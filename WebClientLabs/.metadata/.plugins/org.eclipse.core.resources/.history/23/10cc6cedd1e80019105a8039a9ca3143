@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>테이블 표 만들기</title>
+		<style type="text/css">
+		table {
+			border-collapse: collapse;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+	</head>
+<body>
+
+</body>
+</html>

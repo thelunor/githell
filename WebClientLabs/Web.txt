@@ -1,0 +1,8 @@
+<html>
+  <head>
+	<title>홈페이지</title>
+  </head>
+  <body>
+	<h1>오늘은 Web 배우는 날</h1>
+  </body>
+</html>

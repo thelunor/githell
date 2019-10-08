@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 사용하기</title>
+	<style type="text/css">
+		/*
+			html 페이지에 css를 적용하는 방법
+			1. inline: 태그 안에
+			2. internal: 페이지 상단에
+			3. external: 별도의 파일.css
+		*/
+		body {background-color: skyblue;}
+		h3 {color: red;}
+	</style>
+</head>
+<body>
+	<p style="background-color: pink">문단 태그(inline)</p>
+	<h3>internal 적용하기</h3>
+</body>
+</html>

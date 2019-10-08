@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>목록 태그</title>
+</head>
+<body>
+	<h3>리스트 태그</h3>
+	<ul type="circle">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ul>
+	<ul type="disc">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ul>
+	<ul type="square">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ul>
+	<ul type="none">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ul>
+	<ul>
+		<li>default</li>
+	</ul>
+	<hr>
+	<ol type="1">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ol>
+	<ol type="a">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ol>
+	<ol type="A">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ol>
+	<ol type="i">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ol>
+	<ol type="I">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ol>
+	<ol type="none">
+		<li>none</li>
+	</ol>
+	<br>
+	disabled: Specifies that an input element should be disabled<br>
+	id: Specifies a unique id for an element<!-- id: 식별자(같은 태그들에 이름 부여) --><br>
+	<!-- &nbsp; 빈 공백 -->
+	
+	<h3>링크 기능</h3>
+	<a href="https://www.naver.com">네이버 가기(default: 현재창)</a><br>
+	<a href="https://www.naver.com" target="_self">네이버 가기(self: 현재창)</a><br>
+	<a href="https://www.naver.com" target="_blank">네이버 가기(blank: 현재창)</a><br>
+	
+	
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	1. HTML describes the structure of a Web page
+	<br> 2. Browsers do not display the HTML tags, but use them to
+	render the content of the page
+	<br> 3. 브라우저(소프트웨어): 해석기(parse): html, css, Javascript
+	해석(rendering)해서 그 결과를 보여준다
+	<br>
+	<h3>제목</h3>
+	<p>문단 태그</p>
+	/* 위에서부터 아래로 라인 단위로 해석 */
+
+	<h1>This is heading 1</h1>
+	<h2>This is heading 2</h2>
+	<h3>This is heading 3</h3>
+	<h4>This is heading 4</h4>
+	<h5>This is heading 5</h5>
+	<h6>This is heading 6</h6>
+	<h9>This is heading 9: h4와 크기는 같고 bold(x)</h9>
+
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+
+	<a href="https://www.w3schools.com">This is a link</a>
+	<br>
+	<img src="images/1.jpg" alt="W3Schools.com" width="400" height="300">
+	<br>
+	<ul> <!--unorder list-->
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ul>
+
+	<ol> <!--order list-->
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ol>
+	<!--
+		HTML 주서처리(해석되지 않는다): 화면에 나타나지 않는다(소스보기만 가능) 
+	 -->
+	 <p title="나는풍선 도움말">
+	 	마우스 오버하면... tooltip 정보 제공
+	 </p>
+	 <p align="center">텍스트 가운데 정렬</p>
+	 <font color="red" size="10px" face="궁서체">글자연습</font>
+	 <br/>인정<br>
+	 디자인적인 요소는 CSS 사용
+	 <br>
+	 <font style="color:gold; font-family:명조체">CSS 사용하기</font>
+	 <br>
+	 <p title="나는 "홍길동" 입니다"></p>
+</body>
+</html>

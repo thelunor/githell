@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>개발자 필수 태그(암기)</title>
+</head>
+<body>
+	<!-- 
+		회원가입, 게시판 글쓰기
+	 -->
+	 <form action="">
+	 	<input type="text" name="userid">
+	 	<input type="text" name="username">
+	 	<input type="submit" value="전송하기">
+	 	<input type="reset" value="취소하기">
+	 </form>
+	 <!-- 
+	 	form 태그는 전송을 담당하는 태그(서버로(네이버, 다음...) >> 웹서버 >> Tomcat)
+	 	네이버 >> 회원가입 >> 회원가입 페이지 >> 정보입력 >> 가입하기(전송)
+	 	>> 입력한 데이터(네트워크를 통해) 이동 >> form 태그(이동을 담당(교통수단)) >> 
+	  -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>개발자 필수 태그(암기)</title>
+</head>
+<body>
+	<!-- 
+		회원가입, 게시판 글쓰기
+	 -->
+	 <form action="Ex13_login.jsp" method="get">
+	 	<input type="text" name="userid">
+	 	<input type="text" name="username">
+	 	<!-- <input type="submit" value="전송하기"> -->
+	 	<input type="image" src="">
+	 	<input type="reset" value="취소하기">
+	 </form>
+	 <!-- 
+	 	form 태그는 전송을 담당하는 태그(서버로(네이버, 다음...) >> 웹서버 >> Tomcat)
+	 	네이버 >> 회원가입 >> 회원가입 페이지 >> 정보입력 >> 가입하기(전송)
+	 	>> 입력한 데이터(네트워크를 통해) 이동 >> form 태그(이동을 담당(교통수단)) >> 서버(데이터 받기) >> jsp(servlet)
+	 	>> DB 연결 >> DB에 insert >> 완료여부 >> 클라이언트(정상처리 여부)
+	 	
+	 	form: 전송 수단
+	 	두 가지 방법: 배(method="get"), 비행기(method="post")
+	 	웹사이트 주소창
+	 	get: https://192.168.0.3:8090/WebClient/login.jsp?userid=kglim&username=hong
+	 	: 웹사이트 주소에 컨텐츠 노출
+	 	*어쩔 수 없이 배를 타야되는 상황(Link >> a hef) 형식 처리...
+	 	post: https://192.168.0.3:8090/WebClient/login.jsp(userid=kglim&username=hong: 숨김)
+	 	:https 프로토콜을 사용하여 header 안에 내용(정보)을 숨겨서 전송
+	 	
+	 	목적지: 웹서버
+	 	action="" >> 목적지 주소 >> login.jsp
+	 	
+	 	form 태그의 전송방식 >> post 방식 사용
+	 	
+	 	<a href="boardDetail.jsp?boardnum=100">글상세</a>
+	 	링크 형태의 코드는 get 방식만 적용
+	 	
+	 	기장(선장): 출발: submit, reset
+	 	1. input type="submit": 전송
+	 	2. input type="image": 내부적으로 전송
+	  -->
+</body>
+</html>

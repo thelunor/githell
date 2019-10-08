@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		HTML5 added several new input types:
+		
+		color
+		date
+		datetime-local
+		email
+		month
+		number
+		range
+		search
+		tel
+		time
+		url
+		week
+	 -->
+	 <input type="color" name="favcolor" value="#ff0000">
+	 <br>
+</body>
+</html>

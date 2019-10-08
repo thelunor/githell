@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	/* <a href="" link, visited, hover, active: 의미만 존재 >> 가상 클래스 선택자(a:link) */
+	a:link {
+		color: green;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	
+	a:visited {
+		color: blue;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	
+	a:hover {
+		color: red;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	
+	a:active {
+		color: yellow;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+/*
+			css의 적용은 기존에 존재하느 태그(요소)에만 가능합니까? 아니오
+			p { }
+			h3 { }
+			
+			h1, h2, h3 자원들: 선택자(selector)
+			***선택자***
+			1. 기존에 있는 태그(요소)들
+			2. .: class 반영
+			3. #: id 반영
+		*/
+h1, h2, h3 { /* 다중 선택자 */
+	color: red;
+}
+
+#jhkim { /* #으로 만든... id */
+	color: gold;
+}
+
+.hong { /* .으로 만든... class */
+	color: blue;
+}
+
+p {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<h1>선택자 1</h1>
+	<h2>선택자 2</h2>
+	
+	<p id="jhkim">id라는 속성을 사용하여 css 반영</p>
+	<p class="hong">class라는 속성을 사용하여 css 반영</p>
+	<!-- 
+	사용자 정의: id, class 선택자 사용
+	css, Javascript, jquery에서 활용도 100%
+	-->
+	<a href="http://president.go.kr/">방문하기</a>
+</body>
+</html>

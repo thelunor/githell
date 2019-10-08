@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	#header, #footer {
+		background-color: grey;
+		clear: left;
+	}
+	
+	#nav {
+		background-color: grey;
+	}
+	
+	#article {
+		background-color: grey;
+	}
+	
+	#aside {
+		background-color: grey;
+	}
+</style>
+	
+</head>
+<body>
+	<div id="header">1</div>
+	<div id="nav">2</div>
+	<div id="article">3</div>
+</body>
+</html>

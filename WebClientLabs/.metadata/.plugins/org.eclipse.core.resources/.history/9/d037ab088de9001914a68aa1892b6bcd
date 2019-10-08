@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>개발자 필수 태그(암기)</title>
+</head>
+<body>
+	<!-- 
+		회원가입, 게시판 글쓰기
+	 -->
+	 <form action="">
+	 	<input type="text" name="userid">
+	 	<input type="text" name="username">
+	 	<input type="submit" value="전송하기">
+	 	<input type="reset" value="취소하기">
+	 </form>
+	 <!-- 
+	 	form 태그는 전송을 담당하는 태그(서버로)
+	  -->
+</body>
+</html>

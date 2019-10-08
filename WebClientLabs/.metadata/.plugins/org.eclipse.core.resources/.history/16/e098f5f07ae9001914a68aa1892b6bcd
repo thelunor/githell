@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		/* 넘치는 콘텐츠를 자르고 보이지 않게 한다. */
+		background-color: #333333;
+	}
+	
+	li {
+		float: left;
+		/*
+		left – 요소를 왼쪽으로 이동시킵니다.
+		right – 요소를 오른쪽으로 이동시킵니다.
+		none – 요소를 떠 있게 하지 않습니다.
+		*/
+	}
+	
+	li a {
+		display: block; /* inline(text 형식), block(box 형식), none(숨기기) */
+		color: white;
+		text-align: center;
+		padding: 16px;
+		text-decoration: none;
+	}
+	
+	li a:hover {
+		background-color: #111111;
+	}
+</style>
+</head>
+<body>
+
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#news">News</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#about">About</a></li>
+	</ul>
+
+</body>
+</html>

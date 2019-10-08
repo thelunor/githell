@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	#header, #footer {
+		background-color: grey;
+		clear: left;
+		padding: 1em;
+	}
+	
+	#nav {
+		background-color: grey;
+		float: left;
+		max-width: 160px;
+		margin: 0;
+		padding: 1em;
+	}
+	
+	#article {
+		background-color: grey;
+		margin-left: 60px;
+	}
+	
+	#aside {
+		background-color: grey;
+	}
+</style>
+	
+</head>
+<body>
+	<div id="header">1</div>
+	<div id="nav">2</div>
+	<div id="article">3</div>
+	<div id="aside">4</div>
+	<div id="footer">5</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	#header, #footer {
+		background-color: black;
+		clear: left;
+	}
+	
+	#nav {
+	
+	}
+	
+	#nav ul a {
+	
+	}
+	
+	#article {
+	
+	}
+</style>
+	
+</head>
+<body>
+	<div id="header"></div>
+</body>
+</html>

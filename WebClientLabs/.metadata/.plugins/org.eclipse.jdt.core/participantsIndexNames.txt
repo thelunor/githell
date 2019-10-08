@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\SmartWeb\Web\WebClientLabs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\889149064.index
+\WebClient\src

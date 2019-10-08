@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend>Text : Password</legend>
+			Text: <input type="text" name="userid" id="userid"><br>
+			Password: <input type="password" name="pwd" maxlength="5"><br>
+			<hr>
+			Text2: <input type="text" name="data" maxlength="10" size="100px" value="초기값">
+		</fieldset>
+	</form>
+</body>
+</html>
