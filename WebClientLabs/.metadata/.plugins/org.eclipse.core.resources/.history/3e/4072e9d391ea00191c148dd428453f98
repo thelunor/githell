@@ -1,0 +1,139 @@
+@charset "UTF-8";
+html {height: 100%;}
+body {
+	background-color: #fffff0;
+	color: #666660;
+	line-height: 18px;
+	height: 100%;
+}
+a: hover {color: #c65939;}
+a, a:visited {color: #666660; text-decoration: none; outline-style: none; outline: none;}
+ul {list-style: none; font-size: 15px}
+ol {list-style: none;}
+li {padding-bottom: 5px;}
+.bold {font-weight:bold;}
+.green {color:#6f8b3d;}
+.darkgreen {color:#5a6e38;}
+.lightgreen {color:#abb88d;}
+.red {color:#c65939;}
+.black {color:#333330;}
+.darkgrey {color:#444440;}
+#logo {
+	font-size: 30px;
+	height: 16px;
+	display: block;
+	float: left;
+	top: 40px;
+	left: 175px;
+	z-index: 1;
+	padding-left: 50px;
+}
+#container {
+	width: 975px;
+	margin: 0 auto;
+	background-color: #fffff0;
+	height: auto; /* real browsers */
+	min-height: 100%; /* real browsers */
+}
+#header {
+	height: 64px;
+	color: #fffff0;
+	font-size: 25px;
+	background-color: #a7b393;
+	padding-top: 30px;
+}
+#content {
+	background-color:#faf8df;
+	min-height:600px;
+	height: auto;
+}
+#bodywrapper {
+	width: 815px;
+	border-left: 1px solid #e0dcc0;
+	background-color: #fffff0;
+	float: left;
+	display: inline;
+	padding-bottom: 32px;
+}
+#body {
+	width:785px;
+	margin:0 auto;
+	background-color:#fffff0;
+	min-height:600px;
+	height: auto; /* for modern browsers */
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#leftbar {
+	float: left;
+	display: inline;
+	width: 159px;
+	background-color: #faf8df;
+	color: #6f8b3d;
+}
+#nav {
+	display: block;
+	margin: 16px 15px 16px 15px;
+	line-height: 16px;
+	cursor: default;
+	text-align: left;
+	height: 600px;
+}
+#nav a {
+	cursor: pointer;
+	color: #6f8b3d;
+	text-decoration: none;
+	display: block;
+}
+#nav a, #nav a:visited {
+	color: #647d37;
+	width: 100%;
+	display: block;
+	height: 16px;
+}
+#nav a:hover {
+	color: #c65939;
+	background-color: #eae5c2;
+}
+
+#footer {
+	height: 32px;
+	position: relative;
+	cursor: default;
+	margin-top: 40px;
+	clear: both;
+}
+#footer #copyright {
+	position: absolute;
+	top: 0px;
+	left: 175px;
+	width: 465px;
+	color: #888880
+}
+#footer #announcements {
+	position: absolute;
+	top: 0px;
+	left: 655px;
+	height: 16px;
+}
+#footer #policy {
+	position: absolute;
+	top: 0px;
+	left: 815px;
+	height: 16px;
+}
+#footer a, #footer a:visited, #announcement a, #announcement a:visited {
+	color: #666660;
+	width: 100%;
+	text-decoration: none;
+}
+#footer a:hover {
+	color: #647d37;
+}
+#footer .hover {
+	border-bottom: solid 2px #e0dcc0;
+}
+#header a:link {
+	color: #fffff0;
+	text-decoration: none;
+}

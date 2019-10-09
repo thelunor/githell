@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<title>Drop 4our Bit</title>
+	<link rel="stylesheet" href="css/Basic.css">
+	<style type="text/css">
+	@media only screen and (max-width:620px) {
+		/* For mobile phones: */
+		#leftbar, #body {
+		width:100%;
+		}
+	}
+	</style>
+	
+</head>
+<body>
+	<div id="container">
+		<!-- HEADER -->
+		<div id="header">
+			<div id="logo">
+				<a href="C:/SmartWeb/Web/WebClientLabs/WebClient/WebContent/Ex12_Div_Box.html">
+					<font class="bold">D</font><font>rop</font>
+					<font class="bold">4</font><font>our</font>
+					<font class="bold">B</font><font>it</font>
+				</a>
+			</div>
+		</div>
+		<div id="content">
+			<div id="leftbar">
+				<div id="nav">
+					<font class="blod green" title="Github 주소">
+					<a href="https://www.github.com/" target="_blank" class="bold">Github</a>
+					</font>
+					<ul style="padding-left: 10px;">
+						<li>
+							<a href="https://github.com/thelunor/githell" target="_self">김진호</a>
+						</li>
+						<li>권태일</li>
+						<li>
+							<a href="https://github.com/piaoxinai30" target="_self">박신애</a>
+						</li>
+						<li>
+							<a href="https://github.com/ododo3603" target="_self">오형남</a>
+						</li>
+						<li>
+							<a href="https://github.com/Lee-JeongEun23/BackJoon_Studying" target="_self">이정은</a>
+						</li>
+						<li>
+							<a href="https://github.com/hgoguma/test" target="_self">이혜리</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="bodywrapper">
+				<div id="body" align="center">
+					<img alt="이미지가 없네요" src="images/Dropthebeat.png">
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="copyright">© 2019. created, designed and copyrighted
+				by jinhokim.</div>
+			<div id="announcements" onmouseover="this.className='hover'"
+				onmouseout="this.className=''">
+				<a href="#" onfocus="blur()" title="공지사항">announcements</a>&nbsp;
+			</div>
+			<div id="policy" onmouseover="this.className='hover'"
+				onmouseout="this.className=''" class="">
+				<a href="#" onfocus="blur()" title="개인정보 취급방침"
+					class="policy cboxElement">privacy policy</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
