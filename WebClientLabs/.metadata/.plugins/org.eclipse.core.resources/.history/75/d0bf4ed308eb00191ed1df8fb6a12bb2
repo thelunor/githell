@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>선택자(selector)</title>
+	<style type="text/css">
+		/* 
+			1. 기본 선택자(기존에 존재하는 태그): p, div
+				p {color: red}
+			2. 다중 선택자(group)
+				p, h1, h2, h3 {color: blue}
+			3. 사용자 정의 선택자
+		 */
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

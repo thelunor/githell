@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>선택자(selector)</title>
+	<style type="text/css">
+		/* 
+			1. 기본 선택자(기존에 존재하는 태그): p, div
+				p {color: red}
+			2. 다중 선택자(group)
+				p, h1, h2, h3 {color: blue}
+			3. 사용자 정의
+				.mystyle {color: red}: 범용적(일반적)
+				적용:
+				<p class="mystyle"></p>
+				<p class="mystyle"></p>
+				
+				#idstyle {color: pink}: 식별자(page당 1개만 사용하겠다)
+				적용:
+				<div id="idstyle"></div>
+			4. 결합
+				p {color: black}
+				p.one {color: blue}
+				p.two {color: red}
+		 */
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

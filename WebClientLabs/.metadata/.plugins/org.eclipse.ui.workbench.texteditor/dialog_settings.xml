@@ -6,7 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="content"/>
 		<list key="findhistory">
+			<item value="content"/>
+			<item value="\"/>
 			<item value="cop"/>
 			<item value="Drop 4our Bit"/>
 		</list>
