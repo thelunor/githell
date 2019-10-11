@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// javascript 해석(웹 브라우저): 결과 >> 출력: 웹 브라우저
+		// 웹 브라우저(해석기 + 다양한 API(객체: 내장 객체))
+		// window 내장 객체(웹 브라우저... 사용)
+		// window 객체 생략 가능
+		window.document.write("방가방가<br>");
+		document.write("window 객체는 생략 가능합니다<br>");
+
+		console.log(10+10);
+		console.log("디버깅, 결과확인, 오류메시지");
+		
+		document.write("<b>Hello World</b><br>");
+		document.write("<table border='1'>"); // 바깥이 "이면 안쪽은 ', 바깥이 '이면 안쪽은 "
+		document.write("<tr><td>AA</td><td>BB</td></tr>");
+		document.write("</table>");
+		
+		var element; // 타입을 정의하지 않는다
+		let element2; // 타입을 정의하지 않는다
+		element = 100; // 값을 갖는 시점에 타입이 설정
+		console.log(element); // undefined: 오류 (x)
+		console.log(typeof(element));
+	</script>
+</head>
+<body>
+	<form action="#" method="get" name="myform"> <!-- #: 자기 자신 페이지 -->
+		ID: <input type="text" name="userid" value="hong"><br>
+		PWD: <input type="text" name="pwd" value="1111"><br>
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

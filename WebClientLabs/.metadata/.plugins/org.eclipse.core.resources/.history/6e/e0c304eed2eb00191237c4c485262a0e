@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// javascript 해석(웹 브라우저): 결과 >> 출력: 웹 브라우저
+		// 웹 브라우저(해석기 + 다양한 API(객체: 내장 객체))
+		// window 내장 객체
+	</script>
+</head>
+<body>
+
+</body>
+</html>

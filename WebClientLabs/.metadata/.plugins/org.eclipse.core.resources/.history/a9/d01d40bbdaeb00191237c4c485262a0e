@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 을 사용하는 javascript</title>
+    <script type="text/javascript">
+    	function print() {
+			
+		}
+    </script>
+</head>
+<body>
+    <button onclick="">클릭하세세요</button>
+    <p id="demo">demo p 태그를 구분하는 식별자</p>
+</body>
+</html>
