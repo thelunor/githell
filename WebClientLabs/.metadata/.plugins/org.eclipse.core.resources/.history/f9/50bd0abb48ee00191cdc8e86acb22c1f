@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// javascript 내장 객체
+		// Date(), Array()
+		// 내장 객체(클래스): new 연산자를 통해 객체를 만들고 사용하여야 한다
+		// var d = new Date();
+		
+		var today = new Date();
+		document.write(today.getFullYear() + "년<br>");
+		document.write(today.getMonth() + 1 + "월<br>"); // 0 ~ 11
+		document.write(today.getDate() + "일<br>");
+		document.write(today.getHours() + "시<br>");
+		document.write(today.getMinutes() + "분<br>");
+		document.write(today.getSeconds() + "초<br>");
+		
+		// Math
+		document.write(Math.random() + "<br>"); // 0 ~ < 1
+		document.write(parseInt((Math.random() * 45) + 1) + "<br>");
+		
+		document.write((Math.round(3.5678)) + "<br>");
+		document.write((Math.max(3, 8, 45, 64, 9)) + "<br>");
+		
+		// Point 문자열 관한 함수
+		var str = "ABCDEF";
+		with(document) { // 블럭 안에서는 document 생략
+			write(str + "<br>");
+			write(str.length + "<br>");
+			write(str.charAt(2) + "<br>"); // index 값을 던지면 return char
+			write(str.indexOf("D") + "<br>");
+			write(str.concat("홍길동") + "<br>");
+			
+			var str2 = str.replace("E", "ZZZZZ");
+			write(str2);
+			write(str.substring(2, 4));
+		}
+	</script>	
+</head>
+<body>
+
+</body>
+</html>

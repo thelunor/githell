@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>javascript (문자열, 숫자) 함수</title>
+	<script type="text/javascript">
+		var str = "10 + 20 + 30";
+		document.write(str + "<br>");
+		
+		// 1. eval()
+		// 문자형 수식을 계산 >> "10 + 20A + 30" (x)
+		// 문자형 숫자 -> 숫자
+		document.write("eval(): " + eval(str) + "<br>");
+		
+		// 2. isNAN() >> is(boolean), NaN: Not a Number -> true(너 숫자 아니니), false(너 숫자야)
+		document.write(isNaN("12345") + "<br>"); // false: 숫자
+		document.write(isNaN("12345A") + "<br>"); // true: 문자
+		document.write(isNaN("대한민국") + "<br>"); // true: 문자
+		document.write(isNaN('12345') + "<br>"); // false: 숫자
+		
+		// https://www.w3schools.com/jsref/jsref_obj_string.asp
+		// 문자열 함수 학습
+		
+		// https://www.w3schools.com/jsref/jsref_obj_number.asp
+		// 숫자형 함수 학습
+		/*
+			Method			Description
+			Number()		Returns a number, converted from its argument.
+			parseFloat()	Parses its argument and returns a floating point number
+			parseInt()		Parses its argument and returns an integer
+		*/
+		
+		var i = "100";
+		var j = "200";
+		document.write("결합: " + (i + j)); // Java, javascript: +(산술, 결합)
+		document.write("<br>숫자 변환: " + (Number(i) + Number(j)));
+		
+		// javascript event
+		/*
+			Event		Description
+			onchange	An HTML element has been changed
+			onclick	The user clicks an HTML element
+			onmouseover	The user moves the mouse over an HTML element
+			onmouseout	The user moves the mouse away from an HTML element
+			onkeydown	The user pushes a keyboard key
+			onload		The browser has finished loading the page
+			
+			onload="alert('finished HTML element loading\n the page')"
+		*/
+		
+		function focusFunction() {
+			document.getElementById("myinput").style.background = "yellow";
+		}
+	</script>
+</head>
+<body>
+	<form action="#" name="myform">
+		<input type="text" id="myinput" name="myinput">
+		<select name="sel">
+			<option value="A">AA</option>
+			<option value="B">BB</option>
+			<option value="C">CC</option>
+			<option value="D">DD</option>
+		</select>
+	</form>
+</body>
+</html>

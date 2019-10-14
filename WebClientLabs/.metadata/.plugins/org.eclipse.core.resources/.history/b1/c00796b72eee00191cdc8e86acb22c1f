@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>내장 함수</title>
+    <script type="text/javascript">
+    	window.setInterval(function() { // 익명 함수, 1회성(재사용(x)), parameter로 함수
+            // javascript 다양한 객체(Date 객체))
+            // Date d = new Date(); Java
+            var d=new Date();
+            var t=d.toLocaleTimeString();
+            // DOM script(메모리에 만들어진 HTML에 접근..., Tree 형태로 메모리에 올라가 있는 것을 DOM이라 한다)
+            document.getElementById("time").innerHTML=t;
+    	}, 1000); // 1초마다 익명 함수를 실행
+    </script>
+</head>
+<body>
+    <p id="time"></p> <!-- innerHTML: <p>innerHTML</p> -->
+    <button onclick="">Stop Time</button>
+</body>
+</html>

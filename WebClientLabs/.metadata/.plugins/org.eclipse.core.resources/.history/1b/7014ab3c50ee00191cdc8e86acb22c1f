@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!--  
+		checked="checked"
+		?list=java&list=oracle&...
+	-->
+	<script type="text/javascript">
+		var checkflag = "false";
+	</script>
+</head>
+<body>
+	<form action="">
+		좋아하는 과목은: <br>
+		<input type="checkbox" name="list" value="java">JAVA<br>
+		<input type="checkbox" name="list" value="oracle">ORACLE<br>
+		<input type="checkbox" name="list" value="html">HTML<br>
+		<input type="checkbox" name="list" value="css">CSS<br>
+		<input type="checkbox" name="list" value="javascript">JAVASCRIPT<br>
+		<input type="button" value="[전체선택]" onclick="">
+	</form>
+</body>
+</html>

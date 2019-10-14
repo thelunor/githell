@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h3>DB 연결, 검색, 화면주소 출력(선택)</h3>
+	<form action="" name="zipform">
+		<input type="button" value="200-300 서울시 강남구 역삼동"><br>
+	</form>
+</body>
+</html>

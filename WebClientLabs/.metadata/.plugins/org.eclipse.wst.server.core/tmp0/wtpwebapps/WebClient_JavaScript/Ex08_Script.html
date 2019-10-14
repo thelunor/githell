@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>유효성 검사</title>
+    <script type="text/javascript">
+        // 유효성 검사
+        // 1. Client에서 서버로 전송 >> 서버에서 검사 >> 검사 여부를 Client로 전송: ID 중복확인
+        // 2. Client에서 검사하고 완료 시 서버로 전송 >> 서버에서 반영여부 Client로 전송: 보통의 현업에서는 2번
+        // roundtrip: 웹은 최대한 서버로 전송하는 것을 줄여야 한다
+        // 최대한 할 수 있는 부분은 2번으로...서버 전송 횟수를 줄인다
+
+        // 2번 javascript 담당
+        // 유효성 체크
+        // *****name="txtuserid": name 속성이 없으면 서버는 값을 받지 못합니다*****
+
+        function send() {
+            // var element=document.forms[0].elements[0].value;
+            // form name 속성이 있다면
+            var inputuserid=document.Loginform.txtuserid;
+            // inputuserid: <input type="text" name="txtuserid">
+            console.log(inputuserid);
+            console.log(inputuserid.value);
+            
+            //DOM script
+            var userpwd=document.getElementById("txtpwd");
+            console.log(userpwd);
+            console.log(userpwd.value);
+            
+            // 검증(원하는 코드로)
+            if(inputuserid.value==""||!(inputuserid.value.length>=3&&inputuserid.value.length<=10)) {
+            	alert("다시 입력해");
+            	document.Loginform.txtuserid.focus(); // inputuserid.focus()
+            	inputuserid.select();
+            } else {
+            	alert("검증완료");
+            	// 서버로 전송하는 코드...
+            	
+            	document.Loginform.action="Ex09_login.jsp";
+            	document.Loginform.submit(); // form: submit 함수 내장 >> 호출
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="get" name="Loginform">
+        ID: <input type="text" name="txtuserid"><br>
+        <!-- id는 client에서 다루기 위해, 서버는 name 속성이 있어야 한다 -->
+        PWD: <input type="password" name="txtpwd" id="txtpwd"><br>
+        <input type="button" value="전송" onclick="send()">
+        <!--
+        type="submit"
+        type="image"
+        type="button" 별도의 함수가 필요(함수 내부 submit)
+        -->
+    </form>
+</body>
+</html>

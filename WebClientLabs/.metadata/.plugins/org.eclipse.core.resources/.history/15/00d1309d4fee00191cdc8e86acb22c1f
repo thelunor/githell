@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<form action="">
+		좋아하는 과목은: <br>
+		<input type="checkbox" name="list" value="java"><br>
+		<input type="checkbox" name="list" value="oracle"><br>
+		<input type="checkbox" name="list" value="html"><br>
+		<input type="checkbox" name="list" value="css"><br>
+		<input type="checkbox" name="list" value="javascript"><br>
+	</form>
+</body>
+</html>

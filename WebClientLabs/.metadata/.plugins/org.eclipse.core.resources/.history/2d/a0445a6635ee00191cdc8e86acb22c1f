@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// Client가 전송한 데이터 받기
+	// Ex09_login.jsp?txtuserid=hong&txtpwd=1004 // get 방식
+	String userid = request.getParameter("txtuserid");
+	String pwd = request.getParameter("txtpwd");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
