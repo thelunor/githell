@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById("btnCreate").onclick = function() {
+				
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="">
+	행의 수: <input type="text" id="tableRow"><br>
+	열의 수: <input type="text" id="tableColumn"><br>
+	</form>
+	<br>
+	<input type="button" value="동적테이블 생성" id="btnCreate">
+	<input type="button" value="동적테이블 제거" id="btnRemove">
+	<hr>
+</body>
+</html>

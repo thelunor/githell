@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+	행의 수: <input type="text" id="tableRow">
+	열의 수: <input type="text" id="tableColumn">
+	
+</body>
+</html>

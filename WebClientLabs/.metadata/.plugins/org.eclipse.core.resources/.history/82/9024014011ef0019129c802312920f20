@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			var btn = document.getElementById("btnCreate");
+			for (var i = 0; i < document.form.elements[0].value; i++) {
+				for (var j = 0; j < document.form.elements[1].value; j++) {
+					var btntr(i) = document.createElement("tr");
+					var btntd(j) = document.createElement("td");
+					var tdtxt(j) = document.createTextNode(i + "행, " + j + "열");
+				}
+			}
+			document.body.appendChild(btntr);
+		}
+	</script>
+</head>
+<body>
+	<form action="">
+	행의 수: <input type="text" id="tableRow"><br>
+	열의 수: <input type="text" id="tableColumn"><br>
+	</form>
+	<br>
+	<input type="button" value="동적테이블 생성" id="btnCreate">
+	<input type="button" value="동적테이블 제거" id="btnRemove">
+	<hr>
+</body>
+</html>

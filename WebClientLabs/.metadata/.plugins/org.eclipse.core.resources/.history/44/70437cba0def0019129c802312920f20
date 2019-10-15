@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		window.onload = function() { // onload event 발생 시 익명 함수 실행
+			var btnobj = document.getElementById("btnGetData");
+			// <onclick="call())">
+			btnobj.onclick = function() { // 버튼 클릭 event 발생 시 익명 함수 실행 
+				var txtmsg = document.getElementById("txtmessage");
+				var str = "";
+				str += "ID: " + txtmsg.getAttribute("id");
+				str += "\nVALUE: " + txtmsg.getAttribute("value");
+				str += "\nVALUE: " + txtmsg.value;
+				str += "\nLENGTH: " + txtmsg.value.length;
+				console.log(str);
+			}
+			
+			document.getElementById("btnCreate").onclick = function() {
+				var txtname = document.createElement("input");
+			};
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txtmessage" value="hello">
+	<input type="button" value="getInfo" id="btnGetData">
+	<hr>
+	<input type="button" value="동적생성" id="btnCreate">
+</body>
+</html>

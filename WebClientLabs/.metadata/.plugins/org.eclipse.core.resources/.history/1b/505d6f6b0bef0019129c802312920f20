@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event & Load</title>
+    <script type="text/javascript">
+        /*
+            onload event 발생 시점: body 태그 안에 있는 모든 요소(element)가 브라우저에 loading 되고 나서 발생
+            <body onload = call()>
+            window.onload = call(); 코드도 가능
+
+            function a(); // 원래는
+            필요할 때 a() 호출해서 사용(재사용)
+        */
+        window.onload = function() { // 1회성 사용, 함수의 이름이 없다(익명(anonymous) 함수)
+            // page 모든 요소가 loading 된 후에 함수 자동실행
+            // body 태그 제어 할 수 있다
+            var out = "";
+            out += "<ul>";
+                out += "<li>javascript</li>";
+                out += "<li>jquery</li>";
+                out += "<li>vue</li>";
+            out += "</ul>";
+
+            document.body.innerHTML = out;
+
+            var header = document.createElement("h1");
+            // <h1></h1>
+            var textnode = document.createTextNode("hello");
+            // hello
+
+            header.appendChild(textnode);
+            // <h1>hello</h1>
+            document.body.appendChild(header);
+
+            // image 태그를 생성하고 src 속성을 만들고 body 태그에 자식요소로 append 하시오
+            
+            var image = document.createElement("img"); // <img >
+            image.setAttribute("src", "./images/Whiplash.jpg"); // <img src="./images/Whiplash.jpg">
+            image.setAttribute("width", '300');
+            image.setAttribute("height", '300');
+            // <img src="./images/Whiplash.jpg" width="100" height="100">
+            document.body.appendChild(image);
+            
+        }
+    </script>
+</head>
+<body>
+    Hello World
+</body>
+</html>
