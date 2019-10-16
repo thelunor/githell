@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>keemzino</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico"/>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#araboza">ARABOZA</a></li>
+                <li><a href="#services">EXPERIENCE</a></li>
+                <li><a href="#portfolio">PERFORMANCE</a></li>
+                <li><a href="#pricing">SKILLS</a></li>
+                <li><a href="#contact">INTEREST</a></li>
+                <li><a href="#contact">SOCIAL</a></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        
+        <div class="jumbotron text-center">
+            <h1>K E E M Z I N O</h1> 
+            <p>천재를 갈망하는 광기가 폭발한다.</p> 
+        </div>
+
+<!-- Container (About Section) -->
+    <div id="araboza" class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2>ARABOZA</h2><br>
+            <h4><strong>Kim Jin Ho</strong></h4>
+            <h4>1989. 3월생</h4>
+            <p>최고의 개발자가 되기 위해서라면 무엇이든 할 각오가 되어있는 비트캠프 신입생 김진호는 우연한 기회로 누구든지 성공으로 이끄는 최고의 실력자 임경균 강사에게 발탁되어 그의 강의에 들어가게 된다.
+                사랑과 열정 속에 좌절과 성취를 동시에 안겨주는 임경균 강사의 훌륭한 교육방식은 천재가 되길 갈망하는 김진호의 집착을 끌어내며 그를 점점 광기로 몰아넣는데… </p>
+            <p>지금은 2차 프로젝트 4조 Drop 4our Bit의 조장을 맡고 있다.</p>
+            <br><button class="btn btn-default btn-lg"><a href="https://www.instagram.com/wlsghz/" target="_blank">Drop 4our Bit</a></button>
+          </div>
+          <div class="col-sm-4">
+            <img src="./images/about_1.jpg" alt="drum" width="400" height="600">
+          </div>
+        </div>
+    </div>
+      
+      <div class="container-fluid bg-grey">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="images/Whiplash-Short-Film-to-Whiplash-Feature-Length-Movie-Damien-Chazelle-StudioBinder.jpg" alt="teacher" width="100%">
+          </div>
+          <div class="col-sm-8">
+            <h2>ARABOZA TEAM</h2><br>
+            <h4><strong>Drop 4our Bit</strong></h4>
+            <h4>2019. 9. 23 Start</h4>
+            <p>비트캠프 '스마트웹앱콘텐츠 제작' 강의 2차 프로젝트 최고의 팀을 뜻한다. 중간 과제인 팀, 개인 웹페이지 만들기는 '다형성' 기법(이라 쓰고 '우리 마음대로'라고 읽는다)으로 완성을 향해 질주하는 모습이 일품으로 꼽힌다. 원래는 Drop the beat지만, 우리 마음대로 바꿔버렸다.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container-fluid bg-grey">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2>앤드류 네이먼</h2><br>
+            <h4><strong>난 위대해지고 싶어. 그러려면 시간이 더 필요할 거고. 우린 사귀면 안될 것 같아.</strong></h4>
+            <p>미친놈이세요? 아, 미친 학생...</p>
+          </div>
+          <div class="col-sm-8">
+            <img src="images/break.png" alt="이별중입니다" width="100%">
+          </div>
+        </div>
+      </div>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 900, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+          
+          $(window).scroll(function() {
+            $(".slideanim").each(function(){
+              var pos = $(this).offset().top;
+        
+              var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                  $(this).addClass("slide");
+                }
+            });
+          });
+        })
+        </script>
+</body>
+</html>
