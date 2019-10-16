@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+	#myDiv1, #myDiv2 {
+	  background-color: coral;
+	  padding: 50px;
+	}
+	
+	#myP1, #myP2 {
+	  background-color: white; 
+	  font-size: 20px;
+	  border: 1px solid;
+	  padding: 20px;
+	}
+	</style>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+	
+</body>
+</html>

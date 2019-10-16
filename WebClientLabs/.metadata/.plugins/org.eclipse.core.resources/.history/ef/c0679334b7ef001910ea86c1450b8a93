@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	
+</head>
+<body>
+	<p>Click "Try it" to execute the displayDate() function.</p>
+
+	<button id="myBtn">Try it</button>
+	
+	<p id="demo"></p>
+	
+	<script>
+	document.getElementById("myBtn").onclick = displayDate;
+	// document.getElementById("myBtn").onclick = displayDate(); >> ()가 있으면 이벤트가 바로 함수를 호출해버린다 >> 이벤트가 함수를 가질 때는 ()를 쓰지 않는다
+	
+	function displayDate() {
+	  document.getElementById("demo").innerHTML = Date();
+	}
+	</script>
+	
+	
+</body>
+</html>
