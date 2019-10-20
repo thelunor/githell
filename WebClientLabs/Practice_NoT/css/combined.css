@@ -39,12 +39,12 @@ a:hover {color: #c65939;}
 	height:auto !important; /* real browsers */
 	min-height:100%; /* real browsers */
 }
-#header {height:64px;color:#fffff0;position:relative;}
+#header {height:64px;color:#fffff0;position:relative;background-color: #abb88d;}
 #logo {font-size:20px;width:80px;height:16px;display:block;position:absolute;top:24px;left:175px;z-index:1;}
 #nav_top {font-size:18px;width:315px;height:16px;display:block;position:absolute;top:24px;left:415px;z-index:2;word-spacing:3px;cursor:default;}
 #nav_top a {cursor:pointer;}
 #leftbar {float:left;display:inline;width:159px;background-color:#faf8df;color:#6f8b3d;}
-#nav {display:block;margin:16px 15px 16px 15px;line-height:16px;cursor:default;}
+#nav {display:block;margin:16px 15px 16px 15px;line-height:20px;cursor:default;}
 #nav ul {display:block;margin-bottom:16px;}
 .title_link img, .postsimg {width:16px;height:16px;margin-left:-3px;}
 #nav a, #nav a:visited, .tooltip_top a, .tooltip_top a:visited, .tooltip_top2 a, .tooltip_top2 a:visited, .tooltip_top3 a, .tooltip_top3 a:visited {color:#647d37;width:100%;display:block;height:16sspx;}
@@ -58,16 +58,12 @@ height: auto !important; /* for modern browsers */
 #body {width:785px;margin:0 auto;background-color:#fffff0;min-height:760px;
 height: auto !important; /* for modern browsers */
 }
-#topwrapper {position:relative;width:785px;}
+#bodycontent{width:48%;float:left;line-height:25px;margin-top:10px;margin-bottom:10px;margin-left:12px;}
+#topwrapper {position:relative;width:785px;font-size: 25px;}
 #min {height:385px;width:1px;float:right;background-color:#fffff0;}
 #clear {clear:both;height:1px;overflow: hidden;background-color:#e0dcc0;width:960px;display:block;}
 .clear {clear:both;}
 #indexiframe {display:none;}
-
-#account {height:64px;width:560px;overflow:hidden;white-space:nowrap;}
-.account a, .account a:visited {color:#6f8d3d;display:block;padding:8px 8px;float:left;border:solid 1px #fffff0;margin-top:7px;}
-.account a:hover {color:#647d37;background-color:#faf8df;border:solid 1px #c5d1a8;}
-.level {display:block;float:left;padding:8px 10px 8px 0;margin-top:7px;border:solid 1px #fffff0;cursor:default;}
 
 #announcement {position:absolute;left:400px;top:0;margin-top:10px;height:30px;width:383px;overflow:hidden;white-space:nowrap;border:solid 1px #c5d1a8;background-color:#fdfce9;font-size:12px;}
 
