@@ -10,7 +10,7 @@ img {
 	display: block;
 	width: 100%;
 }
-a: hover {color: #c65939;}
+a:hover {color: #c65939;}
 a, a:visited {color: #666660; text-decoration: none; outline-style: none; outline: none;}
 ul {list-style: none; font-size: 15px}
 ol {list-style: none;}
