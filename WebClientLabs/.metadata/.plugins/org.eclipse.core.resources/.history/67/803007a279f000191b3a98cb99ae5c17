@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>***Today Point***</title>
+	<script type="text/javascript">
+		// 1. 배열: [] >> var arr = []; >> push(), pop()
+		// 2. json 객체: {} >> var obj = {}; >> obj.속성명
+		
+		// 배열과 객체 혼합(대부분의 공공 데이터)
+		var students = [];
+		
+		// 배열에 객체 추가(객체 배열)
+		students.push({이름:"홍길동", 국어:80, 영어:60}); // [0] = {}
+		students.push({이름:"아무개", 국어:100, 영어:50});
+		students.push({이름:"이순신", 국어:90, 영어:90});
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

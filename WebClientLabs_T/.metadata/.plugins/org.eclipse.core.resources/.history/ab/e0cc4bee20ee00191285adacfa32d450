@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>javascript 문법</title>
+	<script type="text/javascript">
+	/*  
+		-변수생성 > 타입설정 > 초기화
+		-모든 변수의 타입 > var  >>(ES6) let , const
+		-String , Number 타입은 존재하지 않나요
+		-JAVA : int age , String name
+		-var ename; 타입이 정의되지 않아요
+		-ename="홍길동" >> 타입 >> String
+		-ename=100 >> 타입 > Number
+		-초기화 시점의 자신의 타입을 결정
+		-javascript (정수 , 실수 , boolean , 문자)
+		-내부적으로 : Number , Boolean , Array , Object ...
+		
+		변수의 범위  > page > function 
+	*/
+	var a;
+    console.log(a); //undefined
+    a = 100;
+    console.log(a);
+    console.log(typeof(a)); //변수의 타입 정보 확인
+    
+    var i , j;
+    i = 100;
+    j = 200;
+    var result = i + j;
+    console.log(result);
+    
+    var intnum = 100; //정수
+    var dnum = 12.345; //실수
+    var flag = true; //boolean
+    var str = null; //값이 없다
+    var str2 = "ABC" //문자열  'ABC'
+    
+    console.log(typeof(intnum)); //number
+    console.log(typeof(dnum)); //number
+    console.log(typeof(flag));
+    console.log(typeof(str)); //object
+    console.log(typeof(str2));
+    
+    //es6 let , const 따로 정리
+    
+    //연산자
+    //산술 (+ , - , / , * , %)
+    var num1 = 10;
+    var num2 = 3;
+    document.write(num1/num2 + "<br>"); //실수범위
+    document.write(num1%num2 + "<br>"); //나머지
+    
+    //관계(== , === , != , >= , <= , < ....)
+    //true, false 값 
+    var a = 3;
+    var b = 5;
+    document.write((a == b) + "<br>");
+    document.write((a != b) + "<br>");
+    document.write((a > b) + "<br>");
+    
+    //논리 (&&(모든 조건이 참 > 참) , ||(둘 중에 하나만 참 > 참))
+    document.write((10 > 5) && (1 != 3) + "<br>");
+    document.write((10 > 5) || (3 != 3) + "<br>");
+    
+    //삼항연산자
+    var result2 = (4%2 == 0) ?"짝수":"홀수";
+    document.write("<br>" + result2 + "<br>");
+    
+    //대입연산자 (+= , -= , *= , /=)
+    var p = 10;
+    var k = 5;
+    //p = p + k;
+    p+=k;
+    document.write("결과 : " + p);
+    
+    var x = 5 + 5;  //10
+    var y = "5" + 5;  //55
+    var z = "Hello" + 5; //Hello5
+    var v = "5";
+    var v2 = 5;
+    document.write(v == v2);
+    document.write(v === v2);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

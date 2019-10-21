@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*  
+		다중 이벤트
+		DOM : https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+		
+		jquery 사용해서 좀더 편하게
+		
+		*/
+	</script>
+</head>
+<body>
+	<p>on  함수를 사용해서 다중 이벤트 처리하기</p>
+	<hr>
+	<button>이벤트 제거</button>
+</body>
+</html>
+
+
+
+
+
+

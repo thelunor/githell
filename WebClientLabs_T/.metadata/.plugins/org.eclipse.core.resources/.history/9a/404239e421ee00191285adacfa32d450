@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>
+	<script type="text/javascript">
+		var a = 8;
+		if(a % 2 == 0 ){
+			document.write("짝수 : " + a + "<br>");
+		}else{
+			document.write("홀수 : " + a + "<br>");
+		}
+		
+		var c = 7;
+		if(c % 2 == 0){
+			document.write("2의 배수 : " + c + "<br>");
+		}else if(c % 3 == 0){
+			document.write("3의 배수 : " + c + "<br>");
+		}else{
+			document.write("기타 : " + c + "<br>");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		.redcolor{color: red}
+		.bluecolor{color: blue}
+		.greencolor{color: green}
+		.whitecolor{color: white}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			
+		})
+	</script>
+</head>
+<body>
+	<table>
+        <tr>
+            <td>이름</td>
+            <td>나이</td>
+            <td>취미</td>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>50</td>
+            <td>훔치기</td>
+        </tr>
+        <tr>
+            <td>이순신</td>
+            <td>10</td>
+            <td>싸움</td>
+        </tr>
+        <tr>
+            <td>학생</td>
+            <td>20</td>
+            <td>잠자기</td>
+        </tr>
+    </table>
+    <hr>
+    <h3>이벤트</h3>
+    <a href="https://www.naver.com/">네이버 바로가기</a>
+    <hr>
+    <div id="btnclick">click</div>
+    <div id="btnclick2">click2</div>
+    <div id="stylediv">스타일적용5</div>
+    
+</body>
+</html>

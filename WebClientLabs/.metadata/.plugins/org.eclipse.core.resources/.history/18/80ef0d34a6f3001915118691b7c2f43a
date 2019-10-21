@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery Events</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+			Mouse Events	Keyboard Events		Form Events		Document/Window Events
+			click			keypress			submit			load
+			dblclick		keydown				change			resize
+			mouseenter		keyup				focus			scroll
+			mouseleave	 						blur			unload
+		*/
+		$(document).ready(function() {
+			$('#btncopy').click(function() {
+				// let data = $('#userid').val();
+				// $('#txtcopyuserid').val(data);
+				$('#txtcopyuserid').val($('#txtuserid').val());
+			});
+			
+			// onchange >> change
+			// <input> value='값' >> value : <p></p>, <div></div> >> text
+			// val()(getter, setter)	  : text()(getter, setter)
+			$('#select_hobby').change(function() {
+				let text = $(':selected').text(); // [body 안에 select 태그 1개만 존재]
+				let text2 = $('#select_hobby option:selected').text();
+				let val = $('#select_hobby').val(); // value 속성이 없으면 text를 value로 인정
+				$("#txtselect").val(text + " / " + text2);
+			});
+			
+			// txtpwd2 >> keyup event로 txtpwd 값을 비교해서
+			// 암호가 같으면 id="message" text로 암호가 일치합니다 출력
+			// 암호가 같지 않으면 암호가 일치하지 않습니다 출력
+			$('#txtpwd2').keyup(function() {
+				if ($('#txtpwd').val() != $('#txtpwd2').val()) {
+					$('mesaage').text("암호가 일치하지 않습니다.");
+				} else {
+					$('message').text('암호가 일치합니다.');
+				}
+			});
+			
+			$('input').focus(funtion() {
+				// $(this): 현재  focus를 가지고 있는 input 태그
+				$(this).css('background-color', 'grey');
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Jquery hover(mouseover, mouseleave)</p>
+	
+	ID: <input type="text" id="txtuserid">
+	<hr>
+	<input type="button" id="btncopy" value="copy">
+	<hr>
+	Copy ID: <input type="text" id="txtcopyuserid">
+	
+	<hr>
+	<select id="select_hobby">
+		<option value="JAVA">JAVA</option>
+		<option>script</option>
+		<option>jdbc</option>
+	</select>
+	<br>
+	<input type="text" id="txtselect">
+	<hr>
+	<table style="border: 1px solid red">
+		<tr>
+			<td>암호</td>
+			<td>
+				<input type="text" id="txtpwd2" size="20" maxlength="5">
+			</td>
+		</tr>
+		<tr>
+			<td>암호확인</td>
+			<td>
+				<input type="text" id="txtpwd2" size="20" maxlength="5">
+			</td>
+		</tr>
+	</table>
+	<div id="message" style="color: red"></div>
+	
+</body>
+</html>

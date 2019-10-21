@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){ //ready == onload
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>사과</li>
+			<li>배</li>
+			<li>수박</li>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li>사과2</li>
+			<li>배2</li>
+			<li>수박2</li>
+		</ul>
+	</div>
+	<input type="text" value="AAA">
+	<input type="text" value="BBB">
+	<input type="text" value="CCC">
+	<input type="password">
+	<input type="radio">
+	<input type="file">
+	<hr>
+	<table>
+		<tr>
+			<td>이름</td>
+			<td>나이</td>
+			<td>취미</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+

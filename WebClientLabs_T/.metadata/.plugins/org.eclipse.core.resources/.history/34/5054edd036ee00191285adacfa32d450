@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>javascript (문자열 , 숫자) 함수</title>
+	<script type="text/javascript">
+		var str = "10+20+30";
+		document.write(str+"<br>");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

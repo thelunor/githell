@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 함수 </title>
+	<script type="text/javascript">
+		var pele = document.createElement("p");
+		var hrele = document.createElement("hr");
+		var h3ele = document.createElement("h3");
+		var textnode = document.createTextNode("hello world");
+		var divele = document.createElement("div");
+		var textnode2 = document.createTextNode("HI HI HI");
+		
+		//<hr title="수평선">
+		hrele.setAttribute("title", "수평선");
+		
+		//<h3>hello world</h3>
+		h3ele.appendChild(textnode);
+		
+		//<div>HI HI HI</div>
+		divele.appendChild(textnode2);
+		
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

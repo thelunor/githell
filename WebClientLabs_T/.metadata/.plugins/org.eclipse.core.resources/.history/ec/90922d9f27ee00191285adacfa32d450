@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 함수 : 내장함수</title>
+	<script type="text/javascript">
+	 //java : public void print(){}
+	 //java : public String print() { return "";}
+	 //java : public int print(int num , int num2) {return num+num2;}
+	
+	 //javascript
+	 //function 함수이름(){} >> void(x) , return type(x)
+	 
+	 //함수는 반드시 호출에 의해서만 실행
+	 function callConfirm(){ //사용자 정의 함수
+		 if(window.confirm("작업내용")){ //confirm 내장함수  //확인 , 취소 (true, false) 리턴
+			 window.alert("삭제합니다");
+		 }else{
+			 alert("취소합니다"); //내장함수
+		 }
+	 }
+	</script>
+</head>
+<body>
+	<h3>내장함수와 사용자정의 함수 사용하기</h3>
+	<button onclick="callConfirm()">클릭 사건 발생(함수 호출)</button>
+</body>
+</html>
+
+
+
+
+

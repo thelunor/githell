@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en, ko">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Introduction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./je_js/je.js"></script>
+  <link rel="stylesheet" href="./je_css/je.css" type="text/css">
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">JE</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#favorites">FAVORITES</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#visitor">VISITOR</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Main slide-->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="./image/m1.gif">
+        <div class="carousel-caption">
+        </div>      
+      </div>
+      
+      <div class="item">
+        <img src="./image/ha.gif" >
+        <div class="carousel-caption">  
+         <p>가장 최근에 갔던 여행 - 베트남 하노이 (8월 개강 직전)</p>    
+      </div>
+      </div>
+
+      <div class="item">
+        <img src="./image/m2.gif">
+        <div class="carousel-caption">
+       		 <p>앞으로 갈 예정인 여행 - 스페인 (2월 종강 직후)</p>
+        </div>      
+      </div>
+    
+    
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+<!-- --------------------ABOUT-------------------- -->
+<div id="about" class="bg-1">
+<div class="container text-center">
+  <h3><img src="./image/8.gif" style="width:40px;height:40px;">Lee Jeong Eun<img src="./image/8.gif" style="width:40px;height:40px;"></h3>
+  <br>
+  <p><em>힘든 이 시간만 시간이 아니고<br>시간이 흐르고 나면  그자리에는 더 빛나는 그대가 남을 거예요<br>힘들었던 시간들보다 더 값지고 소중한 존재가 되어<br>훨씬, 흔글</em></p>
+  <div class="row">
+  <div class="col-sm-6">
+    <br>
+    <br>
+      <div class="card">
+        <img class="card-img-top" src="./image/me.jpg" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title"> 이정은</h4>
+          <p class="card-text" style="font-size:16px;">BIRTH : 12. 23<br> FAMILY : 아빠, 엄마, 나, 5살 차이 여동생<br>BLOOD TYPE : B형<br> PHONE : 010 4422 4185</p>
+           --------------------------------------
+           <p style="font-size:15px;">EMAIL : jelee1223@naver.com<br> GITHUB : https://github.com/Lee-JeongEun23/BackJoon_Studying </p>
+        </div>
+      </div>    
+  </div>
+
+    <br>
+    <p class="text-center"><strong>가장 행복한 시간 BEST 3</strong></p>
+    <div class="col-sm-6">
+    <br>
+    <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+    	좋은 사람들과 멋진 강사님 수업 들을 때(100%)
+    </div>
+  </div>
+  
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+    샤워한 후 새로 꺼낸 겨울 이불에 누울 때(90%)
+  </div>
+  </div>
+  
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80" style="width:80%">
+    백준 알고리즘 한번에 맞췄습니다! 뜰 때(80%)
+  </div>
+  </div>
+  <br>
+   </div>
+  
+  <br>
+  <p class="text-center"><strong>연예인으로 알아보는 이정은의 TMI</strong></p>
+    <div class="col-sm-3">
+      <br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="./image/iu.gif" class="img-circle person" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p><strong>아이유</strong></p>
+        <p>태어난 해 : 1993년생</p>
+        <p>본관 : 전주 이씨</p>
+        <p>본명 : 이지은<br> → 여동생 이름</p>
+        <p>유애나 가입</p>
+      </div>
+
+      <br>
+    </div>
+   
+    <div class="col-sm-3">
+      <br>
+      <a href="#demo3" data-toggle="collapse">
+      <img src="./image/bg.gif" class="img-circle person" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+          <p><strong>박보검</strong></p>
+          <p>띠 : 닭띠</p>
+          <p>거주지 : 양천구 목동</p>
+          <p>악기 : 피아노</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<!-- --------------------FAVORITE-------------------- -->
+	<div id="favorites" >
+		<div class="container text-center">
+			<h3 class="text-center">
+				<img src="./image/h.gif" style="width: 40px; height: 40px;">My Favorites<img src="./image/h.gif" style="width: 40px; height: 40px;">
+			</h3>
+			<br>
+			<div class="row text-center">
+				<div class="col-sm-4">
+					<p><strong>최애 드라마</strong></p>
+					<p style="font-size : 17px;"><strong>수상한 파트너</strong></p>
+					<video src="./image/sp.mp4" type="video/mp4" autoplay controls muted></video>
+				</div>
+					
+				<div class="col-sm-4">
+					<p><strong>최애 영화</strong></p>
+					<p style="font-size : 17px;"><strong>악마는 프라다를 입는다</strong></p>
+					<video src="./image/de.mp4" type="video/mp4" autoplay controls muted></video>
+				</div>
+
+				<div class="col-sm-4">
+					<p><strong>최애 예능</strong></p>
+					<p style="font-size : 17px;"><strong>비긴어게인3</strong></p>
+					<video src="./image/begin.mp4" type="video/mp4" autoplay controls muted></video>
+				</div>
+				<br>
+	
+				<div class="col-sm-6">
+				<p><strong>추천 맛집 Best 3</strong><p>
+			    <div class="list-group">
+			      <a href="#favorites" class="list-group-item list-group-item-action">파스타 & 피자 - 혜화 핏제리아오</a> 
+			        <a href="#favorites" class="list-group-item list-group-item-action">마라탕 - 강남 희래식당</a> 
+			        <a href="#favorites" class="list-group-item list-group-item-action">술집 - 이태원 단골집</a>
+			    </div>
+			  </div>
+				
+				<div class="col-sm-6">
+				<p><strong>추천 POP Best 3</strong><p>
+			    <div class="list-group">
+			      <a href="#favorites" class="list-group-item list-group-item-action">Meghan Trainor - Like I'm Gonna Lose You</a>
+			        <a href="#favorites" class="list-group-item list-group-item-action">Ron Pope - A Drop In The Ocean</a> 
+			        <a href="#favorites"  class="list-group-item list-group-item-action">Tori Kelly - Anyway</a>
+			    </div>
+			  </div>
+			  
+			</div>
+		</div>
+	</div>
+
+
+<!-- --------------------SKILLS-------------------- -->
+	<div id="skills" >
+		<div class="container text-center">
+			<h3 class="text-center"><img src="./image/9.gif" style="width:40px;height:40px;">My Skills<img src="./image/9.gif" style="width:40px;height:40px;"></h3>
+			<br>
+			<div class="row text-center">
+				<div class="col-sm-5">
+					<img src="./image/1.png">
+					<br>
+					<br>				
+					<h2><strong>MBTI 성격유형 <br>ENFJ</strong></h2>
+					<img src="./image/t.gif" style="width: 350px; height: 250px;"> 
+					<p>ENFJ 대표 스타 : 테일러 스위프트<br>(역대 여성 가수 회당 수익 1위)</p>
+					
+					
+				</div>
+				<div class="col-sm-1"></div>			
+				<div class="col-sm-7">
+				<br>
+				<br>
+				<table class="table table-hover">
+		    	<thead>
+		     	 <tr>
+		        <th>#</th>
+		        <th>미래 조장님들이 나를 조원으로 뽑아야 하는 이유</th>
+		     	 </tr>
+		    	</thead>
+		    	<tbody>
+		     	 <tr>
+		        <td>#1</td>
+		        <td>열정(사실 의자에 꿀 발라놓음)</td>
+		      	</tr>
+		      	
+		      	<tr>
+		        <td>#2</td>
+		        <td>PPT 만들기</td>
+		      	</tr>
+		      	
+		     	 <tr>
+		        <td>#3</td>
+		        <td>발표 능력</td>
+		      </tr>
+		      <tr>
+		        <td>#4</td>
+		        <td>진상 절대 No No</td>
+		      </tr>
+		    </tbody>
+ 		 </table>
+ 		 
+			<br>
+			<p style="color:#9966ff"><strong>조원 후보자 기호 1번 이정은</strong><em><br>3차 조편성에 만약 저를 조원으로 데리고 간다면<br>지금 신고있는 이 슬리퍼가 닳을 때까지... 뭔지 알죠!?</em></p>
+			<br>
+			<img src="./image/s.png">
+ 		 
+			</div>
+
+			  </div>
+				  
+			</div>
+		</div>
+
+  
+
+
+<!-- --------------------VISITOR-------------------- -->
+<div id="visitor" class="bg-1">
+<div class="container text-center">
+  <h3 class="text-center">VISITOR</h3>
+  <br>
+  <h5><strong>방명록을 남겨주세요</strong></h5>
+  <br>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p style="font-size: 25px">이정은</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Seoul, Korea</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +10 44224185</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: jelee1223@naver.com</p>
+    </div>
+    <div class="col-md-8">
+      <form name="textV">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="한 줄 남기기" rows="4" type="text" required></textarea>
+      <br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+        <input type="button" name = "btn" value="Send" onclick="resultCom(this.form)" style="margin-left: 30px; float : right;">
+        </div>
+      </div>
+      </form>
+      <br>
+      <form name="textR">
+		<textarea class="form-control" id="result" name="result" placeholder=":-)" rows="4" type="text" required></textarea>
+      </form>     
+    </div>
+  </div>
+  <br>
+	</div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Made By JE</p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

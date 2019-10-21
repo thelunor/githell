@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en, ko">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>정은 페이지</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="./css/agency.min.css" rel="stylesheet">
+  <link href="./css/agency.css" rel="stylesheet">
+
+<style type="text/css">
+header.masthead {
+  text-align: center;
+  color: white;
+  background-image: url('./img/blue.gif')!important;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: 100% 100%;
+  
+}
+
+#contact {
+  background-color: #212529;
+  background-image: url('./img/star.gif') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.loading span {
+  display: inline-block;
+  margin: 0 -.075em;
+  animation: loading .8s infinite alternate;
+  font-size : 100px;
+  text-shadow: 0 0 7px black;
+}
+.loading span:nth-child(2) {
+  animation-delay: .1s;
+}
+.loading span:nth-child(3) {
+  animation-delay: .2s;
+}
+.loading span:nth-child(4) {
+  animation-delay: .3s;
+}
+.loading span:nth-child(5) {
+  animation-delay: .4s;
+}
+.loading span:nth-child(6) {
+  animation-delay: .5s;
+}
+.loading span:nth-child(7) {
+  animation-delay: .6s;
+}
+.loading span:nth-child(8) {
+  animation-delay: .7s;
+}
+
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.wrapper {
+box-sizing: border-box;
+font-family: "Indie Flower";
+line-height: 1.618em;
+background-color: white;
+background-image: repeating-radial-gradient(circle, white, white 50%, white 100%);
+background-size: 10px 10px;
+width: 100%;
+padding: 0 2rem;
+text-align: center;
+font-family : 휴먼편지체;
+}
+.wrapper img {
+max-width: 100%;
+height: auto;
+}
+
+.polaroid {
+background: #fff;
+padding: 1rem;
+box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.2);
+}
+.caption {
+font-size: 1.125rem;
+text-align: center;
+line-height: 2em;
+}
+.item {
+display: inline-block;
+margin-top: 2rem;
+filter: grayscale(100%);
+}
+.item .polaroid:before {
+content: '';
+position: absolute;
+z-index: -1;
+transition: all 0.35s;
+}
+.item:nth-of-type(4n+1) {
+transform: scale(0.8, 0.8) rotate(5deg);
+transition: all 0.35s;
+}
+.item:nth-of-type(4n+1) .polaroid:before {
+transform: rotate(6deg);
+height: 20%;
+width: 47%;
+bottom: 30px;
+right: 12px;
+box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item:nth-of-type(4n+2) {
+transform: scale(0.8, 0.8) rotate(-5deg);
+transition: all 0.35s;
+}
+.item:nth-of-type(4n+2) .polaroid:before {
+transform: rotate(-6deg);
+height: 20%;
+width: 47%;
+bottom: 30px;
+left: 12px;
+box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item:nth-of-type(4n+4) {
+transform: scale(0.8, 0.8) rotate(3deg);
+transition: all 0.35s;
+}
+.item:nth-of-type(4n+4) .polaroid:before {
+transform: rotate(4deg);
+height: 20%;
+width: 47%;
+bottom: 30px;
+right: 12px;
+box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item:nth-of-type(4n+3) {
+transform: scale(0.8, 0.8) rotate(-3deg);
+transition: all 0.35s;
+}
+.item:nth-of-type(4n+3) .polaroid:before {
+transform: rotate(-4deg);
+height: 20%;
+width: 47%;
+bottom: 30px;
+left: 12px;
+box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item:hover {
+filter: none;
+transform: scale(1, 1) rotate(0deg) !important;
+transition: all 0.35s;
+}
+.item:hover .polaroid:before {
+content: '';
+position: absolute;
+z-index: -1;
+transform: rotate(0deg);
+height: 90%;
+width: 90%;
+bottom: 0%;
+right: 5%;
+box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+transition: all 0.35s;
+}
+
+.timeline-heading h4{
+	font-family : 휴먼편지체;
+	font-weight: bold;
+}
+
+
+.text-muted{
+ font-size : 14px;
+}
+
+#project h4, a{
+font-family : 휴먼편지체;
+font-size : 25px;
+}
+
+
+</style>
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Jeong Eun</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">            
+           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#favorites">Favorites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+			<div class="loading">
+			  <span>J</span>
+			  <span>E</span>
+			  <span>'</span>
+			  <span>s&nbsp;</span>		  
+			  <span>&nbsp;P</span>
+			  <span>A</span>
+			  <span>G</span>
+			  <span>E</span>
+			  <br>
+			<p>Welcome to my page :-)</p>  
+			</div>
+		</div>
+    </div>
+  </header>
+
+  <!-------------  About ------------->
+	<section class="page-section" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading text-uppercase">ABOUT</h2>
+					<br>
+					<h6 style="color:gray">안녕하세요 이정은입니다 ʕ·ᴥ·ʔ </h6>
+					<br>
+					<h3 class="section-subheading text-muted">
+						<sup style="color : #ffcc00">★</sup>저 별중의 하난 내꺼겠지? <br> 내 별은 언제나 날 비춰줄거야 <br>
+						'포기하지마'라고 위로하는 것처럼 <br> 스누피 中
+					</h3>
+				</div>
+			</div>
+			
+			<div class="wrapper">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="item">
+							<div class="polaroid">
+								<a href="#demo" data-toggle="collapse"> <img
+									src="./img/k.jpg">
+								</a>
+								<div class="caption">
+									18.12.12<br>태양의 서커스 쿠자
+								</div>
+							</div>
+						</div>
+						<div id="demo" class="collapse">
+							<p>생일 : 93.12.23</p>
+							<p>별명 : 쩡, 쫑니, 새우깡</p>
+							<p>취미 : 뮤지컬 보기, 넷플릭스 & 티빙 보기</p>
+
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="item">
+							<div class="polaroid">
+								<a href="#demo2" data-toggle="collapse"> <img
+									src="./img/s.jpg">
+								</a>
+								<div class="caption">
+									19.08.04<br>가족 여행 in Vietnam
+								</div>
+							</div>
+						</div>
+						<div id="demo2" class="collapse">
+							<p>가장 빨리 그만뒀던 운동 : 플라잉요가</p>
+							<p>최근 가장 많이 본 영화 : 알라딘</p>
+							<p>가장 좋았던 휴양지 : 코타키나발루</p>
+
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="item">
+							<div class="polaroid">
+								<a href="#demo3" data-toggle="collapse"> <img
+									src="./img/j.jpg">
+								</a>
+								<div class="caption">
+									동생 몰래 올리는<br>지똥이 사진
+								</div>
+							</div>
+						</div>
+						<div id="demo3" class="collapse">
+							<p>좋아하는 과일 : 천혜향, 골드키위, 파인애플</p>
+							<p>좋아하는 계절 : 가을</p>
+							<p>최애 : 이지똥</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+  <!-------------  Favorites------------->
+  <section class="page-section" id="favorites">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Favorites</h2>
+          <h3 class="section-subheading text-muted">My favorite things are...<img src="./img/heart.gif" style="width:100px;height:50px;"></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="./img/hjm.gif">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>추천 해주고 싶은 드라마</h4>
+                  <h4 class="subheading">tvN 눈이부시게</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted" style="font-size : 14px">보면서 엄청 많이 울었지만 울림과 감동이 있는 드라마<br>특히 마지막회 대사 중 나에게 와닿던 말<br>
+                  <em>'지금 삶이 힘든 당신 이 세상에 태어난 이상 당신은 이 모든걸 매일 누릴 자격이 있습니다. 대단하지 않은 하루가 지나고 또 별거 아닌 하루가 온다해도 인생은 살 가치가 있습니다. 후회만 가득한 과거와 불안하기만한 미래 때문에 지금을 망치지 마세요. 오늘을 살아가세요.
+                 	 눈이부시게, 당신은 그럴 자격이 있습니다.'</em> </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="./img/hi.gif" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>가장 많이 봤던 영화</h4>
+                  <h4 class="subheading">하이스쿨 뮤지컬</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted" style="font-size : 14px">이거 모르는 사람이 있다면 한국 사람 아님<br>1편부터 3편까지 수없이 봤음<br>영어 공부한다고 대본 다운받아서 외우기도 했던..<br>뮤지컬 영화라 노래도 좋고 주인공들도 풋풋하고 그냥 타임킬링용으로 최고임</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="./img/mon.gif" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>좋아하는 디즈니 영화</h4>
+                  <h4 class="subheading">몬스터 주식회사</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted" style="font-size : 14px">유일하게 노래가 안나오는데 여러번 봤던 <br>디즈니 애니메이션<br>일단 '부'가 너무 귀엽고 부때문에 안절부절 하는 <br>'설리'랑 '마이크'도 귀엽고 그냥 다 귀여움<br>마지막에 다시 만나는 부분 엄청 뭉클함</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="./img/d.gif" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>처음이자 마지막으로 본 웹드라마</h4>
+                  <h4 class="subheading">오늘도 무사히 시즌1,2</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">직장인 얘기이자 엄청 현실적인 웹드라마<br>이거 보면 다른 것들 공감 안되서 못 봄<br>과CC 또는 좀 오래 사겼던 경험 있으면 <br>백퍼 공감하면서 볼 수 있음<br>특히 배우들 현실 연기 너무 잘함</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4 style="text-align : center">It is<br>My<br>Story!</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------- SKILLS ----------- -->
+  <section class="bg-light page-section" id="project">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Project</h2>
+          <br>
+          <h3 class="section-subheading text-muted">지금 저희 4조처럼 함께 오순도순<br> 즐거운 조모임 만들 3차 조장님들 <br>제 <span style="color : green;"><b>그린라이트</b></span> 느끼셨나요?<br>그렇다면 절 냉큼 데려가세요</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/st.jpg" alt="">
+            <h4>할 수 있습니다</h4>
+            
+ 				<br>
+			    <div class="list-group">
+			      <a href="#project" class="list-group-item list-group-item-action">오래 집중하기</a> 
+			        <a href="#project" class="list-group-item list-group-item-action">한번 시작하면 최대한 완벽히 마무리 하기</a> 
+			        <a href="#project" class="list-group-item list-group-item-action">조원들한테 민폐 안 끼치기</a>
+			    </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/co.gif" alt="">
+ 
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/h.jpg" alt="">
+            <h4>노력하겠습니다</h4>
+            <br>
+			    <div class="list-group">
+			      <a href="#project" class="list-group-item list-group-item-action">틈틈히 복습하기</a> 
+			        <a href="#project" class="list-group-item list-group-item-action">미리미리 예습하기 </a> 
+			        <a href="#project" class="list-group-item list-group-item-action">복....습...예..습.ㅎ</a>
+			    </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Contact</h2>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; Lee JeongEun</span>
+        </div>       
+      </div>
+    </div>
+  </footer>
+
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+
+</body>
+
+</html>

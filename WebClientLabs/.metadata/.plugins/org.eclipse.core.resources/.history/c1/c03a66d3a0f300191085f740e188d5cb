@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery Events</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+			Mouse Events	Keyboard Events		Form Events		Document/Window Events
+			click			keypress			submit			load
+			dblclick		keydown				change			resize
+			mouseenter		keyup				focus			scroll
+			mouseleave	 						blur			unload
+		*/
+		$(document).ready(function() {
+			$('#btncopy').click(function() {
+				// let data = $('#userid').val();
+				// $('#txtcopyuserid').val(data);
+				$('#txtcopyuserid').val($('#userid').val());
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Jquery hover(mouseover, mouseleave)</p>
+	
+	ID: <input type="text" id="txtuserid">
+	<hr>
+	<input type="button" id="btncopy" value="copy">
+	<hr>
+	Copy ID: <input type="text" id="txtcopyuserid">
+	
+	<hr>
+	<select id="select_hobby">
+		<option value="JAVA">JAVA</option>
+		<option>script</option>
+		<option>jdbc</option>
+	</select>
+	<hr>
+	<table style="border: 1px solid red">
+		<tr>
+			<td>암호</td>
+			<td>
+				<input type="text" id="txtpwd2" size="20" maxlength="5">
+			</td>
+		</tr>
+	</table>
+	<div id="message" style="color: red"></div>
+</body>
+</html>

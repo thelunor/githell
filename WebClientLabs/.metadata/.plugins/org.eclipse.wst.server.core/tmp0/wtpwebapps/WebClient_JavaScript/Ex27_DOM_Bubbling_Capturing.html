@@ -30,12 +30,13 @@
 	<h2>Capturing:</h2>
 	<p id="myP2">Click me!</p>
 	</div>
-	
+	<!-- addEventListener(event, function, useCapture); -->
+	<!-- // The default value is false, which will use the bubbling propagation,
+		when the value is set to true, the event uses the capturing propagation. -->
 	<script>
 	document.getElementById("myP1").addEventListener("click", function() {
 	  alert("You clicked the white element!");
 	}, false); // Bubbling(Default)
-	// The default value is false, which will use the bubbling propagation, when the value is set to true, the event uses the capturing propagation.
 	
 	document.getElementById("myDiv1").addEventListener("click", function() {
 	  alert("You clicked the orange element!");

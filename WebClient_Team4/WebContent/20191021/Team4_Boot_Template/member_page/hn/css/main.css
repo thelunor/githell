@@ -1,0 +1,475 @@
+@charset "UTF-8";
+
+.service_list_more {
+	height: 35px; padding-bottom: 5px; margin: 0;
+}
+.banner_group.main {margin: 0;}
+
+/* 20160530 추가 */
+.main_home .service_list.grid_type .list_item {
+	padding-bottom: 0;
+}
+/* 20160530 추가 */
+
+/* 20160905 */
+.main_home .service_list_more {
+	height: auto; padding: 8px 0 16px; margin-top: 9px;
+}
+/* 20160905 */
+
+.main_chart .button_group {
+	margin-bottom: 24px;
+}
+.main_chart .button_group .btn {font-size: 16px;}
+.main_chart .button_group .play:before {display: none;}
+/* 20160530 수정 */
+.main_chart .button_group .play:after {
+	display: inline-block; position: relative; top: 9px; width: 12px; height: 16px; margin-left: 5px; background-position: -122px -207px; vertical-align: top;
+}
+/* 20160530 수정 */
+
+.main_shopping .shopping {
+	clear: both; border-top: 1px solid #ededed;
+}
+
+/* 20160905 */
+.shopping .tit {
+	line-height: 1; padding-top: 24px; margin-bottom: 12px; color: #323232; font-size: 20px; text-align: center;
+}
+/* 20160905 */
+.shopping .tit span {
+	display: inline-block; margin-bottom: 4px; font-size: 16px;
+}
+.shopping .list .thumb {position: relative;}
+.shopping .list .thumb:before {
+	content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+	border: 1px solid rgba(0,0,0, 0.04); background-color: transparent;
+}
+.shopping .list .name {
+	display: block; color: #01b925; font-size: 16px;
+}
+.shopping .list .subject {
+	display: block; color: #323232; font-size: 14px;
+}
+.shopping .list .copy {
+	display: block; color: #7d7d7d; font-size: 14px;
+}
+.shopping .list .money {
+	display: block; color: #323232; font-size: 15px;
+}
+
+.shopping.today {border-top: 0;}
+.shopping.today .list {margin: 0 16px;}
+.shopping.today .list:after {
+	content: ''; display: block; clear: both;
+}
+.shopping.today .list .item {
+	float: left; width: 30.5%; margin-left: 4%;
+}
+.shopping.today .list .item:nth-child(3n+1) {clear: both; margin-left: 0;}
+/* 20160905 */
+.shopping.today .list .thumb {
+	margin-bottom: 7px;
+	background-image: url('//cdnimg.melon.co.kr/resource/mobile40/cds/common/image/noimg_180x180.png');
+}
+/* 20160905 */
+.shopping .thumb .img,
+.ticket .thumb .img{
+	display:block;
+}
+
+.shopping .thumb,
+.shopping .thumb img,
+.shopping .thumb .img,
+.ticket .thumb,
+.ticket .thumb img,
+.ticket .thumb .img {
+	background-size: cover;	
+	background-repeat: no-repeat;
+	-moz-background-position: 50% 50%;
+	-webkit-background-position: 50% 50%;
+	background-position: 50% 50%;
+}
+.shopping.today .thumb,
+.shopping.today .thumb img {}
+.shopping.today .thumb .img {
+	padding-top: 100%;
+}
+.shopping.today .list .name {margin-bottom: 2px; font-size: 14px;}
+/* 20160905 */
+.shopping.today .list .subject {
+	margin-bottom: 16px; font-size: 15px;
+}
+/* 20160905 */
+
+.shopping.recom {}
+.shopping.recom .list {margin: 0 16px;}
+.shopping.recom .list .item {margin-bottom: 16px;}
+.shopping.recom .list .item:after {
+	content: ''; display: block; clear: both;
+}
+.shopping.recom .list .thumb {
+	float: left; width: 100px;
+	background-image: url('//cdnimg.melon.co.kr/resource/mobile40/cds/common/image/noimg_180x180.png');
+}
+.shopping.recom .thumb,
+.shopping.recom .thumb img,
+.shopping.recom .thumb .img {
+	width: 100px;height:100px;
+}
+
+.shopping.recom .list .content {
+	padding-top: 2px; margin-left: 113px;
+}
+.shopping.recom .list .copy {
+	margin-bottom: 9px;
+}
+.shopping.recom .list .name {margin-bottom: 2px;}
+.shopping.recom .list .subject {margin-bottom: 9px;}
+
+.shopping.new_goods {}
+.shopping.new_goods .list {margin: 0 16px 6px;}
+.shopping.new_goods .list:after {
+	content: ''; display: block; clear: both;
+}
+/* 20160905 */
+.shopping.new_goods .list .item {
+	float: left; width: 47.5%; margin-left: 5%; margin-bottom: 18px;
+}
+/* 20160905 */
+
+.shopping.new_goods .thumb,
+.shopping.new_goods .thumb img,
+.shopping.new_goods .thumb .img{
+	width:100%;
+}
+.shopping.new_goods .thumb .img {
+	height:auto;
+	padding-top: 100%;
+}
+
+.shopping.new_goods .list .item:nth-child(2n+1) {clear: both; margin-left: 0;}
+.shopping.new_goods .list .thumb {
+	position: relative; margin-bottom: 7px;
+	background-image: url('//cdnimg.melon.co.kr/resource/mobile40/cds/common/image/noimg_180x180.png');
+}
+.shopping.new_goods .list .thumb .icon {
+	position: absolute; top: 10px; right: 8px;
+}
+/* 20160905 */
+.shopping.new_goods .list .name {margin-bottom: 2px; font-size: 14px;}
+/* 20160905 */
+.shopping.new_goods .list .subject {margin-bottom: 9px;}
+.shopping.new_goods .list .money {margin-bottom: 7px;}
+.shopping.new_goods .list .money .sale {
+	margin-left: 5px; color: #7d7d7d; font-size: 12px; font-style: normal; text-decoration: line-through;
+}
+.shopping.new_goods .list .content > p {height: 15px;}
+.shopping.new_goods .list .icon {
+	display: inline-block; width: 45px; height: 15px; background: url('//cdnimg.melon.co.kr/resource/mobile40/cds/main/image/main_sprite.png') no-repeat 0 0; background-size: 125px auto;
+	text-indent: -9999em; overflow: hidden;
+}
+.shopping.new_goods .list .icon.free {
+	background-position: 0 0;
+}
+.shopping.new_goods .list .icon.limit {
+	background-position: -52px 0;
+}
+.shopping.new_goods .list .icon.secret {
+	width: 50px; background-position: 0 -15px;
+}
+.shopping.new_goods .list .icon.gift {
+	background-position: -52px -15px;
+}
+.shopping.new_goods .list .icon.soldout {
+	width: 30px; height: 15px; background-position: -52px -30px;
+}
+.shopping.new_goods .list .icon.new {
+	width: 24px; height: 24px; background-position: -98px 0;
+}
+.main_shopping .button_group,
+.main_ticket .button_group {
+	margin-bottom: 24px;
+}
+.main_shopping .button_group .btn,
+.main_ticket .button_group .btn {
+	line-height: 38px;
+}
+.main_shopping .button_group .btn.sprite:after,
+.main_ticket .button_group .btn.sprite:after {
+	display: inline-block; width: 5px; height: 10px; margin-left: 5px; background-position: -217px -144px;
+}
+
+.main_ticket .ticket {
+	clear: both; border-top: 1px solid #ededed;
+}
+/* 20160905 */
+.ticket .tit {
+	line-height: 1; padding-top: 24px; margin-bottom: 12px; color: #323232; font-size: 20px; text-align: center;
+}
+/* 20160905 */
+.ticket .tit a {
+	color: #323232; font-size: 20px;
+}
+.ticket .tit a.sprite:before {display: none;}
+.ticket .tit a.sprite:after {
+	display: inline-block; width: 8px; height: 14px; margin-left: 5px;
+	background-position: -389px -118px;
+}
+
+.ticket.banner {border-top: 0;}
+.ticket.banner .list {}
+.ticket.banner .list .item {position: relative;}
+.ticket.banner .list .thumb {
+	position: relative;
+	background-image: url('//cdnimg.melon.co.kr/resource/mobile40/cds/common/image/noimg_text.png');
+	background-size: 50% auto;
+}
+.ticket.banner .list .thumb,
+.ticket.banner .list .thumb img,
+.ticket.banner .list .thumb .img
+{
+	width:100%;
+	height:auto;	
+}
+.ticket.banner .list .thumb .img {
+	padding-top: 50%;
+}
+    
+.ticket.banner .list .thumb:before {
+	content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.ticket.banner .list .content {
+	position: absolute; left: 15px; bottom: 15px; z-index: 9;
+}
+.ticket.banner .list .copy {
+	margin-bottom: 5px; color: #fff; font-size: 14px;
+}
+.ticket.banner .list .subject {
+	margin-bottom: 5px; color: #01b925; font-size: 20px;
+}
+.ticket.banner .list .meta {
+	color: #fff; font-size: 13px;
+}
+.ticket.banner .list .meta .location {
+	margin-left: 5px; font-size: 12px;
+}
+
+.ticket.hit .list {margin: 0 16px 3px;}
+.ticket.hit .list:after {
+	content: ''; display: block; clear: both;
+}
+.ticket.hit .list .item {
+	float: left; width: 47.5%; margin-left: 5%; margin-bottom: 13px;
+}
+.ticket.hit .list .item:nth-child(2n+1) {clear: both; margin-left: 0;}
+.ticket.hit .list .thumb {
+	margin-bottom: 7px;
+	background-image: url('//cdnimg.melon.co.kr/resource/mobile40/cds/common/image/noimg_312x424.png');
+}
+.ticket.hit .thumb,
+.ticket.hit .thumb img,
+.ticket.hit .thumb .img{width:100%;height:auto;}
+.ticket.hit .thumb .img{position: relative; padding-top:136%;}
+.ticket.hit .thumb .img:after {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1px solid rgba(0,0,0, 0.04);}
+
+.ticket.hit .list .subject {
+	margin-bottom: 2px; color: #323232; font-size: 15px;
+}
+.ticket.hit .list .date {
+	display: block; margin-bottom: 2px; color: #646464; font-size: 13px;
+}
+.ticket.hit .list .location {
+	display: block; margin-bottom: 7px; color: #646464; font-size: 13px;
+}
+.ticket.hit .list .alert {
+	display: block; color: #01b925; font-size: 14px;
+}
+
+.ticket.wish .body {
+	margin: 0 16px 25px; background-color: #fff;
+}
+.ticket.wish .body .head_copy {
+	line-height: 1.4em; padding: 12px 0; color: #646464; font-size: 14px; text-align: center;
+}
+.ticket.wish .body .head_copy span {color: #01b925;}
+.ticket.wish .body .thumb {position: relative;}
+.ticket.wish .body .thumb,
+.ticket.wish .body .thumb img,
+.ticket.wish .body .thumb .img {
+	width:100%;height:auto;
+}
+.ticket.wish .body .thumb .img {
+	padding-top: 32%;
+}
+.ticket.wish .body .thumb:after {
+	content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+	background-color: rgba(0,0,0,.3); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.ticket.wish .body .thumb .location {
+	display: block; position: absolute; left: 10px; bottom: 6px; color: #fff; font-size: 14px; z-index: 9;
+}
+.ticket.wish .body .thumb .location:before {
+	content: ''; display: inline-block; width: 11px; height: 14px; margin-right: 5px; background: url('//cdnimg.melon.co.kr/resource/mobile40/cds/main/image/main_sprite.png') no-repeat -21px -31px; background-size: 125px auto; vertical-align: middle;
+}
+.ticket.wish .body .thumb .time {
+	position: absolute; top: 9px; right: 9px; padding: 2px 7px; border: 1px solid #fff; border-radius: 100px; background-color: rgba(0,0,0, .3); color: #fff; font-size: 12px;
+}
+.ticket.wish .body .content {margin: 15px 5px;}
+.ticket.wish .body .content:after {
+	content: ''; display: block; clear: both;
+}
+.ticket.wish .body .content .subject {
+	float: left; color: #323232; font-size: 18px;
+}
+.ticket.wish .body .content .meta {float: right;}
+.ticket.wish .body .content .meta .label {
+	display: inline-block; color: #01b925; font-size: 11px; 
+}
+.ticket.wish .body .content .meta .label:before {
+	content: ''; display: inline-block; width: 19px; height: 13px; margin: 0 5px 0 0; background: url('//cdnimg.melon.co.kr/resource/mobile40/cds/main/image/main_sprite.png') no-repeat 0 -32px; background-size: 125px auto; vertical-align: top;
+}
+.ticket.wish .body .content .meta .value {
+	color: #323232; font-size: 18px;
+}
+.ticket.wish .body .progressbar {
+	height: 4px; background-color: #d9d9d9;
+}
+.ticket.wish .body .progressbar .bar {
+	height: 4px; background-color: #01b925;
+}
+.ticket.wish .vs_list {}
+.ticket.wish .vs_list:after {
+	content: ''; display: block; clear: both;
+}
+.ticket.wish .vs_list .item {
+	float: right; width: 49%;
+}
+.ticket.wish .vs_list .item:first-child {
+	float: left;
+}
+.ticket.wish .vs_list .item .content {
+	margin: 5px 0 10px;
+}
+.ticket.wish .vs_list .item .content .subject {
+	float: none; margin-bottom: 5px; font-size: 17px; text-align: center;
+}
+.ticket.wish .vs_list .item .content .meta {
+	float: none; text-align: center;
+}
+.ticket.wish .vs_list .item .content .meta .label {
+	font-size: 14px;
+}
+.ticket.wish .vs_list .item .content .meta .label:before {
+	width: 13px; height: 16px; background-position: -35px -30px;
+}
+.ticket.wish .vs_list .item .content .meta .value {
+	color: #4b4b4b; font-size: 11px;
+}
+
+.ticket.open_news {}
+.ticket.open_news .list {margin: 0 16px;}
+.ticket.open_news .list .item {
+	padding: 16px 0; border-top: 1px solid #ededed;
+}
+.ticket.open_news .list .item:first-child {
+	padding-top: 0; border-top: 0;
+}
+.ticket.open_news .list .item:after {
+	content: ''; display: block; clear: both;
+}
+.ticket.open_news .list .thumb {
+	float: left; position: relative;;
+	background-image: url('//cdnimg.melon.co.kr/resource/mobile40/cds/common/image/noimg_312x312.png');
+}
+
+.ticket.open_news .thumb,
+.ticket.open_news .thumb img,
+.ticket.open_news .thumb .img{
+	width: 68px;height:96px;
+}
+
+.ticket.open_news .list .thumb:before {
+	content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+	border: 1px solid rgba(0,0,0, 0.04); background-color: transparent;
+}
+.ticket.open_news .list .thumb .icon {
+	position: absolute; top: 0; right: 0; line-height: 1.1em; padding: 3px;
+	background-color: #00cd3c; color: #fff; font-size: 10px;
+}
+/* 20160905 */
+.ticket.open_news .list .content {
+	padding-top: 2px; margin-left: 81px;
+}
+/* 20160905 */
+.ticket.open_news .list .subject {
+	max-height: 36px; margin-bottom: 8px; color: #323232; font-size: 15px;
+}
+.ticket.open_news .list .open {
+	margin-bottom: 4px; color: #01b925; font-size: 13px;
+}
+.ticket.open_news .list .location {
+	color: #646464; font-size: 13px;
+}
+
+.ticket.ranking {}
+/* 20160905 */
+.ticket.ranking .list {margin: 0 16px 24px;}
+/* 20160905 */
+.ticket.ranking .list .item {
+	padding: 11px 0; border-top: 1px solid #ededed;
+}
+.ticket.ranking .list .item:first-child {
+	padding-top: 0; border-top: 0;
+}
+.ticket.ranking .list .item:after {
+	content: ''; display: block; clear: both;
+}
+.ticket.ranking .list .rank {
+	float: left; width: 30px; color: #01b925; font-size: 23px; text-align: center;
+}
+.ticket.ranking .list .thumb {
+	display: none; float: left; position: relative; width: 102px; margin-left: 6px;
+	background-image: url('//cdnimg.melon.co.kr/resource/mobile40/cds/common/image/noimg_312x312.png');
+}
+.ticket.ranking .thumb,
+.ticket.ranking .thumb img,
+.ticket.ranking .thumb .img {
+	width: 102px;
+    height: 144px
+}
+.ticket.ranking .list .thumb:before {
+	content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+	border: 1px solid rgba(0,0,0, 0.04); background-color: transparent;
+}
+.ticket.ranking .list .content {
+	margin-left: 37px;
+}
+.ticket.ranking .list .subject {
+	line-height: 27px; color: #323232; font-size: 15px;
+}
+.ticket.ranking .list .open {
+	display: none; margin-bottom: 4px; color: #01b925; font-size: 13px;
+}
+.ticket.ranking .list .location {
+	display: none; color: #646464; font-size: 13px;
+}
+.ticket.ranking .is_active .rank {line-height: 1; font-size: 28px;}
+.ticket.ranking .is_active .thumb {display: block;}
+/* 20160905 */
+.ticket.ranking .is_active .content {
+	padding-top: 2px; margin-left: 151px;
+}
+.ticket.ranking .is_active .subject {
+	display: -webkit-box; -webkit-box-orient: vertical; white-space: normal; line-height: 1.3em; margin-bottom: 8px; -webkit-line-clamp: 2; padding-bottom: 2px;
+}
+/* 20160905 */
+.ticket.ranking .is_active .open {display: block;}
+.ticket.ranking .is_active .location {display: block;}
+
+/* slider Ajax 시 height 0 되는 이슈 */
+.swiper_container {min-height: 350px;}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Theme Company Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="css/mainStyle.css" rel="stylesheet">
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <div class="jumbotron text-center" >
+        <h1>About Hyoungnam</h1>
+        <p>Drop_4our_Bit</p>
+
+    </div>
+
+
+    <div id="about" class="about container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="images/me.png" alt="img02" class="img-responsive" style="margin-top:15%;">
+            </div>
+            <div class="col-sm-7">
+                <div class="profile row">
+                    <p class="col-sm-1"></p>
+                    <span class="profile-head col-sm-11">오형남은 </span>
+                    <p class="profile-ele col-sm-2"></p>
+                    <p class="profile-ele col-sm-4">생년월일</p>
+                    <p class="profile-ele col-sm-5 value">1996년 12월 20일</p>
+                </div>
+                <div class="profile row">
+                    <p class="profile-ele col-sm-2"></p>
+                    <p class="profile-ele col-sm-4">취미</p>
+                    <p class="profile-ele col-sm-5 value">노래 듣기</p>
+                </div>
+                <div class="profile row">
+                    <p class="profile-ele col-sm-2"></p>
+                    <p class="profile-ele col-sm-4">좋아하는 가수</p>
+                    <p class="profile-ele col-sm-5 value">한요한</p>
+                </div>
+                <div class="profile row">
+                    <p class="profile-ele col-sm-2"></p>
+                    <p class="profile-ele col-sm-4"></p>
+                    <p class="profile-ele col-sm-5 value">Beenzino</p>
+                </div>
+                <div class="profile row">
+                    <p class="profile-ele col-sm-2"></p>
+                    <p class="profile-ele col-sm-4"></p>
+                    <p class="profile-ele col-sm-5 value">Loco</p>
+                </div>
+                <div class="profile row">
+                    <p class="profile-ele col-sm-2"></p>
+                    <p class="profile-ele col-sm-4">최애</p>
+                    <p class="profile-ele col-sm-5 value">오도도</p>
+                </div>
+            </div>
+            <div class="col-sm-2">
+
+                <!--span 텍스트나 이미지 크기에 맞게 늘어났다 줄어났다 함-->
+            </div>
+
+        </div>
+    </div>
+    <div id="favorite" class="about container-fluid">
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6">
+                <h1 style="color: black;">한요한</h1><br>
+                <h4><strong>출생: </strong> 1991년 12월 3일</h4>
+                <h4><strong>소속사: </strong>JustMusic</h4>
+                <h4><strong>대표곡: </strong><a class="btn btn-default"
+                        href="https://www.youtube.com/watch?v=Gji9oQvwuUU">12:00</a><a class="btn btn-default"
+                        href="https://www.youtube.com/watch?v=lerSeU7CBlg">불꽃</a></h4>
+            </div>
+            <div class="col-sm-4">
+                <img src="images/exiv.jpg" style="width:70%;"></span>
+                <!--glyphicon에 glyphicon-globe아이콘을 logo로 지정 https://getbootstrap.com/docs/3.3/components/-->
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+                <img src="images/2426.jfif" style="width:70%;"></span>
+                <!--glyphicon에 glyphicon-globe아이콘을 logo로 지정 https://getbootstrap.com/docs/3.3/components/-->
+            </div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <h1 style="color: black;">Beenzino</h1><br>
+                <h4><strong>출생: </strong> 1987년 9월 12일</h4>
+                <h4><strong>소속사: </strong>Illionaire Records</h4>
+                <h4><strong>대표곡: </strong><a class="btn btn-default"
+                        href="https://www.youtube.com/watch?v=Gji9oQvwuUU">Boogie on and on</a><a
+                        class="btn btn-default" href="https://www.youtube.com/watch?v=lerSeU7CBlg">AlwaysAwake</a></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6">
+                <h1 style="color: black;">Loco</h1><br>
+                <h4><strong>출생: </strong> 1989년 12월 25일</h4>
+                <h4><strong>소속사: </strong>AOMG</h4>
+                <h4><strong>대표곡: </strong><a class="btn btn-default"
+                        href="https://www.youtube.com/watch?v=Gji9oQvwuUU">감아</a><a class="btn btn-default"
+                        href="https://www.youtube.com/watch?v=lerSeU7CBlg">시간이 들겠지</a></h4>
+            </div>
+            <div class="col-sm-4">
+                <img src="images/loco.jfif" style="width:70%;"></span>
+                <!--glyphicon에 glyphicon-globe아이콘을 logo로 지정 https://getbootstrap.com/docs/3.3/components/-->
+            </div>
+        </div>
+    </div>
+
+    <!--Carousel start-->
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" style="margin-left: 5%;">
+
+
+        <!-- Wrapper for slides -->
+        <div id="dodo" class="row">
+            <div class="col-sm-1"></div>
+            <div class=" col-sm-4 dodo">
+                <!-- Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <img src="images/a.jpg" class="img-responsive carouselimg" alt="author">
+                    </div>
+                    <div class="item">
+                        <img src="images/b.jpg" class="img-responsive carouselimg" alt="author">
+                    </div>
+                    <div class="item">
+                        <img src="images/c.jpg" class="img-responsive carouselimg" alt="author">
+                    </div>
+                    <div class="item">
+                        <img src="images/d.jpg" class="img-responsive carouselimg" alt="author">
+                    </div>
+                    <div class="item">
+                        <img src="images/e.jpg" class="img-responsive carouselimg" alt="author">
+                    </div>
+                    <div class="item">
+                        <img src="images/f.jpg" class="img-responsive carouselimg" alt="author">
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      
+                        <!--display: none 과 똑같이 화면에 안보이지만 dispalay: none은 검색봇이 태그요소를
+                                인식 못하게됨. 따라서 웹 접근성이 떨어짐 >> 이걸 보완하는게 sr-only 근데 왜 여기서 쓴거냐-->
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+                <img src="./member_page/hn/main.html" style="width:100%;">
+            </div>
+        </div>
+    </div>
+
+ 
+            
+        </div>
+        <!--navbar-->
+        <nav class="navbar navbar-default navbar-fixed-top ">
+            <!--fixed로 자리 고정-->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> <!-- ?? 화면이 작아지면 네비바가 작은 아이콘으로-->
+                    </button>
+                    <a class="navbar-brand" href="#">Drop_4our_Bit</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#favorite">Favorite</a></li>
+                        <li><a href="#dodo">Dodo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <footer class="container-fluid text-center">
+            <a href="#myPage" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            </p>
+        </footer>
+
+        <script>
+
+            $(document).ready(function () {
+                // Add smooth scrolling to all links in navbar + footer link
+                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function () {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+                $(window).scroll(function () {
+                    $(".slideanim").each(function () {
+                        var pos = $(this).offset().top;
+
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slide");
+                        }
+                    });
+                });
+            })
+        </script>
+</body>
+
+</html>

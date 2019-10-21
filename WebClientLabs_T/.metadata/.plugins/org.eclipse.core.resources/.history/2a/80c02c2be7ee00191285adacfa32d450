@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function evtproductor(frm){
+			console.log(frm);
+			console.log(frm.productor.value);
+			console.log("index: " + frm.productor.selectedIndex);
+			//selectedIndex 제공되는 속성 ...
+		}
+	</script>
+</head>
+<body>
+모델별 최저가 검색<br>
+	<form name="frmdata">
+			<select  style="width: 200px" name="productor"  onchange="evtproductor(this.form)">
+				<option value="A000" selected>제조사</option>
+				<option value="A001">삼성전자</option>
+				<option value="A002">LG전자</option>
+				<option value="A003">Apple</option>
+				<option value="A004">Dell</option>
+			</select>
+		    <input type="text" name="valProductor" size="10">
+		    <input type="text" name="txtProductor" size="10">
+		    <br>
+	      
+		    <select style="width: 200px"  name="brand"  onchange="evtBrand()">
+		        <option value="B000" SELECTED>브랜드</option>
+		        <option value="B001">센스</option>
+		        <option value="B002">X-Note</option>
+		        <option value="B003">MAC</option>
+		        <option value="B004">VAIO</option>
+		    </select>
+			    <input type="text" name="valBrand" size="10">
+			    <input type="text" name="txtBrand" size="10">
+	</form>
+
+</body>
+</html>

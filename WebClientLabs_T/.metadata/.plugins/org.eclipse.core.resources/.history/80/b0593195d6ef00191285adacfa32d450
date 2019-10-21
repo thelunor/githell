@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+	<script type="text/javascript">
+		//javascript Array : 정적 + Collection
+		//Java : int[] arr = {10,20,30}; 고정배열 (정적)
+		//Java : Collection >> ArrayList list = new ArrayList();
+		//list.add() , list.get() ....
+		
+		var array = ['포도','사과'];
+		document.write(array.toString() + "<br>");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

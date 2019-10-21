@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.column, .row, .dorpfield {
+   box-sizing: border-box;
+   margin: 0;
+}
+
+.dropfield {
+   display: flex;
+   height: 450px;
+   text-align: center;
+   position:relative;
+   
+}
+
+.backgroundimg {
+width:70%;
+left:15%;
+position: absolute;
+border: 2px solid black;
+height: 450px;
+z-index:-1;
+}
+
+.droppoint {
+   margin: auto;
+   height: 30%;
+   
+   text-align: center;
+   border-image-slice: 30;
+   min-width: 16%;
+   position: relative;
+}
+
+#p {
+   top: 50%;
+   left: 50%;
+   font-size: 25px;
+   text-align: center;
+   text-decoration: bold;
+}
+
+.header {
+   margin: auto;
+   text-align: center;
+   padding: 1px;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+}
+
+.column {
+   flex: 16%;
+   max-width: 16%;
+   padding: 0 4px;
+}
+
+.column img {
+   margin-top: 8px;
+   vertical-align: middle;
+   width: 200px;
+   height: 200px;
+}
+
+@media screen and (max-width: 800px) {
+   .column, .dorppoint {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+   }
+   .d3 {
+      size: 200px;
+      margin: 30px;
+   }
+}
+
+.tooltiptxt {
+  
+  width: 120px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 70%;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 30px;
+}
+
+</style>
+
+<script type="text/javascript">
+   function backToOrg(x) {
+      x.removeAttribute("style");
+   }
+   function backToD(y) {
+      y.setAttribute("style", "filter:grayscale(100%)");
+   }
+
+   function allowDrop(ev) {
+      ev.preventDefault();
+      document.getElementById("p").style.display = "none";
+   }
+
+   function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+   }
+   
+
+   var ourLink = "";
+   var name = "";
+   function setLink(data) {
+      var ele = document.getElementById(data);
+      if (data == "iy") {
+         ourLink = "http://192.168.0.69:8080/Homework/MyHomepage2.html";
+         name= "YongWook";
+      } else if (data == "hy") {
+         ourLink = "http://192.168.0.56:8090/WebClient/Bootstrap/scarlett.html";
+         name= "SooYeon";
+      } else if (data == "yd") {
+         ourLink = "http://192.168.0.13:8090/WebClient_JavaScript/leehayeon.html";
+         name= "HaYeon";
+      } else if (data == "js") {
+         ourLink = "http://192.168.0.91:8090/Webclient_javascript/myPage.html";
+         name= "JinSung";
+      } else if (data == "sy") {
+         ourLink = "http://192.168.0.72:8090/Inyoung/Inyoung.html";
+         name= "InYoung";
+      } else if (data == "cs") {
+         ourLink = "http://192.168.0.65:8090/WebClient/Startbootstrap-resume-gh-pages/yangchansik.html";
+         name= "ChanSik";
+      }
+   }
+
+   function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      console.log(data);
+      
+      setLink(data);
+      console.log(ourLink);
+      var ele = document.getElementById(data);
+      ele.setAttribute("width", "160px");
+      ele.setAttribute("height", "160px");
+      ele.removeAttribute("style");
+      ele.removeAttribute("onmouseover");
+      ele.removeAttribute("onmouseout");
+
+      ev.target.appendChild(document.getElementById(data));
+
+      var link = document.createElement("a");
+      link.setAttribute("href", ourLink);
+      
+      var btnimg = document.createElement("img")
+      btnimg.setAttribute("src", "images/button.png");
+      btnimg.setAttribute("type", "button");
+      btnimg.setAttribute("width", "100");
+      btnimg.setAttribute("height", "50");
+
+      link.appendChild(btnimg);
+
+      var droppoint = document.getElementById("droppoint");
+      console.log(btnimg);
+      console.log(droppoint);
+
+      droppoint.appendChild(link);
+      
+      var tooltiptxt = document.createElement("span");
+      tooltiptxt.setAttribute("class", "tooltiptxt");
+      tooltiptxt.innerHTML = name;
+      droppoint.appendChild(tooltiptxt);
+      
+
+   }
+   /*
+   function reSize(pic){
+   console.log(pic);
+
+      pic.setAttribute("style", "width:10%");
+      pic.setAttribute("style", "height:10%");
+   }
+    */
+
+   window.onload = function() {
+      var images = document.getElementsByClassName("character");
+      console.log(images);
+      for (var i = 0; i < images.length; i++) {
+         images[i].setAttribute("draggable", "true");
+         images[i].setAttribute("title", "Pick me~~!");
+         images[i].setAttribute("ondragstart", "drag(event)");
+         images[i].setAttribute("style", "filter:grayscale(100%)");
+         images[i].setAttribute("onmouseover", "backToOrg(this)");
+         images[i].setAttribute("onmouseout", "backToD(this)");
+
+      }
+      
+      var columnDivs = document.getElementsByClassName("column");
+      for (var j=0; j< columnDivs.length; j++) {
+         columnDivs[j].setAttribute("ondrop", "drop(event)"); 
+         columnDivs[j].setAttribute("ondragover", "allowDrop(event)");
+         
+      }
+
+   }
+</script>
+</head>
+<body>
+
+
+
+   <div class="dropfield" id="dropfield">
+   <img src="images/toy1.png" class="backgroundimg">
+      <!--  
+<div class="header" id="d1">
+<h1>Team 3</h1>
+</div>
+-->
+      <div ondrop="drop(event)" ondragover="allowDrop(event)"
+         class="droppoint" id="droppoint">
+         <p id="p">Drop Here</p>
+      </div>
+   </div>
+
+
+
+
+   <div class="row" style="text-align: center">
+
+      <div class="column">
+         
+         <img src="images/woody.jpg" class="character" name="iy" id="iy">
+      </div>
+      <div class="column">
+         <img src="images/jessie.png" class="character" name="hy" id="hy">
+      </div>
+      <div class="column">
+         <img src="images/hamm1.jpg" class="character" name="yd" id="yd">
+      </div>
+      <div class="column">
+         <img src="images/mr.-potato.jpg" class="character" name="js" id="js">
+      </div>
+      <div class="column">
+         <img src="images/buzz.jpg" class="character" name="sy" id="sy">
+      </div>
+      <div class="column">
+         <img src="images/alien.JPG" class="character" name="cs" id="cs">
+      </div>
+   </div>
+</body>
+</html>

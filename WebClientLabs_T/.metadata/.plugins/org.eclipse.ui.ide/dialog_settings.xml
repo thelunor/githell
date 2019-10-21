@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Temp\Team3_Boot"/>
+			<item value="C:\Temp\Team2_Boot_Template"/>
+			<item value="C:\Temp\Team2_Boot"/>
+			<item value="C:\Temp\Team2_API"/>
+			<item value="C:\Temp\Team1_Boot_Template"/>
+			<item value="C:\Temp\Team1_Boot"/>
+			<item value="C:\Temp\Team1_API"/>
+			<item value="C:\Temp\104_3Team_HtmlAPI_Video_drag_drop"/>
+			<item value="C:\Users\USER\Downloads\1조 project\Team1_Boot_Template"/>
+			<item value="C:\Users\USER\Downloads\1조 project\Team1_Boot"/>
+			<item value="C:\Users\USER\Downloads\1조 project\Team1_API"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

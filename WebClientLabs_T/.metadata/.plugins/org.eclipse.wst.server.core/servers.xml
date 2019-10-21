@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="32">
+    <list key="modules" value0="WebClient_Jquery::org.eclipse.jst.jee.server:WebClient_Jquery::jst.web::4.0" value1="Team1_API::org.eclipse.jst.jee.server:Team1_API::jst.web::3.0" value2="Team3_Boot_Template::org.eclipse.jst.jee.server:Team3_Boot_Template::jst.web::4.0" value3="WebClient_JavaScript::org.eclipse.jst.jee.server:WebClient_JavaScript::jst.web::4.0" value4="Team3_API::org.eclipse.jst.jee.server:Team3_API::jst.web::4.0" value5="Team4_API::org.eclipse.jst.jee.server:Team4_API::jst.web::4.0"/>
+  </server>
+</servers>

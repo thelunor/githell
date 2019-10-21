@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 함수 </title>
+	<script type="text/javascript">
+		var pele = document.createElement("p");
+		var hrele = document.createElement("hr");
+		var h3ele = document.createElement("h3");
+		var textnode = document.createTextNode("hello world");
+		var divele = document.createElement("div");
+		var textnode2 = document.createTextNode("HI HI HI");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

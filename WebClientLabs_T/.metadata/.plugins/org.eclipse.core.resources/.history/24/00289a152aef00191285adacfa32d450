@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.democlass {
+  color: red;
+}
+</style>
+</head>
+<body>
+<div id="div">
+<h1 class="democlass">Hello World1</h1>
+<h1 class="democlass">Hello World2</h1>
+<h1 class="democlass">Hello World3</h1>
+</div>
+<p id="demo">Click the button to remove the class attribute from the h1 element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  //document.getElementsByTagName("H1")[0].removeAttribute("class"); 
+  var arr = document.getElementsByTagName("H1");
+  //for(var index in arr){
+  	//arr[index].removeAttribute("class"); 
+  	//console.log(arr[index]);
+  	//document.body.removeChild(arr[index]);error
+  	//document.getElementById("div").removeChild(arr[0]);
+  	//if(arr.length > 0){
+	//	document.getElementById("div").removeChild(arr[arr.length -1]);
+	//}else{
+	//	alert("모두 삭제 되었습니다");
+	//}
+  	var len = arr.length;
+  	for(var i= 0 ; i < len ; i++){
+  		console.log(arr.length + " : " + i);
+  		
+  		document.getElementById("div").removeChild(arr[0]);
+  	}
+  //}
+  
+    //var tab = document.getElementById("Tab");  //하나의 요소만 가지고 와요 (제일 먼저 만나는 녀석)
+	//console.log(tab);
+	//document.getElementById("div").removeChild(tab);
+	
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

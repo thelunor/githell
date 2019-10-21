@@ -98,7 +98,7 @@
 	document.write(product.toString() + "<br>");
 	
 	var person = { // JSON(리터럴 방식) 표기법
-			name:"홍길동",
+			name:"홍길동", // key(property: name)
 			addr:'서울시 강남구 역삼동',
 			eat:function(food) {
 				document.write(this.name + " / " + this.addr + " / " + food + "냠냠" + "<br>"); // member field의 접근은 this로 한다
@@ -112,7 +112,7 @@
 	// var product = {제품명:'사과', 년도:'2018', 원산지:'대구'};
 		delete(product.년도);
 		
-	// for (var index in Array) { arr[index] } // 배일이면 무조건 index
+	// for (var index in Array) { arr[index] } // 배열이면 무조건 index
 	
 	// JSON: { 키:값, 키:값, ... } // 키와 값을 한 쌍으로 갖는 배열로 본다
 	for (var key in product) { // 무조건 변수명 key 사용
@@ -128,6 +128,41 @@
 	// JSON 객체
 	// 외부 API(우편번호, 서울시 화장실정보, 날씨정보, 대법원 판례... 등 데이터)
 	// KEY: JSON을 가지고 필요한 정보를 추출해서 가공
+	
+	var Member = {}; // 빈 객체 생성(var Member = new Object();)
+	Member.name = "hong"; // { name:"hong" }
+	document.write("<br>" + Member.name + "<br>");
+	Member.age = 100;
+	document.write(Member.age + "<br>");
+	
+	// 기능 함수
+	Member.print = function() {
+		document.write(this.name + " / " + this.age + "<br>");
+	}
+	
+	Member.print(); // 객체.함수명(호출)
+	
+	// JSON 객체를 해석하고 원하는 값을 출력
+	// 객체가 객체를 가질 수 있다
+	var Grade = {
+		"list":{
+			"hong":10,
+			"kim":20,
+			"park":30
+		},
+		"show":function() {
+			for (var key in this.list) { // this.list 자체가 JSON 객체
+				document.write(key + " : " + this.list[key] + "<br>");
+			}
+		}
+	}
+	Grade.show();
+	document.write("<br>");
+	var listobj = Grade.list; // JSON 객체
+	document.write(listobj.kim + "<br>");
+	for (var key in listobj) {
+		document.write(key + ", " + listobj[key] + "<br>");
+	}
 	
 	({
 		"title": "Recent Uploads tagged raccoon",

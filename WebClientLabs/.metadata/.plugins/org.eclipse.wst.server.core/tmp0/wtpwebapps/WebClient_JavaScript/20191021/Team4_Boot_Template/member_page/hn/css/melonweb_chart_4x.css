@@ -1,0 +1,584 @@
+@charset "utf-8";
+
+/*
+	Title : Melon Web 4.x UI Common Template
+	Create Date : 2017.05
+	Author : mTechCrew
+	Category : Chart(멜론차트)
+*/
+
+.calendar_prid {margin-top: 38px; margin-bottom: 32px;}
+
+.multi_row {position: relative;}
+.multi_row .sorting {position: absolute; top: 0; left: 0; z-index: 10;}
+.multi_row .top3.button_group {position: absolute; top: 30px; right: 0; z-index: 10;}
+
+.top3.button_group {position: relative; margin-bottom: 10px; padding-right: 2px; text-align: right;}
+.top3.button_group button {margin-left: 5px;}
+.top3.button_group .text {margin-right: 6px; color: #767676; font-size: 13px; vertical-align: middle;}
+
+/*
+	실시간 TOP100
+*/
+.wrap_top3 {position:relative;height:319px; width:1004px; margin:-2px 0 40px; *margin-top:2px; border:1px solid #404b60;}
+.wrap_top3 .real_graph{position:relative;width:100%;}
+.wrap_top3 .graph_wrap{float:left;width:647px; height:320px; position:relative; z-index:1; background:url('//cdnimg.melon.co.kr/resource/image/web/chart/bg_realtimechart_20180614.png') no-repeat 0 0;}
+.wrap_top3 .five_wrap {position: relative; z-index: 5;}
+.wrap_top3 .five_wrap .graph_wrap { background:url('//cdnimg.melon.co.kr/resource/image/web/chart/bg_fivechart.png') no-repeat 0 0; overflow:visible;}
+
+.wrap_top3 .graph_wrap .graph_rank{height:277px;}
+
+/* baloon default */
+.wrap_top3 .graph_wrap .dataLabel_wrap { position:absolute; width:100px; height:0; top:7px; left: -50px; text-align:center;}
+.wrap_top3 .graph_wrap .time_layer { position:absolute; left:50%; margin-left:-11px; display:inline-block; width:22px; height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_balloon.png) no-repeat 0 0; cursor:pointer; font-size:0;line-height:0; z-index:0; text-align:center; vertical-align:middle;}
+.wrap_top3 .graph_wrap .time_layer .icon {display:none;}
+/* rank top d_7 */
+.wrap_top3 .graph_wrap .dataLabel_wrap.d_7 { top:-12px; left:-48px;}
+
+/* line active */
+.wrap_top3 .graph_wrap .mhover .time_layer {height:25px;background-position:0 -23px;}
+
+/* marker active */
+.wrap_top3 .graph_wrap .mhover .time_layer.mactive {background:none;width:auto;height:auto; margin-left:-32px; margin-top:-13px; }
+.wrap_top3 .graph_wrap .mhover .time_layer.mactive .icon{ display:inline-block; }
+
+
+.wrap_top3 .graph_wrap .occupancy_cont{position:relative; z-index:2; height:41px; padding-top:1px;}
+.wrap_top3 .graph_wrap .rank_bg{height:7px;width:703px;font-size:0;line-height:0;}
+.wrap_top3 .graph_wrap .rank_bg span{height:7px;float:left;font-size:0;line-height:0;cursor:pointer;}
+.wrap_top3 .graph_wrap .rank_bg .lank01{background:#94f315;}
+.wrap_top3 .graph_wrap .rank_bg .lank02{background:#febf01;}
+.wrap_top3 .graph_wrap .rank_bg .lank03{background:#39c5c2;}
+.wrap_top3 .graph_wrap .rank_time {margin:9px 0 0 162px;}
+.wrap_top3 .five_wrap .graph_wrap .rank_time {margin:8px 0 0 128px;}
+.wrap_top3 .graph_wrap .rank_time .time{float:left;margin-top:5px;font-size:12px;font-weight:bold;}
+.wrap_top3 .graph_wrap .rank_time .time em{color:#ffffff;font-weight:normal;vertical-align:1px;}
+.wrap_top3 .graph_wrap .rank_time ul{overflow:hidden;float:left;margin:0 0 0 15px;}
+.wrap_top3 .graph_wrap .rank_time ul li{overflow:hidden;float:left; font-size:0;line-height:0;}
+.wrap_top3 .graph_wrap .rank_time ul li a{display:block;text-decoration:none; cursor:pointer;}
+.wrap_top3 .graph_wrap .rank_time ul li a em{display:inline-block; width:69px; padding:3px 10px 0 0; font-size:13px;line-height:19px;font-family:Arial;font-weight:bold;vertical-align:middle;  text-align:right;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank01{width:80px; height:25px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_rank01.png) no-repeat left top;color:#94f315;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank01.on{background-position:0 -25px;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank01 em{color:#b5f832;line-height:20px;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank02{width:79px; height:25px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_rank02.png) no-repeat left top;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank02.on{background-position:0 -25px;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank02 em{color:#ff9752;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank03{width:80px; height:25px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_rank03.png) no-repeat left top;color:#39c5c2;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank03.on{background-position:0 -25px;}
+.wrap_top3 .graph_wrap .rank_time ul li.lank03 em{color:#5ccfff;}
+.wrap_top3 .five_graph{float:left;display:none;}
+.wrap_top3 .five_wrap .five_graph {display:block;width:320px;height:319px;}
+.wrap_top3 .five_wrap .five_graph ol li {position:relative;display:none;}
+.wrap_top3 .five_wrap .five_graph ol li.on {display:block;}
+.wrap_top3 .five_wrap .five_graph ol li.on .album_img{overflow:hidden;width:320px;height:320px;z-index:1; }
+
+.wrap_top3 .five_wrap .five_graph ol li.on .album_img img {width:320px; height:320px;}
+
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music{position:absolute;left:0;top:0;width:262px;height:320px;padding:0 29px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_bg_album.png) repeat;z-index:80;}
+/* .wrap_top3 .five_wrap .five_graph ol li.on .rank_music .rank_01{display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat 0 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .rank_02{display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -50px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .rank_03{display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -100px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .rank_01.type2{display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -150px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .rank_02.type2{display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -200px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .rank_03.type2{display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -250px 0;font-size:0;line-height:0;vertical-align:top;} */
+
+.wrap_top3 .five_wrap .five_graph ol li.forecast1 .rank_music .rank_01 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -151px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.forecast1 .rank_music .rank_02 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -201px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.forecast1 .rank_music .rank_03 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -250px 0;font-size:0;line-height:0;vertical-align:top;}
+
+.wrap_top3 .five_wrap .five_graph ol li.forecast2 .rank_music .rank_01 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -307px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.forecast2 .rank_music .rank_02 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -356px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.forecast2 .rank_music .rank_03 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -406px 0;font-size:0;line-height:0;vertical-align:top;}
+
+.wrap_top3 .five_wrap .five_graph ol li.forecast3 .rank_music .rank_01 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -463px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.forecast3 .rank_music .rank_02 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -511px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.forecast3 .rank_music .rank_03 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -558px 0;font-size:0;line-height:0;vertical-align:top;}
+
+.wrap_top3 .five_wrap .five_graph ol li.forecast4 .rank_music .rank_01 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -1px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.forecast5 .rank_music .rank_02 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -51px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.forecast6 .rank_music .rank_03 {display:block;width:44px;height:65px;margin-top:-2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num03.png) no-repeat -101px 0;font-size:0;line-height:0;vertical-align:top;}
+
+
+
+.wrap_top3 .five_wrap .five_graph .time_five {position:absolute; top:63px; right:29px; width:262px; height:69px; z-index:90;}
+.wrap_top3 .five_wrap .five_graph .txt_five {width:139px;height:15px;margin-top:15px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_time.png) no-repeat 0 1px; *background-position:0 2px;}
+.wrap_top3 .five_wrap .five_graph .txt_five em{display:block;padding-left:51px;color:#85e100;font-family:Arial;font-size:15px;line-height:15px;font-weight:bold;vertical-align:middle;}
+.wrap_top3 .five_wrap .five_graph .real_time{margin-top:7px;padding-bottom:13px;border-bottom:1px solid #8D8C8F;font-family:Arial,"Apple Gothic", sans-serif;font-weight:bold;font-size:30px;line-height:33px;color:#fff;}
+.wrap_top3 .five_wrap .five_graph ol li.on .wrap_song_info {margin:114px 0 0 4px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .wrap_song_info .icon_song.new{display:block;width:34px;height:17px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/icon_new02.png) no-repeat 0 0;font-size:0;line-height:0;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_song_info {width:261px;font-size:14px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .wrap_song_info .play{display:inline-block;width:23px;height:23px;margin-left:4px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_play.png) no-repeat 0 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .wrap_song_info .play.mhover{background-position:0 -23px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .wrap_song_info .play.mactive{background-position:0 -46px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .wrap_song_info .play .odd_span{font-size:0;line-height:0;text-indent:-9999px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .rank_music .btn_play.dim{display:none;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_song_info span strong{display:inline-block;max-width:260px;margin-top:10px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_song_info span strong a.btn_play_song{overflow:hidden;display:inline-block; height:auto; font-size:18px;line-height:20px;letter-spacing:-1px;font-weight:bold;color:#ffffff; white-space:nowrap; text-overflow:ellipsis; word-wrap:normal; text-decoration:none; }
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_song_info span strong a .play{display:inline-block;width:17px;height:17px; *margin-top:6px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_play.png) no-repeat 0 0;font-size:0;line-height:0;vertical-align:bottom; *vertical-align:-1px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_song_info span strong a:hover .play {background-position:0 -30px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_song_info span strong a.btn_play_song.mactive .play {background-position:0 -60px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_song_info span strong span{overflow:hidden;display:inline-block;max-width:220px;font-size:20px;line-height:23px;_margin-top:-3px;letter-spacing:-1px;font-weight:bold;color:#fff; white-space:nowrap; text-overflow:ellipsis; word-wrap:normal;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_song_info span strong span.tit{*display:inline;font-family:"맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;line-height:25px;*line-height:28px;vertical-align:middle;*vertical-align:top;cursor:pointer;}
+
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_atist {width:260px;overflow:hidden; margin:1px 0 0 4px; *margin-top:4px; white-space:nowrap; text-overflow:ellipsis; word-wrap:normal;letter-spacing:-1px; font-size:12px;line-height:14px;color:#999999;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .wrap_atist a{color:#bbbbbb;font-family:"맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;font-size:14px;line-height:16px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .btn_like {width:100%;margin-top:13px;padding:0 0 0 4px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .btn_like .btn_icon .odd_span{width:11px;height:9px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_like.png) no-repeat 0 0;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .btn_like .btn_icon.mhover .odd_span{background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_like.png) no-repeat 0 -9px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .btn_like .btn_icon.mactive .odd_span{background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_like.png) no-repeat 0 -18px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .btn_like .btn_icon span.cnt {color:#c2c2c2;font-family:arial; font-size:14px; line-height:16px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .btn_like .btn_icon.on .odd_span{background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_like.png) no-repeat 0 -27px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .btn_like .btn_icon.on.mhover .odd_span{background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_like.png) no-repeat 0 -36px;}
+.wrap_top3 .five_wrap .five_graph ol li.on .music_info .btn_like .btn_icon.on.mactive.mhover .odd_span{background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_like.png) no-repeat 0 -45px;}
+.wrap_top3 .five_graph .wrap{height:283px;}
+.wrap_top3 .five_graph .fivex_txt{height:32px;width:244px;background:#191b1b;padding:18px 0 0 19px;font-size:0;line-height:0;}
+/* .five_wrap .btn_play_song{line-height:30%;}*/
+/* 5분버튼 */
+.wrap_top3 .graph_bar {position:relative; float:left; width:37px; height:319px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_rank_graph.png) no-repeat 0 0;cursor:pointer;font-size:0;line-height:0; z-index:0;}
+.wrap_top3 .graph_bar.disabled { cursor:default;}
+.wrap_top3 .graph_bar.mhover{background-position:-39px 0;}
+.wrap_top3 .graph_bar.mactive{width:37px;right:0;background-position:-78px 0;}
+.wrap_top3 .graph_bar.mactive.mhover{width:37px;right:0;background-position:-39px 0;}
+.wrap_top3 .five_wrap .graph_bar {background-position:-117px 0;}
+.wrap_top3 .five_wrap .graph_bar.mhover {background-position:-156px 0;}
+.wrap_top3 .five_wrap .graph_bar.mactive {background-position:-194px 0;}
+.wrap_top3 .graph_wrap .rank_txt{position:absolute;left:-27px;top:75px;display:block;width:72px; height:63px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/bg_forecast02.png) no-repeat; font-size:0; line-height:0; z-index:99;}
+
+.wrap_top3 #d_chart_box .highcharts-tooltip { z-index:80;}
+.wrap_top3 #d_chart_box .highcharts-tooltip span {font-family:"돋움",Dotum;}
+.wrap_top3 #d_chart_box { position:relative; z-index:1; height:290px; top:-10px;}
+.wrap_top3 #d_chart_box2 { position:relative; z-index:1; margin-top:-5px;*margin-top:-10px;}
+.wrap_top3 .real_wrap .d_xlabel { display:inline-block; width:20px; height:18px; padding:3px 2px 1px 0; text-align:center; line-height:1.5; overflow:hidden; vertical-align:top; letter-spacing:-1px; font-family:arial; font-size:11px; }
+.wrap_top3 .real_wrap .d_xlabel.on { background:url('//cdnimg.melon.co.kr/resource/image/web/chart/bg_xlabel_last.png') no-repeat 0 0; color:#fff;}
+.wrap_top3 .five_wrap .d_xlabel { display:inline-block; width:32px; height:18px; padding:3px 0 1px 0; text-align:center; line-height:1.5; overflow:hidden; vertical-align:top; font-family:arial; font-size:11px; }
+.wrap_top3 .five_wrap .d_xlabel.on { background:url('//cdnimg.melon.co.kr/resource/image/web/chart/bg_xlabel_last2.png') no-repeat 0 0; color:#fff;}
+svg { position:relative; z-index:1;}
+
+.wrap_top3 .graph_wrap a.d_icon_rank {display:none; width:37px; height:23px; overflow:hidden; background:url('//cdnimg.melon.co.kr/resource/image/web/chart/icon_chart_rank.png') no-repeat 0 0; text-indent:-99px; z-index:0; cursor: default;}
+.wrap_top3 .graph_wrap a.d_icon_rank.mhover{display:inline-block;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank1 {background-position:-342px 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank1.mhover{background-position:-342px 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank2 {background-position:-342px -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank2.mhover{background-position:-342px -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank3 {background-position:-342px -59px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank3.mhover{background-position:-342px -59px;}
+
+/* .wrap_top3 .graph_wrap a.d_icon_rank.d_new1 {background-position:-293px -25px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new1.mhover{background-position:-293px -25px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new2 {background-position:-293px -93px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new2.mhover{background-position:0 -93px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new3 {background-position:-293px -160px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new3.mhover{background-position:-293px -160px;} */
+
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new1 {width:56px; height:22px; background-position:-228px 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new2 {width:56px; height:22px; background-position:-228px -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new3 {width:56px; height:22px; background-position:-228px -59px;}
+
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank1.forecast1 {width:56px; height:22px; background-position:0 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank1.forecast2 {width:56px; height:22px; background-position:0 -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank1.forecast3 {width:56px; height:22px; background-position:0 -59px;}
+
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank2.forecast1 {width:56px; height:22px; background-position:-75px 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank2.forecast2 {width:56px; height:22px; background-position:-75px -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank2.forecast3 {width:56px; height:22px; background-position:-75px -59px;}
+
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank3.forecast1 {width:56px; height:22px; background-position:-150px 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank3.forecast2 {width:56px; height:22px; background-position:-150px -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank3.forecast3 {width:56px; height:22px; background-position:-150px -59px;}
+
+/* .wrap_top3 .graph_wrap a.d_icon_rank.d_new1.forecast1 {width:56px; height:22px; background-position:-151px 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new2.forecast1 {width:56px; height:22px; background-position:-151px -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new3.forecast1 {width:56px; height:22px; background-position:-151px -59px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new1.forecast2 {width:56px; height:22px; background-position:-151px 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new2.forecast2 {width:56px; height:22px; background-position:-151px -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new3.forecast2 {width:56px; height:22px; background-position:-151px -59px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new1.forecast3 {width:56px; height:22px; background-position:-151px 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new2.forecast3 {width:56px; height:22px; background-position:-151px -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_new3.forecast3 {width:56px; height:22px; background-position:-151px -59px;}  */
+
+/* .wrap_top3 .graph_wrap a.d_icon_rank.d_rank1.forecast4 {width:56px; height:22px; background-position:0 0;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank2.forecast4 {width:56px; height:22px; background-position:0 -29px;}
+.wrap_top3 .graph_wrap a.d_icon_rank.d_rank3.forecast4 {width:56px; height:22px; background-position:0 -59px;}  */
+
+/* 지붕킥 말풍선 */
+.highcharts-xaxis-labels { z-index:1;}
+.wrap_top3 .rank_cont {position:absolute;right:0;top:0;width:320px;}
+.wrap_top3 .rank_cont ol li .rank_music{position:relative;position:absolute;left:0;top:0;height:320px;width:260px;padding:0 30px 0 30px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_bg_album.png) repeat;z-index:80;}
+.wrap_top3 .rank_cont ol li .rank_music .btn_play{position:absolute;right:0;top:9px;}
+.wrap_top3 .rank_cont ol li .album_img {overflow:hidden; width:320px; height:320px;}
+.wrap_top3 .rank_cont ol li .album_img img {width:320px; height:320px;}
+
+
+.wrap_top3 .rank_cont ol li{display:none;font-size:0;line-height:0;}
+.wrap_top3 .rank_cont ol li.on{display:block;position:relative;}
+.wrap_top3 .rank_cont ol li.on a.btn_hearing{position:absolute;right:0;bottom:22px; *bottom:0;overflow:hidden;display:block;width:93px;height:16px; z-index:90;}
+.wrap_top3 .rank_cont ol.time_click li a.btn_hearing{display:none;}
+.wrap_top3 .rank_cont ol li.on .music_info{position:relative;height:296px; width:260px;}
+.wrap_top3 .rank_cont ol li .chart_num{margin-top:25px;}
+.wrap_top3 .rank_cont ol li .chart_num .rank_01{display:inline-block;width:32px;height:25px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/rank_num.png) no-repeat 0 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .rank_cont ol li .chart_num .rank_02{display:inline-block;width:33px;height:25px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/rank_num.png) no-repeat -115px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .rank_cont ol li .chart_num .rank_03{display:inline-block;width:33px;height:25px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/rank_num.png) no-repeat -222px 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .rank_cont ol li .hearing_layer .rank_01{display:inline-block;margin-top:16px;width:17px;height:35px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num02.png) no-repeat -4px -8px;font-size:0;line-height:0;}
+.wrap_top3 .rank_cont ol li .hearing_layer .rank_02{display:inline-block;margin-top:15px;width:26px;height:36px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num02.png) no-repeat -32px -7px;font-size:0;line-height:0;}
+.wrap_top3 .rank_cont ol li .hearing_layer .rank_03{display:inline-block;margin-top:14px;width:26px;height:37px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/rank_num02.png) no-repeat -67px -7px;font-size:0;line-height:0;}
+.wrap_top3 .rank_cont ol li .chart_num .icon_up{width:14px;height:14px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_sprite_rank.png) no-repeat 0 0;}
+.wrap_top3 .rank_cont ol li .chart_num .icon_down{width:14px;height:14px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_sprite_rank.png) no-repeat -19px 0;}
+.wrap_top3 .rank_cont ol li .chart_num .icon_static{width:14px;height:4px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_sprite_rank.png) no-repeat -45px -4px;}
+.wrap_top3 .rank_cont ol li .music_info .chart_num .wrap_rank span{font-size:16px;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_rank{margin:0 0 24px 13px;vertical-align:bottom;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_rank span{font-size:14px; font-family:"Arial", "Apple Gothic", sans-serif;font-weight:bold;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_rank .icon_down,
+.wrap_top3 .rank_cont ol li .music_info .wrap_rank .icon_rank_new,
+.wrap_top3 .rank_cont ol li .music_info .wrap_rank .icon_static,
+.wrap_top3 .rank_cont ol li .music_info .wrap_rank .icon_up{font-size:0 !important;line-height:0;}
+
+.wrap_top3 .rank_cont ol li .music_info .song_info_cont {height:98px; margin-top:16px; border-bottom:1px solid #696867;}
+.wrap_top3 .rank_cont ol li .music_info .song_info_cont .thumb {float:left; width:80px; height:80px; font-size:0; line-height:0;}
+.wrap_top3 .rank_cont ol li .music_info .song_info_cont .thumb img {width:80px; height:80px;}
+.wrap_top3 .rank_cont ol li .music_info .song_info_cont .song_info_cont2 {float:right; width:169px;}
+
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info {max-width:160px; font-size:14px; white-space:nowrap; text-overflow:ellipsis; word-wrap:normal;}
+.wrap_top3 .rank_cont ol li .rank_music .wrap_song_info .play{display:inline-block;width:14px;height:18px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/btn_play.png) no-repeat 0 0;text-indent: -9999em; vertical-align:middle;}
+.wrap_top3 .rank_cont ol li .rank_music .wrap_song_info .play .odd_span{font-size:0;line-height:0;text-indent:-9999px;}
+.wrap_top3 .rank_cont ol li .rank_music .btn_play.dim{display:none;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info .icon_song{display:inline-block;*display:inline;margin:1px 0 0 0; background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/icon_sprite_songlist02.png) no-repeat 0 0; vertical-align:middle;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info .icon_song.age_19{width:15px; height:15px;background-position: -90px 0;text-indent: -9999em;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info .icon_song.hold{width:15px; height:15px;background-position:-55px 0;text-indent: -9999em;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info .icon_song.free{width: 35px; height: 15px; background-position:0 0;text-indent: -9999em;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info strong{display:inline-block;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info strong a.btn_play_song{display:inline-block; max-width:169px; height:auto; font-size:14px;line-height:16px;letter-spacing:-1px;font-weight:bold;color:#ffffff; white-space:nowrap; text-overflow:ellipsis; word-wrap:normal; }
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info strong a:hover {text-decoration:none;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info strong .ellipsis {display: inline-block; max-width: 169px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: auto; word-wrap: normal; vertical-align:middle;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info strong span{overflow:hidden;display:inline;font-size:18px;line-height:22px;letter-spacing:-1px;font-weight:bold;color:#fff;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_song_info strong span.tit{*display:inline; font-family:"맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;cursor:pointer;}
+
+.wrap_top3 .rank_cont ol li .music_info .wrap_atist {width:169px;overflow:hidden; margin-top:1px; *margin-top:4px; white-space:nowrap; text-overflow:ellipsis; word-wrap:normal;letter-spacing:-1px; font-size:12px;line-height:14px;color:#999999;}
+.wrap_top3 .rank_cont ol li .music_info .wrap_atist a{color:#bbbbbb; font-family:"맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;font-size:13px;line-height:16px;}
+.wrap_top3 .rank_cont ol li .music_info .btn_like {margin-top:12px;padding:0 0 0 2px;}
+.wrap_top3 .rank_cont ol li .music_info .btn_like .btn_icon .odd_span{width:12px;height:10px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/btn_like.png) no-repeat -14px 0;}
+.wrap_top3 .rank_cont ol li .music_info .btn_like .btn_icon span.cnt {color:#c2c2c2; font-family:arial; font-size:14px; line-height:16px;}
+
+.wrap_top3 .rank_cont ol li .music_info .btn_like .btn_icon.on .odd_span{background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/btn_like.png) no-repeat 0 0;}
+
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul{overflow:hidden; padding-top:13px;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li {display:block;margin-top:8px;font-size:12px;line-height:14px;color:#dddddd;font-weight:bold;vertical-align:middle;  font-family: "돋움", Dotum;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li em{font-weight:normal;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li.txt{float:right;margin-top:-16px;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li .inssue_txt{padding-right:3px;color:#1ee13c;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li .icon_info.issue{display:inline-block;width:13px;height:13px;padding-left:6px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/icon_realchart.png) no-repeat 0 0;font-size:0;line-height:0;vertical-align:top;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li .icon_info.rank01{display:inline-block;width:13px;height:14px;padding-left:4px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/icon_realchart.png) no-repeat 0 -1px;vertical-align:top;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li .icon_info.max{display:inline-block;width:13px;height:13px;padding-left:7px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/icon_realchart.png) no-repeat 0 -22px; vertical-align:top;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li .icon_info.dauily{display:inline-block;width:13px;height:11px;padding-left:7px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/icon_realchart.png) no-repeat 0 -69px;vertical-align:top;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li .icon_info.root{display:inline-block;width:13px;height:14px;margin-top:-4px;padding-left:7px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/icon_realchart.png) no-repeat 0 -42px;vertical-align:top;}
+.wrap_top3 .rank_cont ol li .music_info .info_btm ul li .icon_info.urgent{display:inline-block;width:13px;height:11px;padding-left:7px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/icon_realchart.png) no-repeat 0 -90px;vertical-align:top;}
+
+/* 누가 들었나요 레이어 */
+.wrap_top3 .rank_cont ol li .hearing_layer{display:none;position:absolute;left:0;top:0;width:320px;height:319px;background:#fff;z-index:90;}
+.wrap_top3 .rank_cont ol li .hearing_layer.mactive{display:block;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap{position:relative;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap h3{margin-left:28px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .txt_desc{margin:14px 0 0 28px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender {zoom:1; width:230px; margin:42px 0 0 50px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender:after {display:block; clear:both; content:'';}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li {position: relative;display:block;float:left;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.man{float:left;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.woman{zoom:1; float:right;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.woman:after {display:block; clear:both; content:'';}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.man strong {position: absolute; bottom:-3px; left:-19px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.man strong span {display:inline-block; width:13px; height:30px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_artist_top.png) no-repeat -3px -22px; font-size:0; line-height:0; vertical-align:top;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.woman strong {position: absolute; bottom:-3px; right:-20px; }
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.woman strong span {display:inline-block; width:13px; height:30px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_artist_top.png) no-repeat -31px -22px; font-size:0; line-height:0; vertical-align:top;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li .graph_bar2 {display:inline-block; width:100%; background:#e4e7e4; }
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.woman .graph_bar2 {background:#e4e7e4;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li .graph_bar2 span {display:block; position:relative; width:100%; height:17px; background:#e4e7e4;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.man .graph_bar2 span {display:block; position:relative; width:100%; height:17px; background:#1ebce4;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.woman .graph_bar2 span {width:100%; background:#ff6aa5; }
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li .graph_bar2 span em {position:absolute; top:-21px; color:#1a1a1a; font-size:16px; font-weight:bold; line-height:19px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .gender li.woman .graph_bar2 span em {position:absolute; right:0;}
+
+
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group  {zoom:1; margin:23px 0 0 25px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group:after {content:''; display:block; clear:both;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li {position:relative;display:block; float:left; width:42px; height:57px; text-align:right;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li.nth1 {width:39px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li.nth6 strong {padding-right:16px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li strong {display:inline-block; position:absolute; left:0; bottom:-16px; width:100%; height:11px; padding-top:4px; border-top:1px solid #dedede; font-size:0;	line-height:0;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li strong span {display:inline-block; width:23px; height:11px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_artist_top.png) no-repeat 0 0; font-size:0; line-height:0}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li.nth1 strong span {background-position: -1px -3px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li.nth2 strong span {background-position: -45px -3px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li.nth3 strong span {background-position: -88px -3px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li.nth4 strong span {background-position: -131px -3px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li.nth5 strong span {background-position: -173px -3px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li.nth6 strong span {background-position: -215px -3px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li .graph_bar2 {position:relative; display:inline-block; width:10px; height:57px; margin-right:5px; background:#e4e7e4;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li .graph_bar2 span {position:absolute; display:inline-block; left:0; bottom:0; width:100%; background:#ffad02;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .age_group li .graph_bar2 span em {position:absolute; bottom:46px; left:0; font-size:11px; line-height:13px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .count_num {height:26px;margin-top:24px; *margin-top:22px; padding:6px 0 0 30px;border-top:1px solid #bfcbd7;background:#e4e9f1;font-size:14px;line-height:17px;font-weight:bold;vertical-align:middle;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .count_num em{font-family:Arial;color:#566888;vertical-align:middle;font-size:14px;line-height:16px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .count_num .unit{display:inline-block;width:11px;height:13px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_count02.png) no-repeat 0 0;font-size:0;line-height:0;vertical-align:middle;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .count_num .count{display:inline-block;width:79px;height:15px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_count.png) no-repeat 0 0;font-size:0;line-height:0;vertical-align:middle;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .cont .count_num .hour{display:inline-block;width:70px;height:14px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_count03.png) no-repeat 0 0;font-size:0;line-height:0;vertical-align:middle;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .btn{position:absolute;right:14px;top:12px;width:18px;height:18px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_close02.png) no-repeat 0 0;font-size:0;line-height:0;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .btn.mhover{background-position:0 -18px;}
+.wrap_top3 .rank_cont ol li .hearing_layer .wrap .btn.mactive{background-position:0 -36px;}
+
+/* 경합중,차트올킬 레이어 */
+.wrap_top3 .real_graph .rank_layer{position:absolute; z-index:1;}
+.wrap_top3 .real_graph .rank_layer.macitve{display:block;}
+.wrap_top3 .real_graph .rank_layer .wrap{position:relative;width:320px;height:114px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_conflict.png) no-repeat 0 0;}
+.wrap_top3 .real_graph .rank_layer .wrap .btn{position:absolute;right:-9px;top:-15px;width:29px;height:29px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_close.png) no-repeat 0 0;font-size:0;line-height:0;}
+.wrap_top3 .real_graph .rank_layer .wrap .btn.mhover{background-position:0 -29px;}
+.wrap_top3 .real_graph .rank_layer .wrap .num_01{position:absolute;left:11px;top:10px;}
+.wrap_top3 .real_graph .rank_layer .wrap .num_02{position:absolute;left:218px;top:10px;}
+.wrap_top3 .real_graph .rank_layer .wrap.all_kill{width:169px;height:228px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_all_kill.png) no-repeat 0 0;}
+.wrap_top3 .real_graph .rank_layer .wrap.all_kill .num_123{position:absolute;left:18px;top:13px;}
+
+
+.wrap_tab03.type11 .last_child.vote .link_tab{padding:10px 4px 9px 4px;;width:181px;font-size:0;line-height:0;}
+.summ_prid .btn_chart{display:inline-block;float:right; height:23px; width:100px; margin-right:5px; *margin-top:-22px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_re.png) no-repeat right 0;text-indent:-9999px;}
+.summ_prid .btn_chart.mhover {background-position:right -23px;}
+.summ_prid .btn_chart.mactive {background-position:right -46px;}
+
+.summ_prid .btn_guide{display:inline-block;float:right; height:23px; width:71px; *margin-top:-23px; margin-right:13px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/btn_guide.png) no-repeat 0 0; text-indent:-9999px;}
+.summ_prid .btn_guide.mhover {background-position:right -23px;}
+.summ_prid .btn_guide.mactive {background-position:right -46px;}
+.summ_prid.real_chart button:active{position:relative;top:0px;left:0px}
+
+.summ_prid .time_list{padding-top:8px;}
+.summ_prid .time_list li{width:53px;}
+.summ_prid .time_list li a{display:block;padding:5px 0 5px 12px;font-size:12px;line-height:14px;color:#555555;}
+.summ_prid .time_list li a:hover{background:#e6e6e6;text-decoration:none;}
+.summ_prid .time_list li .disabled{display:block;padding:5px 0 5px 12px;color:#c0c0c0;}
+
+.summ_prid.real_time .datelk{font-size:0;line-height:0;}
+.summ_prid.real_time .datelk span{display:inline-block;font-size:0;line-height:0;}
+.summ_prid.real_time .datelk .num_0{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 0;}
+.summ_prid.real_time .datelk .num_1{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -30px;}
+.summ_prid.real_time .datelk .num_2{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -60px;}
+.summ_prid.real_time .datelk .num_3{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -90px;}
+.summ_prid.real_time .datelk .num_4{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -120px;}
+.summ_prid.real_time .datelk .num_5{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -150px;}
+.summ_prid.real_time .datelk .num_6{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -180px;}
+.summ_prid.real_time .datelk .num_7{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -210px;}
+.summ_prid.real_time .datelk .num_8{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -240px;}
+.summ_prid.real_time .datelk .num_9{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_black.png) no-repeat 0 -270px;}
+.summ_prid.real_time .datelk .dot {width:9px;height:3px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_dot.png) no-repeat 3px -11px;vertical-align:bottom;}
+
+.summ_prid.real_time .hour{font-size:0;line-height:0;}
+.summ_prid.real_time .hour span{display:inline-block;font-size:0;line-height:0;vertical-align:middle;}
+.summ_prid.real_time .hour .num_0{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 0;}
+.summ_prid.real_time .hour .num_1{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -30px;}
+.summ_prid.real_time .hour .num_2{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -60px;}
+.summ_prid.real_time .hour .num_3{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -90px;}
+.summ_prid.real_time .hour .num_4{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -120px;}
+.summ_prid.real_time .hour .num_5{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -150px;}
+.summ_prid.real_time .hour .num_6{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -180px;}
+.summ_prid.real_time .hour .num_7{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -210px;}
+.summ_prid.real_time .hour .num_8{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -240px;}
+.summ_prid.real_time .hour .num_9{width:14px;height:19px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/txt_num_green.png) no-repeat 0 -270px;}
+.summ_prid.real_time .hour .dot {width:6px;height:13px;margin-left:2px;background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_dot.png) no-repeat -13px -1px; vertical-align:middle;}
+.summ_prid.real_time .hour_layer{margin-left:10px;}
+
+.tutorial_wrap {position:relative;z-index:90;}
+.tutorial_wrap .tutorial{position:absolute;left:0;top:-432px;font-size:0;line-height:0;}
+.tutorial_wrap ul.tab {position:absolute;right:74px;top:-400px;overflow:hidden;font-size:0;line-height:0;}
+.tutorial_wrap ul.tab li{float:left;margin-right:7px;}
+.tutorial_wrap ul.tab li a{display:block;overflow:hidden;height:22px;}
+.tutorial_wrap ul.tab li.on a img,
+.tutorial_wrap ul.tab li a.hover img{display:block;margin-top:-22px;}
+.tutorial_wrap .btn_next {position:absolute; right:18px; bottom:56px; font-size:0; line-height:0;}
+.tutorial_wrap .btn_next a {display:block; overflow:hidden; height:28px; }
+.tutorial_wrap .btn_next a:hover img {display:block; margin-top:-28px;}
+
+/*
+	시대별 차트
+*/
+.year_list {position: relative; padding: 40px 0 30px; text-align: right; z-index: 9;}
+.year_list .select_wrap {margin: 0 10px;}
+.year_list .calendar_prid {position: absolute; top: 34px; left: 0; margin: 0 0 0; z-index: auto;}
+.year_list .calendar_prid .btn_year {width: 8px; height: 14px; margin: 0 5px; background: url(//cdnimg.melon.co.kr/resource/image/web/chart_4x/btn_year_select.png) no-repeat 0 0; vertical-align: middle;}
+.year_list .calendar_prid .btn_year.before {background-position: 0 -14px;}
+.year_list .calendar_prid .btn_year.after {background-position: -8px -14px;}
+.year_list .calendar_prid .btn_year[disabled="disabled"] {background-position-y: 0;}
+
+/* 시대별 차트 리뷰 */
+.wrap_age_rvew {clear:both;}
+.wrap_age_rvew h3 {padding:25px 0 12px; color:#1a1a1a; font-weight:bold; font-size:18px; line-height:24px; font-family:"맑은 고딕", "Malgun Gothic","돋움", Dotum,"Apple Gothic",sans-serif; letter-spacing:-1px;}
+.wrap_age_rvew .wrap_rvew {}
+/*
+********************
+* 컬럼영역 CSS 시작
+********************
+*/
+
+div.ageColumnWrap {clear:both; font-family:"Apple Gothic", sans-serif;}
+/*div.ageConTxtBox { float:right;  width:737px;}*/
+
+/* songTable */
+div.ageConTxtBox div.recommendList {clear:both; margin:0; padding-bottom:22px;}
+div.ageConTxtBox div.recommendList .tb_list td {height:39px;}
+div.ageConTxtBox div.recommendList div.btnList {margin:0;}
+div.ageConTxtBox div.recommendList .btnList p {color: #a7a7a7; font-size: 11px; line-height:13px; padding-top:7px;}
+
+/* point */
+span.agebox {display:block; padding-bottom:10px;}
+span.ageUnderLine {text-decoration:underline;}
+.pointColorPop {color:#ff0000;}
+.pointColorKPop {color:#8db312;}
+
+/* etc */
+.ageTxtb{font-weight:bold;}
+.ageClear {clear:both;}
+
+.agePbTit {padding-bottom:30px !important;}
+.agePb15 {padding-bottom:10px;}
+.agePb25 {padding-bottom:25px;}
+.agePb35 {padding-bottom:35px;}
+.agePl17 {padding-left:17px;}
+
+.chartTxtAge {display:block; padding-bottom:25px; color:#333; text-align:right;}
+.chartTxtAge strong {color:#739900; text-decoration:underline;}
+.chartTxtAge img {vertical-align:middle; padding-left:7px;}
+.chartTxtAge strong.ic {background:none; text-decoration:none;}
+
+/* 문단 */
+p.ageCalromTxt1 {float:left; padding:19px 22px; margin-bottom:27px; color:#4e4e4e; text-align:justify; border:1px solid #e2e2e2; background:#f7f7f7;}
+span.smallTxtAge {display:block; padding-top:20px; color:#717171; font-size:11px;}
+
+/* 이미지 */
+/* span.calName {clear:both; display:block; padding-top:10px; text-align:right;} */
+span.calName {clear:both; display:block; padding-top:20px; text-align:right;}
+
+/* 타이틀 */
+h4.ageTitIcon1 {clear:both; height:22px; padding:0 0 16px 0; font-size:18px; line-height:22px; font-weight:bold; color:#1a1a1a; background:none; font-family:"맑은 고딕","Malgun Gothic","Apple Gothic", sans-serif; letter-spacing:-1px;}
+h4.ageTitIcon2 {clear:both; height:22px; margin-top:2px; padding:0 0 16px 0; font-size:18px; line-height:22px; font-weight:bold; color:#323232; background:none; font-family:"맑은 고딕","Malgun Gothic","Apple Gothic", sans-serif; letter-spacing:-1px;}
+
+/* 시대별 컬럼 */
+dl.age_chartType1 {clear:both; padding-bottom:19px; }
+dl.age_chartType1.ageNone {padding-bottom:0;}
+dl.age_chartType1.tpB {padding-bottom:35px;}
+dl.age_chartType1 dt {padding-bottom:10px; color:#1a1a1a; font-size:14px; line-height:16px;}
+dl.age_chartType1 dd.post1 {color:#666; text-align:justify !important;}
+dl.age_chartType1 dd.post2 {padding-bottom:10px; color:#666; text-align:justify !important;}
+dl.age_chartType1 dd.imgPos1 {padding-bottom:14px;}
+dl.age_chartType1 dd.imgPos1 img {width:737px;} /* 131114 added */
+dl.age_chartType1 dd.imgPos2 {padding-top:10px;}
+dl.age_chartType1 dd.imgPos3 {padding-bottom:14px;}/*150202 추가 lyr*/
+dl.age_chartType1 dd.imgTit1 {padding-top:3px; text-align:center; color:#aaa; font-size:11px;}
+dl.age_chartType1 dd.imgTit2 {padding-top:3px; text-align:right; color:#aaa; font-size:11px;}
+dl.age_chartType1 dd.imgTit3 {padding-top:3px; text-align:left; color:#aaa; font-size:11px;}
+dl.age_chartType1 dd.subTit1 {padding-bottom:3px; }
+
+dl.age_chartType2 {clear:both; width:674px; padding-bottom:25px; }
+dl.age_chartType2 dt {padding-bottom:10px; color:#4e4e4e; font-weight:bold; text-decoration:underline; font-size:13px;}
+dl.age_chartType2 dd {text-align:justify !important;}
+dl.age_chartType2 dd ul li {color:#666 !important; padding-bottom:4px;}
+dl.age_chartType2 dd ul li.bt {padding-bottom:0; font-size:11px;}
+
+dl.age_chartType3 {clear:both; float:left; width:674px; padding-bottom:25px; }
+dl.age_chartType3.pbB {padding-bottom:35px;}
+dl.age_chartType3 dt {padding-bottom:10px; color:#1a1a1a; font-size:14px; line-height:16px;}
+dl.age_chartType3 dd {color:#666; text-align:justify !important;}
+dl.age_chartType3 dd.txtL {float:left;}
+dl.age_chartType3 dd.imgsR {float:right;}
+
+
+/* 의견쓰기 */
+div.replyAgeWrite {clear:both; float:left; width:100%; height:48px; background:url(//cdnimg.melon.co.kr/resource/image/web/chart/bg_columnist.png) no-repeat left top;}
+div.replyAgeWrite span.tit {display:block; float:left; zoom:1; padding:17px 0 0 51px; color:#1a1a1a; font-weight:bold; font-size:14px; line-height:16px;}
+div.replyAgeWrite span.btn {display:block; float:right; padding:12px 12px 0 0;}
+
+/* 닫기 */
+div.ageConTxtBoxBtn {margin-top:20px; height:38px; padding-top:4px; text-align:right; border-top:1px solid #d9d9d9; background:none;}
+
+/* 어워드 */
+h4.awardTit {clear:both; width:100%; padding-bottom:12px; padding-top:5px; border-bottom:3px solid #c1c1c1;}
+
+h4.awardTit1 {clear:both; width:100%; padding-bottom:12px; padding-top:5px; border-bottom:3px solid #c1c1c1; overflow:hidden;}
+h4.awardTit1 span.tit {display:block; float:left;}
+h4.awardTit1 span.btn {display:block; float:right; padding-top:3px;}
+
+h4.awardTit2 {clear:both; height:22px; padding:0 0 6px 0; font-size:18px; line-height:22px; font-weight:bold; color:#1a1a1a; background:none; font-family:"맑은 고딕","Malgun Gothic","Apple Gothic", sans-serif; letter-spacing:-1px;}
+h4.awardTit2 span.tit {margin-left:10px; color:#333; font-weight:normal; font-size:12px; line-height:14px; font-family:Dotum,"Apple Gothic", sans-serif; letter-spacing:0;}
+
+h4.awardTit3 {clear:both; height:22px; padding:0 0 13px 0; font-size:18px; line-height:22px; font-weight:bold; color:#1a1a1a; background:none; font-family:"맑은 고딕","Malgun Gothic","Apple Gothic", sans-serif; letter-spacing:-1px;}
+
+div.fullBox1 {clear:both; width:100%; padding:10px 0 10px 30px; overflow:hidden;}
+div.fullBox1 span.tit {display:block; float:left; padding-top:3px;}
+div.fullBox1 span.btn {display:block; float:right;}
+
+div.fullBox2 {clear:both; width:100%; padding:0 0 23px 30px; overflow:hidden;}
+div.fullBox2 dl {float:left; padding-right:9px;}
+div.fullBox2 dl.nopd {padding-right:0;}
+div.fullBox2 dl dd {padding-bottom:10px;}
+div.fullBox2 dl dd img {width:151px; height:101px; border:5px solid #313131;}
+
+div.fullBox3 {clear:both; width:100%; padding-bottom:25px; padding-left:30px;}
+
+div.fullBox4 {clear:both; width:100%; padding:0 0 23px 0; overflow:hidden;}
+div.fullBox4 dl {float:left; padding-right:13px;}
+div.fullBox4 dl.nopd {padding-right:0;}
+div.fullBox4 dl dd {padding-bottom:10px;}
+div.fullBox4 dl dd img {width:196px; height:148px; border:9px solid #000000;}
+
+div.fullBox5 {clear:both; width:100%; margin-bottom:34px;}
+div.fullBox5 div.videoList1 {border-bottom:1px solid #ebebeb; height:160px; margin-top:10px;}
+div.fullBox5 div.videoList1 span {width:220px; display:block; float:left; padding-right:17px;}
+div.fullBox5 div.videoList1 dl {float:left; width:420px;}
+div.fullBox5 div.videoList1 dl dt {padding-top:3px; font-weight:bold; font-size:14px; color:#000;}
+div.fullBox5 div.videoList1 dl dd {padding-top:5px; line-height:18px;}
+
+div.fullBox5 div.videoList2 {height:160px; margin-top:16px;}
+div.fullBox5 div.videoList2 span {width:220px; display:block; float:left; padding-right:17px;}
+div.fullBox5 div.videoList2 dl {float:left; width:420px;}
+div.fullBox5 div.videoList2 dl dt {padding-top:3px; font-weight:bold; font-size:14px; color:#000;}
+div.fullBox5 div.videoList2 dl dd {padding-top:5px; line-height:18px;}
+
+dl.awardCon {position:relative; width:100%; padding-bottom:25px; overflow:hidden;}
+dl.awardCon dt {padding:9px 0 7px 0; font-weight:bold; font-size:14px; color:#1a1a1a;font-family:"Apple Gothic", sans-serif;}
+dl.awardCon dd.post1 {color:#666; text-align:justify !important;}
+dl.awardCon dd.post2 {padding-bottom:10px; color:#666; text-align:justify !important;}
+dl.awardCon dd.post3 {padding-top:15px; color:#666; text-align:justify !important;}
+dl.awardCon dd.post4 {color:#666; text-align:justify !important;}
+
+dl.awardCon dd.imgTit1 {padding-top:3px; text-align:center; color:#aaa; font-size:11px;}
+dl.awardCon dd.imgPos1 {padding-bottom:10px;}
+dl.awardCon dd.imgPos1 img {width:737px;} /* 131114 added */
+dl.awardCon dd.mvBtn {position:absolute; right:0; top:10px;}
+
+div.topBox {clear:both; width:100%; padding-bottom:15px; overflow:hidden;}
+div.topBox dl.topBox10 {float:left; width:131px; padding:10px 0;}
+div.topBox dl.topBox10.pr {padding-right:20px;}
+div.topBox dl.topBox10 dt {font-weight:bold; padding-top:4px; color:#787878; text-align:left;}
+div.topBox dl.topBox10 dd {position:relative;}
+div.topBox dl.topBox10 dd span {position:absolute; left:10px; top:0;}
+div.topBox dl.topBox10 dd a img {width:122px; height:122px; border:4px solid #66339d;}
+
+div.topBox dl.topBox10_2011 {float:left; width:118px; padding:10px 0;}
+div.topBox dl.topBox10_2011.pr {padding-right:21px;}
+div.topBox dl.topBox10_2011 dt {font-weight:bold; padding-top:4px; color:#787878; text-align:left;}
+div.topBox dl.topBox10_2011 dd {position:relative;}
+div.topBox dl.topBox10_2011 dd span {position:absolute; left:10px; top:0;}
+div.topBox dl.topBox10_2011 dd a img {width:112px; height:112px; border:3px solid #66339d;}
+
+div.topBox dl.topBox10_2012 {float:left; width:118px; padding:10px 0;}
+div.topBox dl.topBox10_2012.pr {padding-right:21px;}
+div.topBox dl.topBox10_2012 dt {font-weight:bold; padding-top:4px; color:#8a8a8a; text-align:left;}
+div.topBox dl.topBox10_2012 dd {position:relative;}
+div.topBox dl.topBox10_2012 dd span {position:absolute; left:10px; top:0;}
+div.topBox dl.topBox10_2012 dd a img {width:112px; height:112px; }
+
+div.stillBox {clear:both; width:100%; padding:15px 0 25px 0; overflow:hidden;}
+
+.cont_dtl.music_awards div.ageColumnWrap div.ageTopImg {font-size:0; line-height:0;} /* 140425_수정 aty */
+.cont_dtl div.ageColumnWrap div.ageTopImg {position:relative; margin-bottom:24px; border:1px solid #bfbfbf; background-color:#edf2f6;height:221px;}
+.cont_dtl div.ageColumnWrap div.ageTopImg .btn_view {position:absolute; bottom:7px; right:7px;}
+.cont_dtl div.ageColumnWrap div.ageTopImg .btn_view img {vertical-align: top;}
+.summ_prid button.pre,.summ_prid button.next {z-index:1} /* 140113 kiok add */
+.summ_prid .year_list {position:absolute; top:19px; right:0;}
+.summ_prid .year_list .select_wrap {margin-left:4px;}
+/*
+********************
+* 컬럼영역 CSS 끝
+********************
+*/

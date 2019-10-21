@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		/*
+		1. Jquery.com  공식 사이트 (다운로드 , 학습)
+		2. https://www.w3schools.com/jquery/jquery_get_started.asp (학습)
+		3. jquery
+			-HTML/DOM manipulation
+			-CSS manipulation
+			-HTML event methods
+			-Effects and animations
+			-AJAX
+			-Utilities
+		4. Jquery(javascript  라이브러리 또는  프레임워크 ) >> *.js 파일
+		4.1 Jquery 사이트에서 다운로드 (내 서버에서 js 배포  >> CDN 글로벌 업체 배포)
+			
+			Download the compressed, production jQuery 3.4.1
+			(압축 : 편집하지 않고 사용 ....)
+			Download the uncompressed, development jQuery 3.4.1
+			(용량 크다 ... 내가 편집 가공 사용 ....)
+		4.2 CDN 방식을 권장
+			-https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+		
+		5. Jquery version (웹 브라우져 에서 지원여부) 
+		   1.x
+		   2.x : 브라우져 호환성(IE 6,7,8 지원 (x))
+		   3.x : 현재 사용 (기존 필요없는 것은 제거, 새로운 것은 추가)
+		
+		   -회사 1.x 버전 개발 .... 사장님 버전 3.x
+		   -문제는 기존 소스가 1.x 버전 함수(k()) ... 3.x(k()x)
+		   -migrate : 하위 호환성 버전
+		    Download the compressed, production jQuery Migrate 3.1.0
+	
+		*/
+		
+		
+	</script>
+	<script src="Script/jquery-3.4.1.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>

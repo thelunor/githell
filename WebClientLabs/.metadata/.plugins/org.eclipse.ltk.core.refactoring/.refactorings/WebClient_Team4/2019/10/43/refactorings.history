@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WebClient_Team4/WebContent/20191021/Team4_Boot/member_page/hn/images/쵀애짤.gif&apos; to &apos;lovelove.gif&apos;" description="Rename resource &apos;쵀애짤.gif&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/20191021/Team4_Boot/member_page/hn/images/쵀애짤.gif" name="lovelove.gif" stamp="1571634439123" updateReferences="true"/>
+</session>

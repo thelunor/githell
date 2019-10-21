@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery</title>
+	<script type="text/javascript">
+		/*
+			1. Jquery.com 공식사이트(다운로드 가능)
+			2. https://www.w3schools.com/jquery/default.asp 학습사이트
+			3. Jquery
+				HTML/DOM manipulation
+				CSS manipulation
+				HTML event methods
+				Effects and animations
+				AJAX
+				Utilities
+			4. Jquery(javascript 라이브러리 또는 프레임워크) >> *.js 파일로 제공
+			  4.1 Jquery 사이트에서 다운로드(내 서버에서 js 배포보다는 CDN 방식(글로벌 업체를 통한 배포))
+
+			  Download the compressed, production jQuery 3.4.1
+				(압축: 편집하지 않고 사용)
+			  Download the uncompressed, development jQuery 3.4.1
+			  	(비압축: 용량이 크고 직접 편집해서 사용)
+		*/
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

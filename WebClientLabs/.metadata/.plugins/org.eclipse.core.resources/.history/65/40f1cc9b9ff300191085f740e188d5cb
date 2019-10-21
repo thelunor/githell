@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery Events</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+			Mouse Events	Keyboard Events	Form Events	Document/Window Events
+			click			keypress		submit		load
+			dblclick		keydown			change		resize
+			mouseenter		keyup			focus		scroll
+			mouseleave	 					blur		unload
+		*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>javascript 문법</title>
+	<script type="text/javascript">
+	/*  
+		-변수생성 > 타입설정 > 초기화
+		-모든 변수의 타입 > var  >>(ES6) let , const
+		-String , Number 타입은 존재하지 않나요
+		-JAVA : int age , String name
+		-var ename; 타입이 정의되지 않아요
+		-ename="홍길동" >> 타입 >> String
+		-ename=100 >> 타입 > Number
+		-초기화 시점의 자신의 타입을 결정
+		-javascript (정수 , 실수 , boolean , 문자)
+		-내부적으로 : Number , Boolean , Array , Object ...
+	*/
+	var a;
+    console.log(a); //undefined
+    a = 100;
+    console.log(a);
+    console.log(typeof(a)); //변수의 타입 정보 확인
+    
+	</script>
+</head>
+<body>
+
+</body>
+</html>

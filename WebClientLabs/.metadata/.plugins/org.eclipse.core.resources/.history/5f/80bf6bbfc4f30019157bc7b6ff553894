@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drop-4-bit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body id="page-top">
+    <!--navigation-->
+    <!--nav bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <!--모바일시 버튼 아이콘 생성됨-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--logo-->
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    Drop-4-bit
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!--navbar 태그 안쪽-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                 
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#partners">Partners</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--header-->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Drop-4-bit</div>
+                <div class="intro-heading">미쳤따</div>
+                <a href="#about" class="page-scroll btn btn-xl">About</a>
+            </div>
+        </div>
+    </header>
+    <!-- about 섹션 -->
+    <section id="about" class="light-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>ABOUT</h2>
+                        <br>
+                        <h4>Drop 4 bits</h4>
+                        <p><em>Even though there are only four members on the team, <br>we'll show you the best
+                                teamwork.</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- about module -->
+                <div class="col-md-6 text-center">
+                    <div class="mz-module-about">
+                        <video style="width : 500px; height :230px;" autoplay controls muted>
+                            <source src="./images/we.mp4" type="video/mp4"></video>
+                        <h3>19.10.13</h3>
+                        <p>Our first weekend Studying</p>
+                    </div>
+                </div>
+                <!-- end about module -->
+                <!-- about module -->
+                <div class="col-md-3 text-center">
+                    <div class="mz-module-about">
+                        <img src="./images/1.gif" style="width:60px;height:60px;">
+                        <h3>Class</h3>
+                        <p>Oracle</p>
+                        <p>Html</p>
+                        <p>Javascript</p>
+
+                    </div>
+                </div>
+                <!-- end about module -->
+                <!-- about module -->
+                <div class="col-md-3 text-center">
+                    <div class="mz-module-about">
+                        <img src="./images/1.gif" style="width:60px;height:60px;">
+                        <h3>Study</h3>
+                        <p>Css</p>
+                        <p>Bootstrap</p>
+                    </div>
+                </div>
+                <!-- end about module -->
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- main 화면-->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skills-text">
+                        <h2 style="font-size:40px; font-family:나눔손글씨 붓;">저희 4조는요...</h2>
+                        <p style="font-size:25px; font-family:나눔손글씨 붓;">비록 조의 1/3이 다른 길을 찾아 떠났지만</p>
+                        <p style="font-size:25px; font-family:나눔손글씨 붓;">착하고 성실한 조원들만 모여 밝은 분위기를 유지하는</p>
+                        <p style="font-size:25px; font-family:나눔손글씨 붓;">비트 내의 최고의 Team입니다.</p>
+                        <br><br>
+                        <p style="font-size:25px; color : #666633; font-family:나눔손글씨 붓;">그렇다면 저희 4조의 매력을 좀 더 살펴볼까요?</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- skill bar item -->
+                    <div class="skillbar-item">
+                        <div class="skillbar-score">
+                            <span class="score">80</span><span class="percent">%</span>
+                        </div>
+                        <div class="skillbar" data-percent="80%">
+                            <h3>친절함</h3>
+                            <div class="skillbar-bar">
+                                <div class="skillbar-percent" style="width: 80%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- skill bar item -->
+                    <div class="skillbar-item">
+                        <div class="skillbar-score">
+                            <span class="score">90</span><span class="percent">%</span>
+                        </div>
+                        <div class="skillbar" data-percent="90%">
+                            <h3>열정</h3>
+                            <div class="skillbar-bar">
+                                <div class="skillbar-percent" style="width: 90%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- skill bar item -->
+                    <div class="skillbar-item">
+                        <div class="skillbar-score">
+                            <span class="score">15</span><span class="percent">%</span>
+                        </div>
+                        <div class="skillbar" data-percent="15%">
+                            <h3>조원의 수</h3>
+                            <div class="skillbar-bar">
+                                <div class="skillbar-percent" style="width: 15%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- skill bar item -->
+                    <div class="skillbar-item">
+                        <div class="skillbar-score">
+                            <span class="score">75</span><span class="percent">%</span>
+                        </div>
+                        <div class="skillbar" data-percent="75%">
+                            <h3>드립력</h3>
+                            <div class="skillbar-bar">
+                                <div class="skillbar-percent" style="width: 75%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="overlay-dark bg-img1 dark-bg short-section stats-bar">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-3 mb-sm-30">
+                    <div class="counter-item">
+                        <h2 class="stat-number" data-n="60">60</h2>
+                        <h6 style="font-size:15px;">조원들의 평균 공부시간</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-sm-30">
+                    <div class="counter-item">
+                        <h2 class="stat-number" data-n="25">25</h2>
+                        <h6>지금까지 푼 알고리즘 개수</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-sm-30">
+                    <div class="counter-item">
+                        <h2 class="stat-number" data-n="108">108</h2>
+                        <h6>조원의 나이 총 합</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-sm-30">
+                    <div class="counter-item">
+                        <h2 class="stat-number" data-n="100">100</h2>
+                        <h6>조원끼리의 합(%)</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about 섹션 끝!!!!!!! -->
+
+    <!--portfolio-->
+    <section id="team" class="light-bg">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span class="underline">Drop_4our_Bit</span>
+                        <br>
+                        <p>술 한잔 마셨읍니다... 프로젝트가 잘 안돼도 좋습니다.<br>
+                            하지만 4조 하나만 기억해주세요. 진심을 다해 전합니다.<br>
+                            프로젝트가 별로일 수 있습니다. 밤낮으로 고민하고 준비했읍니다...<br>
+                            최선을 다했고 열심히 했읍니다. 저희의 진심이 느껴지길 바랍니다.<br>
+                            고맙읍니다...
+                            그만큼 프로젝트가 재밌다는..ㅋㅋ
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- start portfolio item -->
+                <div class="col-lg-3">
+                    <div class="ot-portfolio-item">
+                        <figure class="effect-bubba">
+                            <img src="images/jh1.jpg" alt="img02" class="img-responsive" />
+                            <figcaption>
+                                <h2>조장쓰</h2>
+                                <p>우리조장님 체고시다~^^</p>
+                                <a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!-- end portfolio item -->
+                <!-- start portfolio item -->
+                <div class="col-lg-3">
+                    <div class="ot-portfolio-item">
+                        <figure class="effect-bubba">
+                            <img src="images/j1.jpg" class="img-responsive" />
+                            <figcaption>
+                                <h2>정은쓰</h2>
+                                <p>다시만난세계 전국 1등</p>
+                                <a href="#" data-toggle="modal" data-target="#Modal-2">View more</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="ot-portfolio-item">
+                        <figure class="effect-bubba">
+                            <img src="images/h1.jpg" class="img-responsive" />
+                            <figcaption>
+                                <h2>혜리쓰</h2>
+                                <p>오께이~!~!</p>
+                                <a href="#" data-toggle="modal" data-target="#Modal-3">View more</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!-- end portfolio item -->
+                <!-- start portfolio item -->
+                <div class="col-lg-3">
+                    <div class="ot-portfolio-item">
+                        <figure class="effect-bubba">
+                            <img src="images/hn1.jpg" alt="img02" class="img-responsive" />
+                            <figcaption>
+                                <h2>도도쓰</h2>
+                                <p>4조의 준비된 일꾼</p>
+                                <a href="#" data-toggle="modal" data-target="#Modal-4">View more</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!-- end portfolio item -->
+            </div>
+        </div><!-- end container -->
+    </section>
+    
+    <!-- Modal for 김진호-->
+    <div class="modal fade" id="Modal-1" tabindex="-1" role="dialog" aria-labelledby="Modal-label-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>                  
+                    <h3 class="modal-title" id="Modal-label-1" style="text-align: center;"><b>김진호</b></h3>
+                </div>
+                
+                <div class="modal-body">
+                    <img src="./images/jh1.jpg" class="img-responsive" > 
+                     <br> 
+                    &nbsp;<a href="./member_page/jh/jh.html" class="btn btn-default" role="button" target="_blank"> <img src="./images/eye.gif" style="width:80px;height:50px;"> </a>
+                    <div class="row">
+                    <div class="col-lg-12">
+                     <p>&nbsp; ✔&nbsp; <b>가장 기억에 남는 영화?</b> : 위플래쉬
+                        <br><br>&nbsp; ✔ &nbsp;  <b>감명깊게 읽은 책, 작가</b> : 직업으로서의 소설가, 무라카미 하루키</p>
+                    </div>
+                    <p style="text-align : center;">짜장 : <span>짬뽕</span>  &nbsp; / &nbsp; <span>바다</span> : 계곡 &nbsp; / &nbsp; 문자 : <span>전화</span> &nbsp; / &nbsp; 첫눈에 반하기 : <span>오래보고 반하기</span></p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+   </div>
+    <!-- Modal for 이정은-->
+    <div class="modal fade" id="Modal-2" tabindex="-1" role="dialog" aria-labelledby="Modal-label-2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>                  
+                    <h3 class="modal-title" id="Modal-label-2" style="text-align: center;"><b>이정은</b></h3>
+                </div>
+                
+                <div class="modal-body">
+                    <img src="./images/j1.jpg" class="img-responsive" > 
+                     <br> 
+                    &nbsp;<a href="./member_page/je/je_page.html" class="btn btn-default" role="button" target="_blank"> 
+                        <img src="./images/eye.gif" style="width:80px;height:50px;"> </a>
+                    <div class="row">
+                    <div class="col-sm-5">
+ 					<p>&nbsp; ✔&nbsp; <b>별자리</b> : 사수자리  <br>&nbsp; ✔ &nbsp; <b>좋아하는 색</b> : <span>남색</span></p>
+                    </div>
+                    <div class="col-sm-7">
+                    <p>&nbsp; ✔ &nbsp; <b>좋아하는 음식</b> : 로제파스타  <br>&nbsp; ✔ &nbsp; <b>가고 싶은 곳</b> : 미국 라스베이거스</p>
+                    </div>
+                    <p style="text-align : center;"><span>짜장</span> : 짬뽕  &nbsp; / &nbsp; <span>바다</span> : 계곡 &nbsp; / &nbsp; 문자 : <span>전화</span> &nbsp; / &nbsp; <span>첫눈에 반하기</span> : 오래보고 반하기</p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Modal for portfolio 이혜리 -->
+    <div class="modal fade" id="Modal-3" tabindex="-1" role="dialog" aria-labelledby="Modal-label-3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="Modal-label-3" style="text-align: center;"><b>이혜리</b></h3>
+                </div>
+                <div class="modal-body">
+                    <img src="./images/h1.jpg" class="img-responsive" > 
+                    <br> 
+                    &nbsp;<a href="./member_page/hl/main.html" class="btn btn-default" role="button" target="_blank"> <img src="./images/eye.gif" style="width:80px;height:50px;"> </a>
+                    <div class="row">         
+                    <div class="col-lg-12">
+                     <p>&nbsp; ✔&nbsp; <b>외로울때는?</b> : 혼밥하러 갔는데 2인분부터 주문받을때 
+                        <br><br>&nbsp; ✔ &nbsp;  <b>머리의 한계를 느낄때</b> : for문 쓸때</p>
+                    </div>
+                    <br><br>
+                    <p style="text-align : center;">짜장 : <span>짬뽕</span>  &nbsp; / &nbsp; <span>바다</span> : 계곡 &nbsp; / &nbsp; 문자 : <span>전화</span> &nbsp; / &nbsp; 첫눈에 반하기 : <span>오래보고 반하기</span></p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for portfolio 오형남 -->
+    <div class="modal fade" id="Modal-4" tabindex="-1" role="dialog" aria-labelledby="Modal-label-4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="Modal-label-3" style="text-align: center;"><b>오형남</b></h3>
+                </div>
+                    <div class="modal-body">
+                    <img src="./images/hn1.jpg" class="img-responsive" > 
+                     <br> 
+                    &nbsp;<a href="./member_page/hn/index.html" class="btn btn-default" role="button" target="_blank"> <img src="./images/eye.gif" style="width:80px;height:50px;"> </a>
+                    <div class="row">
+                    <div class="col-lg-12">
+                     <p>&nbsp; ✔&nbsp; <b>로또1등에 당첨된다면?</b> 안녕히계세요 
+                        <br><br>&nbsp; ✔ &nbsp;  <b>좋아하는 명언?&nbsp;</b>죄책감의 크기는 죄의 크기에 비례하는것이 아니라 <br> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;죄의식에 크기에 비례한다.</p>
+                    </div>
+                    <br><br>
+                    <p style="text-align : center;">짜장 : <span>짬뽕</span>  &nbsp; / &nbsp; <span>바다</span> : 계곡 &nbsp; / &nbsp; 문자 : <span>전화</span> &nbsp; / &nbsp; 첫눈에 반하기 : <span>오래보고 반하기</span></p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--partners-->
+    <section id="partners" class="light-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Our Partners</h2>
+                        <p>우리는 비트캠프에서 배우고, 스타벅스, 커피빈, 할리스커피에서 <br>삼성노트북과 엘지노트북을 가지고 이 페이지를 만들었습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="owl-carousel">
+                        <div class="item">
+                            <div class="partner-logo"><img src="./images/partners/logo_bit.png" alt="partners"></div>
+                        </div>
+                        <div class="item">
+                            <div class="partner-logo"><img src="./images/partners/logo_coffeebean.png" alt="partners">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="partner-logo"><img src="./images/partners/logo_hollys.png" alt="partners"></div>
+                        </div>
+                        <div class="item">
+                            <div class="partner-logo"><img src="./images/partners/logo_lg.png" alt="partners"></div>
+                        </div>
+                        <div class="item">
+                            <div class="partner-logo"><img src="./images/partners/logo_samsung.png" alt="partners">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="partner-logo"><img src="./images/partners/logo_starbucks.png" alt="partners">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="container text-center">
+            <p>© 2019. created, designed and copyrighted by Drop 4our Bit.</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+		================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/jquery.appear.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cbpAnimatedHeader.js"></script>
+    <script src="./js/theme-scripts.js"></script>
+</body>
+
+</html>

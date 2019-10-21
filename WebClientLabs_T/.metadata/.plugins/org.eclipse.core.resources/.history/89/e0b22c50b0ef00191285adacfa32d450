@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var menode;
+			menode = document.getElementById("me");
+			menode.style.backgroundColor="yellow"; //style= 
+		
+			var parentnode = menode.parentNode; //body
+			parentnode.style.backgroundColor = "skyblue";
+			
+			var grandnode;
+			grandnode = parentnode.parentNode; //html
+			grandnode.style.backgroundColor = "green";
+		}
+	</script>
+</head>
+<body>
+<div>A</div><div>B</div><div id="me">C</div><div>D</div><div>E</div>
+<ul id="mychild"><li>AA</li><li>BB</li><li>CC</li></ul>
+</body>
+<script type="text/javascript">
+	
+</script>
+</html>
