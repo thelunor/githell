@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+			remove() - Removes the selected element (and its child elements)
+				: 자신과 자식요소 삭제
+			empty()  - Removes the child elements from the selected element
+				: 자식요소 삭제
+		*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

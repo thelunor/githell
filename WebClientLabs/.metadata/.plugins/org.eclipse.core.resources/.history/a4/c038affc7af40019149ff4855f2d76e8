@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+			remove() - Removes the selected element (and its child elements)
+				: 자신과 자식요소 삭제
+			empty()  - Removes the child elements from the selected element
+				: 자식요소 삭제
+		*/
+	</script>
+</head>
+<body>
+	<div id="div">
+			행의수 : <input type="text" id="txtrow" name="txtrow" value="2"><br>
+			열의수 : <input type="text" id="txtcolumn" name="txtcolumn" value="2"><br>
+			<input type="button" id="b1" value="동적테이블 생성" >
+			<input type="button" id="b2"  value="동적테이블 제거" >
+	</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>HTML 오디오 활용하기</h1>
+    <img src="./images/audio1.png" width="700px" height="500px"> <br>
+    <img src="./images/audio2.png" width="700px" height="500px"> <br>
+
+<audio id="myaudio" controls>
+        <source id="main">
+        <source src="./audio/오께이~.m4a">
+        <source src="./audio/Okay.m4a">
+        <source src="./audio/timidOkay.m4a">
+    </audio>
+    <button id='play'>재생하기</button>
+    <button id='play-next'>다음 곡 재생하기</button>
+    <button id='play-previous'>이전 곡 재생하기</button>
+    <button id='pause'>정지하기</button>
+
+</body>
+    
+<script>
+    var index = 2;
+   
+
+    //재생하기 
+    $('#play').click(function(){
+
+
+        if( $("#myaudio")[0].paused) { 
+            $("#myaudio")[0].play();
+        } else{ 
+            $('#myaudio source#main').attr('src', 
+         $('#myaudio source:nth-child(' + index + ')').attr('src')); 
+         $("#myaudio")[0].load(); 
+         $("#myaudio")[0].play(); 
+        }
+    });
+
+    $('#play-next').click(function() {
+        index++;
+        if(index > $('#myaudio source').length) index=2;
+        console.log( index + '번째 소스 재생' );
+        $('#myaudio source#main').attr('src',
+            $('#myaudio source:nth-child('+index+')').attr('src'));
+        $("#myaudio")[0].load();
+        $("#myaudio")[0].play();
+    });
+
+    $('#play-previous').click(function() {
+        index--;
+        if(index < 1) index= 2;
+        console.log( index + '번째 소스 재생' );
+
+        $('#myaudio source#main').attr('src',
+            $('#myaudio source:nth-child('+index+')').attr('src')); 
+        $("#myaudio")[0].load();
+        $("#myaudio")[0].play();
+    });
+
+    $('#pause').click(function(){
+        $('myaudio source#main').attr('src',
+            $('#myaudio source:nth-child(' + index + ')').attr('src'));
+        $('#myaudio')[0].pause();
+    })
+
+
+</script>
+
+</body>
+</html>

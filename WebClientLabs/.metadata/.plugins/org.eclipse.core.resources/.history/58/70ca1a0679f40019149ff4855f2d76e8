@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+			append()  - Inserts content at the end of the selected elements
+			prepend() - Inserts content at the beginning of the selected elements
+			after()   - Inserts content after the selected elements
+			before()  - Inserts content before the selected elements
+			
+			<p>A</p> -> B append()  -> <p>AB</p>: 닫는 태그 바로 앞에 추가
+			<p>A</p> -> B prepend() -> <p>BA</p>: 시작 태그 바로 뒤에 추가 -> <p>CBA</p>
+			<p>A</p> -> B after()   -> <p>A</p>B: 태그 뒤에 추가
+			<p>A</p> -> B before()  -> B<p>A</p>: 태그 뒤에 추가
+			
+			태그 안쪽 제어: prepend, append
+			태그 바깥쪽 제어: before, after
+		*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

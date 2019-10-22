@@ -256,7 +256,10 @@
 				document.write("<img src=" + imgs + "><br>")
 			}
 		*/
-		
+	/*	
+	아래 구문을 Jquery 로 바꾸세요
+	배운한도 내에서 ....
+	
 	console.log(data);
 	var imgIdx = 0;
 	window.onload = function()
@@ -289,7 +292,49 @@
 			document.getElementById("imgs").src = myphotos[--imgIdx];
 		}
 	}
+	*/
 	
+	
+	$(document).ready(function() {
+		  var mediaList = [];
+
+		  /*  
+		  	var itemList = data.items;
+			for( var index in itemList)
+			{
+				var media = itemList[index].media; //media객체
+				myphotos.push (media.m);
+			}
+		  */
+		  
+		  //$(data.items).each(function(index, element) {
+		 //     mediaList.push(element[index].media.m);
+		 // })
+		    
+		$.each(data.items,function(index, element) {
+		      mediaList.push(element[index].media.m);
+		  })
+        var index=0;
+        $('#imgs').attr('src', mediaList[0]);
+        
+        console.log("index : " + index);
+        
+        $('#prv').click(function() {
+            if(index == 0){
+              index = mediaList.length;
+          }
+            $('#imgs').attr('src', mediaList[--index]);
+            console.log("index : " + index);
+        });
+        
+        $('#next').click(function() {
+            if(index == (mediaList.length-1)){
+              index = -1;
+          }
+            $('#imgs').attr('src', mediaList[++index]);
+            console.log("index : " + index);
+        });
+    });
 	</script>
 </head>
 <body>

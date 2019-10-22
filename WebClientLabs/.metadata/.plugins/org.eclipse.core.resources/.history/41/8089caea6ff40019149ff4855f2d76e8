@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery Each</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+			Java: for(String str : 배열(Collection)) {}
+			javascript(Array): for (var(let) index in Array) {Array[index]}
+			javascript(Object): for (let key in Object(json)) {}
+			console.log("key: " + key + " = " + Object[key]);
+			
+			Jquery: each() 반복구문
+			
+			Jquery: Ajax 처리구문... 화면 구성
+			1. $(selector).each(function(){this}); // function(): 콜백(재귀) 함수
+			2. $(selector).each(function(index){this});
+			3. $(selector).each(function(index, element){}); 70%
+			
+			* selector 없는 each()
+			1. $.each(selector, function(){this});
+			2. $.each(selector, function(index){this});
+			3. $.each(selector, function(index, element){element}); 70%
+			
+			만약 selector가 JSON 객체라면
+			var obj = {name:"홍길동", age:100}
+			$(obj).each(function(key, value){})
+		*/
+		$(function() {
+			// 1. $.each(selector, function(){this});
+			$('p').each(function() { // p태그의 개수만큼 재귀호출 >> function() 재귀함수(콜백함수)
+				console.log("this: " + $(this).text());
+				// this: p 태그
+			});
+			
+			// 2. $.each(selector, function(index){this}); 
+			$('p').each(function(index) {
+				console.log("index: " + index);
+				console.log("this: " + $(this).text());
+			
+				// $(this).attr("id", "param-" + index)
+				// 다수 p 태그에 같은 속성을 부여(id 충동가능성)
+				$(this).attr("id", "param-"+index);
+				
+				// 속성을 한번에 여러 개: json 객체(parameter) ***여러 개 >> json***
+				$(this).attr(
+					{
+						"id":"param-"+index,
+						"style":"color:red"
+					}		
+				);
+			});
+			// 3. $(selector).each(function(index, element){}); 70%
+			// 가장 편한 방식
+			$('p').each(function(index, element) {
+				console.log("index: " + index);
+				// element: <p>java</p>
+				console.log("element: " + element + " / " + $(element).text());
+			});
+			
+			$('#btm').click(function() {
+				alert($('#param-1').text());
+			});
+		/*
+			응용학습
+			javascript
+			var arr = ['사과', '배', '수박'];ㅣ
+			var obj = {}
+			객체배열
+			var arrobj = [{}, {}, {}];
+		*/
+			var array = [
+				{"name":"naver", "link":"www.naver.com"},
+				{"name":"daum", "link":"www.daum.net"},
+				{"name":"bit", "link":"www.bit.com"}
+			];
+			// 문제: name 값, link 값 출력
+			// $(selector).each(function(key, value){})
+			// $(selector).each(function(index, element){});
+			// element가 받는 자원은 무엇일까
+			// selector가 일반 element, Array...
+			$(array).each(function(index, element) {
+				console.log(element); // 객체.속성명, 객체["속성명"]
+				console.log(element.name + " / " + element["link"]);
+			});
+			
+			// $.each(selector, function(index){this});
+			// 태그가 아닌 내부자원은... 이 방법이 더 잘 어울리지 않을까
+			$.each(array, function(index, element) {
+				console.log(element); // 객체.속성명, 객체["속성명"]
+				console.log(element.name + " / " + element["link"]);
+			});
+		});
+
+		// $(selector).each(function(index, element){element});
+		// body 안에 있는 태그 정보
+		
+		// $.each(selector, function(index, element){element});
+		// script 내부에 있는 배열이나 객체를 다룰 때
+		
+		let board = {
+				values:[
+					{no:1, title:"hello world"},
+					{no:2, title:"world korea"},
+					{no:3, title:"bit camp"},
+				],
+				search:"검색"
+		}
+		// 1. $.each() 사용하여 no 값, title 값을 출력하시오
+		$(function() {
+			$.each(board.values, function(index, elemenet) {
+				console.log(index + " / " + element.no + ", " + element["title"]);
+			});
+		});
+	</script>
+	
+</head>
+<body>
+	<p>java</p>
+	<p>jsp</p>
+	<p>oracle</p>
+	<input type="button" value="click" id="btn">
+</body>
+</html>
