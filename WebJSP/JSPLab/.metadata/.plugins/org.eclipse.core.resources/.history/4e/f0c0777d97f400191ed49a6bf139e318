@@ -1,0 +1,39 @@
+<%@page import="java.util.Date"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// 스크립트 릿(java code 작성)
+	Date day = new Date();
+	/*
+		JSP 페이지: UI: html + css + javascript code
+				  server code(JDBD): java code >> <% 안에서 구현 %
+				  >> 디자인 코드+ 서버로직 코드(좋은 방식은  아님)
+				  >> [ 결론 ]
+				  >> servlet: Java로 Web을 구현하는 페이지
+				  >> UI -> jsp
+				  >> MVC(Model(java) View(jsp) Controller(servlet))
+				  >> servlet: 웹 전용 java code(java와 jsp를 연결하는 역할)
+				  >> 잘하는 것만 해: Model2 기반의 MVC 패턴
+
+				  >> jsp와 html 차이점
+				  >> tomcat: Web Server, (WAS: Web Application Server(Service): Client의 요청을 받음: 페이지 컴파일 )
+				  >> tomcat과 WAS는 다른 개념이지만 tomcat을 설치하면 WAS까지 한번에 설치
+				  >> 1. html로만 구성 
+				  >> 2. jsp로 구성
+	*/
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	String str = "hong";
+%>
+<%= str %><br>
+<%= day %>
+</body>
+</html>

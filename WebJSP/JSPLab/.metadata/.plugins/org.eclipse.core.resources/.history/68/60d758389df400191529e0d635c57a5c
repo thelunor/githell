@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// 서버쪽 객체 사용...
+	// 아파치톰캣: 웹 전용 객체를 제공(request, response)
+	// new 없이 바로 사용가능한 객체(내장 객체)
+	
+	// client가 서버에 전달한 데이터 받기
+	// Ex02_register.jsp?userid=hong&pwd=111&hobby=baseball&hobby=soccer...
+	
+	String uid = request.getParameter("userid"); // 단일값 받기
+	String pwd = request.getParameter("pwd");
+	String hobby = request.getParameter("hobby");
+%>   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

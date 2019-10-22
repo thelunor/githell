@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\SmartWeb\WebJSP\JSPLab\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+799011890.index
+3989199948.index
+4161146632.index
+560847869.index
+4040475097.index
+252519832.index
