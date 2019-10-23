@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 혜리 -->
+    <script type="text/javascript"> 
+        $(document).ready(function(){ 
+           $("#add").click(function(){ 
+              move($("#leftTable"),$("#rightTable")); 
+           }); 
+           $("#del").click(function(){ 
+              move($("#rightTable"),$("#leftTable")); 
+           }); 
+        }); 
+        
+        //이전 테이블의 정보를 새로운 테이블로 옮기고 이전 테이블의 정보를 없애는 함수
+        function move(from, to) { 
+           var target = from.find("tr:has(:checked)"); //tr 태그 중 checked 된 요소를 찾음
+           if (target.size() == 0) { //체크박스를 선택하지 않았는데 추가 버튼을 눌렀을 경우 경고창 뜨게 함
+              alert("선택된 요소가 없습니다."); 
+              } else { //체크박스를 선택한 경우
+              for ( var i = target.size() - 1; i >= 0; i--) { //체크박스에 체크한 개수 만큼 해당 요소를 복사함
+                 var item = target.eq(i); //선택된 요소를 변수item에 넣어줌
+                 copy(to, from, item); //사용자 정의함수 copy 실행
+              } 
+              target = from.find("tr:has(:checked)"); //원래 있던 테이블에서 체크박스에 체크된 요소를 찾음
+              target.each(function(i){ 
+                 $(this).remove(); //원래 있던 테이블에서 체크박스에 체크되었던 요소를 테이블에서 삭제함
+              }); 
+           } 
+        } 
+        
+        //이전 테이블의 정보를 그대로 새로운 테이블로 복사하는 함수
+        function copy(to, from, item) { 
+           var appended = false; //체크박스가 새로운 테이블로 옮겨졌는지 아닌지 체크하는 변수
+           var targettext = item.find("td").eq(1).text(); //이전 테이블에서 td의 두번째 요소의 text값을 가져옴
+           var trs = to.find("tr"); //새로운 테이블의 tr 요소를 가져옴
+           for ( var i = trs.size() - 1; i >= 0; i--) { 
+              if (trs.eq(i).find("td").eq(1).text() < targettext) { 
+                 //새로운 테이블의 i번째 tr에서 td를 찾고 그 td의 두번째 text 값이 이전 테이블의 text 값 보다 작다면
+                 //새로운 테이블에 만들어질 텍스트 < 이전 테이블에서 옮겨질 텍스트 라면
+                 item.find(":checked").removeAttr("checked"); //이전 테이블에서 checked 된 요소들을 선택해 checked 속성을 없앰
+                 trs.eq(i).after(item); //새로운 테이블에 이전 테이블의 요소를 앞에 넣어줌
+                 appended = true; 
+                 break;
+              }
+           }
+           if (!appended) { // 옮겨지지 않았다 -> for문 다 돌고 난 후에도 어떤 text가 남아있는 경우
+              //즉, 원래 있던 텍스트의 숫자 < 새로운 텍스트의 숫자 일 때
+              item.find(":checked").removeAttr("checked"); 
+              to.prepend(item); 
+           } 
+           return true; //다 옮겨짐
+        } 
+        </script>
+
+        <!-- 정은 -->
+        <script type="text/javascript"> 
+            $(document).ready(function(){  
+               $("#add").click(function(){ //추가 버튼을 클릭하면
+                  move($("#leftTable"),$("#rightTable")); //leftTable이 rightTable로 이동
+               }); 
+               $("#del").click(function(){  //삭제 버튼을 클릭하면
+                  move($("#rightTable"),$("#leftTable")); // rightTable이 leftTable로 이동
+               }); 
+            }); 
+            function move(from, to) { //from param -> to param으로 이동
+               var target = from.find("tr:has(:checked)"); 
+               /*
+               :has(selector) - 적어도 하나의 요소를 가지고 있다면 그것을 선택
+               따라서 tr 태그안에서 체크된 요소를 target 이라는 변수로 받음
+               */
+               if (target.size() == 0) { //만약 target의 크기가 0이면
+                  alert("선택된 요소가 없습니다."); //선택된 요소가 없습니다 창이 뜸
+                  } else { //target이 있다면
+                  for ( var i = target.size() - 1; i >= 0; i--) {  
+                     var item = target.eq(i); //eq() selector - 요소의 i값 선택 // 선택한 target을 item이라는 변수로 받음
+                     copy(to, from, item); //copy() - 선택된 item을 from으로부터 to에게 보냄
+                  } 
+                  target = from.find("tr:has(:checked)"); 
+                  target.each(function(i){ 
+                     $(this).remove(); //보낸 것은 제거
+                  }); 
+               } 
+            } 
+            function copy(to, from, item) { 
+               var appended = false; 
+               var targettext = item.find("td").eq(1).text();  //item의 <td> 태그에서 1번째 방에 있는 text값
+                var trs = to.find("tr"); 
+               for ( var i = trs.size() - 1; i >= 0; i--) { 
+                  if (trs.eq(i).find("td").eq(1).text() < targettext) {  //i번째 <tr>의 <td>를 찾았을 때 그 1번째 text의 값 보다 targettext 값이 크다면 
+                     item.find(":checked").removeAttr("checked"); //체크되어 있는 item의 checked 되어 있는 속성을 없앰
+                     trs.eq(i).after(item);  // <tr> 뒤에 item 추가
+                     appended = true; //보다 값이 큰건 append
+                     break; 
+                  } 
+               } 
+               if (!appended) { //appended가 false일 때
+                  item.find(":checked").removeAttr("checked"); 
+                  to.prepend(item);  //보다 값이 작으면 prepend
+               } 
+               return true; 
+            } 
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
