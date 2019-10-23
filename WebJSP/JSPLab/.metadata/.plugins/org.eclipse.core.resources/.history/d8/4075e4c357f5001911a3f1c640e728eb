@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// 1. 한글처리***항상
+	request.setCharacterEncoding("UTF-8");
+	String id = request.getParameter("id");
+	
+	/*
+		request 객체
+		Tomcat이 가지고 있는 내장 객체
+	*/
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
