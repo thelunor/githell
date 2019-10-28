@@ -1,0 +1,101 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+  <!--Travel Package-->
+  <div class="row text-center" id="Book">
+        <h1>2019 책 베스트3</h1>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="./images/book1.jpg" alt="권여선" width="200px" height="auto">
+                <p><strong>오늘 뭐 먹지?</strong></p>
+                <p>2018.05</p>
+                <button class="btn" data-toggle="modal" data-target="#myModal_1">감상</button>
+            </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./images/book2.jpg" alt="박막례" width="200px" height="auto">
+                    <p><strong>박막례, 이대로 죽을 순 없다</strong></p>
+                    <p>2019.06</p>
+                    <button class="btn" data-toggle="modal" data-target="#myModal_2">감상</button>
+                  </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./images/book3.jpg" alt="허지원" width="200px" height="auto">
+                    <p><strong>나도 아직 나를 모른다</strong></p>
+                    <p>2018.10</p>
+                    <button class="btn" data-toggle="modal" data-target="#myModal_3">감상</button>
+                  </div>
+        </div>
+    </div>
+    <!-- Book Modal -->
+    <div class="modal fade" id="myModal_1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3><span class="modal-title"></span>오늘 뭐 먹지?<br>-권여선</h3>
+        </div>
+        <div class="modal-body">
+          <p>권여선 작가의 소설 '레몬'을 읽고 권여선 작가의 팬이 되었다.<br>
+          미식가이자 애주가로 유명한 권여선 작가의 음식 에세이로 맛깔난 묘사가 좋았다.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> close
+            </button>
+            <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+            onclick="open_page('https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147897375')">
+            <span class="glyphicon glyphicon-search"></span> 책정보
+            </button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal_2" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3><span class="modal-title"></span>박막례 이대로 죽을 순 없다<br>-박막례</h3>
+            </div>
+            <div class="modal-body">
+              <p>나이, 과거, 삶의 형태에 상관없이 내가 하고 싶은대로 즐기고 사는 게 중요하다는 걸 느낄 수 있었다.
+                <br>근래 읽은 책 중 가장 강한 에너지와 긍정적인 희망을 주는 책!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                <span class="glyphicon glyphicon-remove"></span> close
+                </button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+                onclick="open_page('https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=192372285')">
+                <span class="glyphicon glyphicon-search"></span> 책정보
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal_3" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3><span class="modal-title"></span>나도 아직 나를 모른다<br>-허지원</h3>
+            </div>
+            <div class="modal-body">
+              <p>뇌과학과 심리학을 통해 나를 되돌아볼 수 있게 해준 책</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                <span class="glyphicon glyphicon-remove"></span> close
+                </button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+                onclick="open_page('https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171698547')">
+                <span class="glyphicon glyphicon-search"></span> 책정보
+            </div>
+            </div>
+        </div>
+    </div>

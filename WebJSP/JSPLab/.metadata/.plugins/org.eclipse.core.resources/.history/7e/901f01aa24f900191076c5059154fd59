@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	/*
+	Was: 여러 개의 웹 애플리케이션을 서비스 할 수 있다
+	Was 안에 WebJSP 웹 프로젝트(애플리케이션)을 가지고 있다
+	
+	
+	
+	WebJSP 애플리케이션 이름, 프로젝트 이름, 가상 디렉토리
+	-- C:\SmartWeb\WebJSP\JSPLab\WebJSP 실경로...
+	-- http://192.168.0.48:8090/WebJSP/ 웹 경로(가상 디렉토리)
+	WebJSP2 애플리케이션 이름, 프로젝트 이름
+	
+	애플리케이션이 가지는 default 서비스 경로: 실 서비스경로: WebContent (Context root)
+	http://192.168.0.48:8090/WebJSP/
+	*/
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

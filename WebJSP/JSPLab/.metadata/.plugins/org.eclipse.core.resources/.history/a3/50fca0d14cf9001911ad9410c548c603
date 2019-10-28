@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>개인 웹페이지</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="personal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+      function open_page(url){
+        mywindow = window.open(url,"_blank");
+      } 
+    </script>
+</head>
+<body>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!--Wrapper for slides-->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="./images/main1.jpg" alt="석림" width="100%" height="auto">
+                <div class="carousel-caption">
+                    <h3>석림</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/main2.jpg" alt="운남" width="100%" height="auto">
+                <div class="carousel-caption">
+                    <h3>운남</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/main3.jpg" alt="한강" width="100%" height="auto">
+                <div class="carousel-caption">
+                    <h3>한강</h3>
+                </div>
+            </div>
+        </div>
+      </div>
+        <!--left and right controls-->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    <div class="jumbotron" id="Aboutme">
+      <div class="container text-center">
+        <h1>About Me</h1>
+        <img src="./images/alpaca.jpg" alt="알파카">
+          <p>1994.01.24 출생<br>B형<br>경기도 부천시 거주</p>
+      </div>
+    </div>
+    <div class="container text-center" id="Gourmet">
+      <h1>2019 맛집 베스트3</h1>
+      <br>
+      <div class="row">
+          <div class="col-sm-4">
+              <a href="#demo" data-toggle="collapse">
+              <img src="./images/noodle.jpg" alt="국수" class="img-circle food" width="120px" height="auto">
+              </a>
+              <div id="demo" class="collapse">
+                  <p>샤먼</p>
+                  <p>빅마마 국수</p>
+                  <p>★★★★☆</p>
+              </div>
+          </div>
+          <div class="col-sm-4">
+                  <a href="#demo2" data-toggle="collapse">
+                    <img src="./images/donkatsu.jpg" alt="돈카츠" class="img-circle food" width="120px" height="auto">
+                  </a>
+                  <div id="demo2" class="collapse">
+                      <p>도쿄</p>
+                      <p>돈카츠 마루이치</p>
+                      <p>★★★★☆</p>
+                  </div>
+          </div>
+          <div class="col-sm-4">
+                  <a href="#demo3" data-toggle="collapse">
+                    <img src="./images/ramen.jpg" alt="라멘" class="img-circle food" width="120px" height="auto">
+                  </a>
+                  <div id="demo3" class="collapse">
+                      <p>합정</p>
+                      <p>오레노라멘</p>
+                      <p>★★★★★</p>
+                  </div>
+          </div>  
+      </div>
+  </div>
+  <!--book-->
+  <div class="row text-center" id="Book">
+        <h1>2019 책 베스트3</h1>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="./images/book1.jpg" alt="권여선" width="200px" height="auto">
+                <p><strong>오늘 뭐 먹지?</strong></p>
+                <p>2018.05</p>
+                <button class="btn" data-toggle="modal" data-target="#myModal_1">감상</button>
+            </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./images/book2.jpg" alt="박막례" width="200px" height="auto">
+                    <p><strong>박막례, 이대로 죽을 순 없다</strong></p>
+                    <p>2019.06</p>
+                    <button class="btn" data-toggle="modal" data-target="#myModal_2">감상</button>
+                  </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./images/book3.jpg" alt="허지원" width="200px" height="auto">
+                    <p><strong>나도 아직 나를 모른다</strong></p>
+                    <p>2018.10</p>
+                    <button class="btn" data-toggle="modal" data-target="#myModal_3">감상</button>
+                  </div>
+        </div>
+    </div>
+    <!-- Book Modal -->
+    <div class="modal fade" id="myModal_1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3><span class="modal-title"></span>오늘 뭐 먹지?<br>-권여선</h3>
+        </div>
+        <div class="modal-body">
+          <p>권여선 작가의 소설 '레몬'을 읽고 권여선 작가의 팬이 되었다.<br>
+          미식가이자 애주가로 유명한 권여선 작가의 음식 에세이로 맛깔난 묘사가 좋았다.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> close
+            </button>
+            <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+            onclick="open_page('https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147897375')">
+            <span class="glyphicon glyphicon-search"></span> 책정보
+            </button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal_2" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3><span class="modal-title"></span>박막례 이대로 죽을 순 없다<br>-박막례</h3>
+            </div>
+            <div class="modal-body">
+              <p>나이, 과거, 삶의 형태에 상관없이 내가 하고 싶은대로 즐기고 사는 게 중요하다는 걸 느낄 수 있었다.
+                <br>근래 읽은 책 중 가장 강한 에너지와 긍정적인 희망을 주는 책!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                <span class="glyphicon glyphicon-remove"></span> close
+                </button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+                onclick="open_page('https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=192372285')">
+                <span class="glyphicon glyphicon-search"></span> 책정보
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal_3" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3><span class="modal-title"></span>나도 아직 나를 모른다<br>-허지원</h3>
+            </div>
+            <div class="modal-body">
+              <p>뇌과학과 심리학을 통해 나를 되돌아볼 수 있게 해준 책</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                <span class="glyphicon glyphicon-remove"></span> close
+                </button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+                onclick="open_page('https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171698547')">
+                <span class="glyphicon glyphicon-search"></span> 책정보
+            </div>
+            </div>
+        </div>
+    </div>
+
+<!--media-->
+<div class="row text-center" id="Media">
+    <h1>2019 영화&드라마 베스트3</h1>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <img src="./images/asako.jpg" alt="아사코" width="200px" height="auto">
+            <p><strong>아사코</strong></p>
+            <p>2019.03</p>
+            <button class="btn" data-toggle="modal" data-target="#myModal_4">감상</button>
+        </div>
+    </div>
+    <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="./images/killingeve.jpg" alt="킬링이브" width="200px" height="auto">
+                <p><strong>킬링 이브</strong></p>
+                <p>2018.04</p>
+                <button class="btn" data-toggle="modal" data-target="#myModal_5">감상</button>
+              </div>
+    </div>
+    <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="./images/misung.jpg" alt="미성년" width="200px" height="auto">
+                <p><strong>미성년</strong></p>
+                <p>2019.04</p>
+                <button class="btn" data-toggle="modal" data-target="#myModal_6">감상</button>
+              </div>
+    </div>
+</div>
+<!-- Media Modal -->
+<div class="modal fade" id="myModal_4" role="dialog">
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3><span class="modal-title"></span>아사코</h3>
+    </div>
+    <div class="modal-body">
+      <p>히가시데 마사히로 첫 내한이라는 말에 헐레벌떡 예매했는데, 생각보다 좋았던 영화<br>
+      아사코의 불안정한 심리 묘사가 인상깊었고 동시대를 살아가는 청년에 대한 감독의 시선이 엿보였다.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+        <span class="glyphicon glyphicon-remove"></span> close
+        </button>
+        <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+        onclick="open_page('https://movie.naver.com/movie/bi/mi/basic.nhn?code=172145')">
+        <span class="glyphicon glyphicon-search"></span> 네이버 영화정보
+     </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal_5" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3><span class="modal-title"></span>킬링이브</h3>
+        </div>
+        <div class="modal-body">
+          <p>여태껏 보기 힘들었던 여성 사이코패스 살인자 캐릭터가 흥미로웠다. <br>두 주연 배우의 연기가 돋보였다. </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> close
+            </button>
+            <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+            onclick="open_page('https://play.watcha.net/contents/tRBxA7l')">
+            <span class="glyphicon glyphicon-search"></span>왓챠 정보       
+          </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal_6" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3><span class="modal-title"></span>미성년</h3>
+        </div>
+        <div class="modal-body">
+          <p>남성 감독이 이 영화를 만들었다는 게 신기할 정도로 여성 캐릭터나 감정선에 대한 묘사가 인상깊었다.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> close
+            </button>
+            <button type="button" class="btn btn-default pull-right" data-dismiss="modal"
+            onclick="open_page('https://movie.naver.com/movie/bi/mi/basic.nhn?code=171785')">
+            <span class="glyphicon glyphicon-search"></span>네이버 정보        
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="container bg-1 text-center">
+  <h1>2019 Best Video</h1>
+  <div class="container-fluid" id="Video">
+      <iframe width="100%" height="430" 
+      src="https://www.youtube.com/embed/amCjTkWOSRU?controls=0" frameborder="0" 
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+    <!--Contact Container-->
+    <div class="container">
+        <h3 class="text-center">Contact</h3>
+        <p class="text-center"><em>문의해주세요.</em></p>
+        <div class="row text">
+            <div class="col-md-4">
+                <p>연락처</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span>경기도 부천시</p>
+                <p><span class="glyphicon glyphicon-phone"></span>Phone: +82 0192963610</p>
+                <p><span class="glyphicon glyphicon-envelope"></span>Email: hgoguma@gmail.com</p>
+            </div>
+            <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                      </div>
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                      </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <button class="btn pull-right" type="submit">Send</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+
+    <!--navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Hyelee</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#myCarousel">Home</a></li>
+                  <li><a href="#Aboutme">About Me</a></li>                
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">2019 Awards
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#Gourmet">Gourmet</a></li>
+                      <li><a href="#Book">Book</a></li>
+                      <li><a href="#Media">Media</a></li>
+                      <li><a href="#Video">Video</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#contact">CONTACT</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+</body>
+</html>
