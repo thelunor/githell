@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>IU Concert Reservation</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/Smoothness/jquery-ui.css"> -->
+	<style>
+	<!--section1 -->
+	#gallery { /* 그림 왼쪽 정렬  및 그 공간의 폭 설정 */
+	   float: left;  
+	   width: 70%;
+	   min-height: 12em;
+	}
+	
+	.gallery li { /* 그림  뒤의 공간 css 설정 */
+	   float: left;
+	   width: 200px;
+	   height: 250px;
+	   padding: 0.4em;
+	   margin: 0 0.4em 0.4em 0;
+	   text-align: center;
+	}
+	
+	.gallery li h5 { 
+	   margin: 0 0 0.4em;
+	   cursor: move;
+	}
+	
+	.gallery li img {
+	   width: 100%;
+	   cursor: move;
+	}
+	
+	#place{
+	   float: right;
+	   width: 20%;
+	   height: 40%;
+	   min-height: 18em;
+	   padding: 1%;
+	}
+	
+	#place h4 {
+	   float: left;
+	   line-height: 16px;
+	   margin: 0 0 0.4em;
+	}
+	
+	#place h4 .ui-icon {
+	   float: left;
+	}
+	
+	#place .gallery h5 {
+	   display: none;
+	}
+	
+	<!--
+	좌석 선택 -->#feedback {
+	   font-size: 1.4em;
+	}
+	
+	#selectable .ui-selecting {
+	   background: #FECA40;
+	}
+	
+	#selectable .ui-selected {
+	   background: #F39814;
+	   color: white;
+	}
+	
+	#selectable {
+	   list-style-type: none;
+	   margin: 0;
+	   padding: 0;
+	   width: 600px;
+	   <!--
+	}
+	
+	#selectable li {
+	   margin: 3px;
+	   padding: 1px;
+	   float: left;
+	   width: 50px;
+	   height: 40px;
+	   font-size: 1.8em;
+	   text-align: center;
+	}
+	
+	#feedback {
+	   font-size: 1.4em;
+	}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			
+		    //변수 설정
+		    var $gallery = $( "#gallery" )
+		    var $place = $( "#place" );
+		 
+		    //갤러리에 있는 사진을 draggable 할 수 있도록
+		    $( "li", $gallery ).draggable({
+		      cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+		      revert: "invalid", //drag하다가 놓치면 다시 제자리로
+		      containment: "document",
+		      helper: "clone",
+		      cursor: "move"
+		    });
+		 
+		    //갤러리에 있는 사진 장소 선택창에 보내기
+		    $place.droppable({
+		      accept: "#gallery > li",
+		      classes: {
+		        "ui-droppable-active": "ui-state-highlight"
+		      },
+		      drop: function( event, ui ) {
+		        chooseImage( ui.draggable );
+		        
+		      }
+		    });
+		    
+		   
+		     //장소 선택창에 있는 사진 되돌리기(드래그)
+		    $gallery.droppable({
+		      accept: "#place li",
+		      classes: {
+		        "ui-droppable-active": "custom-state-active"
+		      },
+		      drop: function( event, ui ) {
+		        recycleImage( ui.draggable );
+		      }
+		    });
+
+		  //장소 선택창에 있으면 되돌리기 아이콘이 생기고 애니메이션 줌
+		    var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+		    function chooseImage( $item ) {
+		      $item.fadeOut(function() {
+		        var $list = $( "ul", $place ).length ?
+		          $( "ul", $place ) :
+		          $( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $place );
+		        $item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
+		          $item
+		            .animate({ width: "200px" })
+		            .find( "img" )
+		              .animate({ height: "220px" });
+		        });
+		      });
+		    }
+		 
+		    //장소 선택창에서 사진 지울 때
+		    function recycleImage( $item ) {
+		      $item.fadeOut(function() {
+		        $item
+		          .find( "a.ui-icon-refresh" ).remove()
+		          .end()
+		          .find("img")
+		          .end()
+		          .appendTo( $gallery)
+		          .fadeIn();
+		      });
+		    }
+		 
+		    //되돌리기 아이콘 누르면 사진 되돌려지기
+		    $( "ul.gallery > li" ).on( "click", function( event ) {
+		      var $item = $( this ),
+		        $target = $( event.target );
+		    
+		      if ( $target.is( "a.ui-icon-refresh" ) ) {
+		        recycleImage( $item );
+		      }
+		      return false;
+		    });
+			
+			// 달력에서 날짜 선택하기
+			let monthNames = []; // 달력에서 1~12월을 받기 위한 배열
+			for (let i = 1; i <= 12; i++) {
+				monthNames.push(i + "월")
+			}
+			
+/* 			let gwangjuday = ['2019-11-02', '2019-11-03'];
+			let incheonday = ["2019-11-09"];
+			let busanday = ["2019-11-16"];
+			let seoulday = ["2019-11-23", "2019-11-24"]; */
+
+			$("#gj").click(function() {
+		        $("#inputplace").val($("h5").html());
+		        $('#event_date').datepicker("option","minDate","2019-11-02");
+		        $('#event_date').datepicker("option","maxDate","2019-11-03");
+		     });
+
+		     $("#ic").click(function() {
+		        $("#inputplace").val($("h5").html());
+		        $('#event_date').datepicker("option","minDate",incheonday[0]);
+		        $('#event_date').datepicker("option","maxDate",incheonday[0]);
+		     });
+
+		     $("#bs").click(function() {
+		        $("#inputplace").val($("h5").html());
+		        $('#event_date').datepicker("option","minDate",busanday[0]);
+		        $('#event_date').datepicker("option","maxDate",busanday[0]);
+		     });
+
+		     $("#se").click(function() {
+		        $("#inputplace").val($("h5").html());
+		        $('#event_date').datepicker("option","minDate",seoulday[0]);
+		        $('#event_date').datepicker("option","maxDate",seoulday[1]);
+		     });
+									
+			$('#event_date').datepicker({
+				dateFormat: "yy년 mm월 dd일",
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				monthNames: monthNames,
+				prevText: "이전달",
+				nextText: "다음달",
+				yearSuffix: "년",
+				onSelect: function(date) {
+					let eventdate = $('#event_date').datepicker().val(); // alert를 위한 변수
+					alert("선택한 날짜는 " + eventdate + " 입니다."); // 선택한 날짜 확인창 출력
+				},
+			   $("#Date").click(function(){
+			       let value= $("#inputplace").val();
+			      
+			      if(value== "광주 - 유니버시아드 체조경기장"){
+			          $( "#datepicker" ).datepicker({ minDate: "+8D", maxDate: "+9D" });
+			      }
+			      else if(value== "인천 - 남동체육관"){
+			          $( "#datepicker" ).datepicker({ minDate: "+15D", maxDate: "+15D" });
+
+			      }
+			      else if(value== "부산 - 사직 실내체육관"){
+			          $( "#datepicker" ).datepicker({ minDate: "+22D", maxDate: "+22D" });
+			      }
+			      else if(value== "서울 - 올림픽 체조경기장"){
+			          $( "#datepicker" ).datepicker({ minDate: "+29D", maxDate: "+30D" });
+			      }
+			      
+			   });   
+			});
+			
+			// 달력을 보여주는 accordion
+			$('#accordion').accordion({
+				collapsible: true,
+				heightStyle: "content",
+				active: false // 초기값 접혀있음
+			});
+			
+		});
+	</script>
+</head>
+<body>
+ <h1 style="text-align: center; color: purple">2019 아이유 투어 콘서트
+      〈LOVE， POEM〉</h1>
+   <div id="accordion">
+   
+   <h3>장소 선택</h3>
+      <div class="container">
+         <div id="place" class="ui-widget-content ui-state-default">
+               <h4 class="ui-widget-header">
+                  <span class="ui-icon ui-icon-heart"></span>장소 <span style="font-size : 12px">(최종선택을 했다면 이 안의 포스터 클릭)</span>
+               </h4>
+         </div>
+      <div class="ui-widget ui-helper-clearfix">
+            <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+               <li class="ui-widget-content ui-corner-tr" id="gj">
+                  <h5 class="ui-widget-header" id="gjtext">광주 - 유니버시아드 체조경기장</h5> 
+                  <img src="./images/gwangju.jpg" width="150" height="200"> 
+               </li>
+               <li class="ui-widget-content ui-corner-tr" id="ic">
+                  <h5 class="ui-widget-header">인천 - 남동체육관</h5> <img
+                  src="./images/incheon.jpg" width="150" height="200"> 
+               </li>
+               <li class="ui-widget-content ui-corner-tr" id="bs">
+                  <h5 class="ui-widget-header">부산 - 사직 실내체육관</h5> 
+                  <img src="./images/busan.jpg" width="150" height="200"> 
+               </li>
+               <li class="ui-widget-content ui-corner-tr" id="se">
+                  <h5 class="ui-widget-header">서울 - 올림픽 체조경기장</h5> 
+                  <img src="./images/seoul.jpg" width="150" height="200"> 
+               </li>
+            </ul>   
+         </div>
+         <input type="text" title="지역" id="inputplace" readonly class="inputP" placeholder="최종 지역">
+      </div>
+      
+                      
+		<h3>날짜지정</h3>
+		<div>
+			<input type="text" title="날짜" id="event_date" readonly placeholder="선택한 날짜">
+		</div>
+	</div>
+</body>
+</html>

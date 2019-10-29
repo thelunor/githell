@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="text/javascript"></script>
+<title></title> 
+<style type="text/css"> 
+* { 
+  margin:0; 
+  padding:0; 
+} 
+body{ 
+  font-size:9pt; 
+} 
+#info { 
+  border:1px solid #000; 
+  height:30px; 
+  margin:50px 0 0 100px; 
+  width:500px; 
+} 
+#parent1 { 
+  border:1px solid #000; 
+  position:absolute; 
+  width:500px; 
+  height:400px; 
+  left:100px; 
+  top:100px; 
+} 
+#google { 
+  position:absolute; 
+  left:0px; 
+  top:0px; 
+} 
+</style> 
+<script type="text/javascript">
+
+    function typeB() {
+        var fish2 = document.getElementById("google");
+        // #info 구하기 
+        var $info = $("#info");
+        // #fish 구하기 
+        var $fish = $("#google");
+
+        // #parent1에 클릭 이벤트 등록 
+        $("#parent1").click(function (e) {
+            // 클릭한 전역 좌표 위치 구하기 
+            var left = e.clientX;
+            var top = e.clientY;
+            $("#el").val(left);
+            $("#et").val(top);
+            console.log(left)
+            //fish2.width fish2.height 이미지의 크기를 사용 
+            if (left - fish2.width / 2 < 100)//왼쪽위 x좌표가 사각형을 벗어날 경우 
+                left = 100 + fish2.width / 2; //위치 보정 
+            if (top - fish2.height / 2 < 100)//왼쪽위 y좌표가 사각형을 벗어날 경우 
+                top = 100 + fish2.height / 2; //위치 보정 
+            if (left + fish2.width / 2 > 600)//오른쪽위 x좌표가 사각형을 벗어날 경우 
+                left = 600 - fish2.width / 2; //위치 보정 
+            if (top + fish2.height / 2 > 500)//오른쪽위 y좌표가 사각형을 벗어날 경우 
+                top = 500 - fish2.height / 2; //위치 보정 
+            $fish.offset({ left: left - fish2.width / 2, top: top - fish2.height / 2 });
+            $("#il").val(left - fish2.width / 2);
+            $("#it").val(top - fish2.height / 2);
+        })
+
+    }
+    /* 
+    예제06:  클릭한 위치로 물고기를 이동시켜 주세요. 단, 이동 시 전역 좌표를 이용해 주세요. 
+    */
+    $(document).ready(function () {
+     //   typeB()
+    });
+    $(function () {
+        var count = 0;
+        $("#google").draggable({
+            containment: "#parent1",
+            start: function () {
+
+            },
+            drag: function () {
+                count++;
+
+            },
+            stop: function () {
+
+            }
+        });
+    })
+</script> 
+</head> 
+<body> 
+<div id="parent1"> 
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" id="google" width="200" alt=""/> 
+</div> 
+event left : <input type="text" id="el"/>
+event top : <input type="text" id="et"/><br/>
+img left : <input type="text" id="il"/>
+img top : <input type="text" id="it"/>
+</body> 
+</html> 
+[출처] draggable|작성자 Archanfel

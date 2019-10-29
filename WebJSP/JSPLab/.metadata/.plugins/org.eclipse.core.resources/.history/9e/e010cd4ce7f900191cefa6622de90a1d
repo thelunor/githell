@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	정보(데이터)
+	클라이언트(로컬 PC 웹 브라우저) : 서버(웹 Tomcat, DB)
+	
+	정보(데이터: 자료) -> 어디에 저장하는 것이 좋을까?
+-->
+
+</body>
+</html>

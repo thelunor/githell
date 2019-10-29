@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+사용시 
+size() > length 변경 
+-->
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<style> 
+.float_center{ 
+   float:center; 
+} 
+.layout{ 
+   margin:10px; 
+   width:700px; 
+} 
+.pocket{ 
+   border:solid 1px #000; 
+   height:300px; 
+   padding:0px; 
+   vertical-align: top; 
+} 
+.dnd{ 
+   width:100%; 
+} 
+.dnd tr{ 
+   height:30px; 
+} 
+.dnd td{ 
+   border-bottom:solid 1px #aaa; 
+} 
+.btn{ 
+   height:20px; 
+   border:solid 2px black; 
+   padding: 5px; 
+   font-weight: bold; 
+   cursor:pointer; 
+} 
+.center{ 
+   text-align: center; 
+}
+
+.test{
+	border: 3px inset red;
+}
+</style> 
+<script type="text/javascript"> 
+$(document).ready(function(){ 
+   $("#add").click(function(){ 
+      move($("#leftTable"),$("#rightTable")); 
+   }); 
+   $("#del").click(function(){ 
+      move($("#rightTable"),$("#leftTable")); 
+   }); 
+});
+//이전 테이블의 정보를 새로운 테이블로 옮기고 이전 테이블의 정보를 없애는 함수
+function move(from, to) { //from param -> to param으로 이동
+   var target = from.find("tr:has(:checked)");
+// find() -> find() 메소드는 선택한 요소의 자손(descendant) 요소 중에서 전달받은 선택자에 해당하는 자손 요소를 모두 선택함.
+// find()가 선택한 tr 태그의 자손 요소 중에서 :has()를 통해 checked 되어있는 모든 자손요소를 찾는다.
+// :has(selector) -> 선택한 요소 중에서 지정한 선택자와 일치하는 자손 요소를 갖는 요소를 모두 선택함.
+// ex) $("tr:has(td)").addClass("test");
+// :checked -> type 속성값이 "checkbox" 또는 "radio"인 요소 중에서 체크되어 있는 요소를 모두 선택함.
+// ex) $(":checked").wrap("<span style='background-color:red'>");
+// :eq(n) -> 선택한 요소 중에서 인덱스가 n인 요소를 선택함.
+      
+	   if (target.size() == 0) { //체크박스를 선택하지 않았는데 추가 버튼을 눌렀을 경우 경고창 뜨게 함
+	      alert("선택된 요소가 없습니다."); 
+      } else { 
+	      for (var i = target.size() - 1; i >= 0; i--) { 
+	         var item = target.eq(i); //eq() selector - 요소의 i값 선택, 선택된 요소를 변수item에 넣어줌
+            copy(to, from, item); //copy() - 선택된 item을 from으로부터 to에게 보냄
+	      } 
+	      target = from.find("tr:has(:checked)"); //원래 있던 테이블에서 체크박스에 체크된 요소를 찾음
+	      target.each(function(i){ 
+	         $(this).remove(); //원래 있던 테이블에서 체크박스에 체크되었던 요소를 테이블에서 삭제함
+	      }); 
+   	}
+}
+//이전 테이블의 정보를 그대로 새로운 테이블로 복사하는 함수
+function copy(to, from, item) { 
+   var appended = false; //체크박스가 새로운 테이블로 옮겨졌는지 아닌지 체크하는 변수
+   var targettext = item.find("td").eq(1).text(); 
+   var trs = to.find("tr");
+   
+   for (var i = trs.size() - 1; i >= 0; i--) { 
+      if (trs.eq(i).find("td").eq(1).text() < targettext) {
+         //새로운 테이블의 i번째 tr에서 td를 찾고 그 td의 두번째 text 값이 이전 테이블의 text 값 보다 작다면
+         //새로운 테이블에 만들어질 텍스트 < 이전 테이블에서 옮겨질 텍스트 라면
+         item.find(":checked").removeAttr("checked");
+         //이전 테이블에서 checked 된 요소들을 선택해 checked 속성을 없앰
+         trs.eq(i).after(item); // <tr> 뒤에 item 추가
+         appended = true; //보다 값이 큰건 append
+         break;
+      } 
+   } 
+   if (!appended) {
+      // 옮겨지지 않았다 -> for문 다 돌고 난 후에도 어떤 text가 남아있는 경우
+      // 즉, 원래 있던 텍스트의 숫자 < 새로운 텍스트의 숫자 일 때
+      item.find(":checked").removeAttr("checked"); 
+      to.prepend(item); //보다 값이 작으면 prepend
+   } 
+   return true;
+} 
+</script>
+</head>
+<body>
+    <table class="layout float_center">
+        <colgroup>
+            <col width="45%">
+            <col width="10%">
+            <col width="45%">
+        </colgroup>
+        <tr>
+            <td class="pocket center">
+                <table id="leftTable" class="dnd">
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>test1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>test2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>test3</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>test4</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>test5</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>test6</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="center"><span id="add" class="btn">추가</span> <br>
+                <br> <span id="del" class="btn">삭제</span></td>
+            <td class="pocket center">
+                <table id="rightTable" class="dnd">
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

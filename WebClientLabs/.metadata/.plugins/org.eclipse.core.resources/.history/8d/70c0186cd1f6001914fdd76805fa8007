@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body>
+
+<button type="button" onclick="loadXMLDoc()">안양시 지역화폐 가맹점 조회</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "https://openapi.gg.go.kr/RegionMnyFacltStus?Key=8c5ccadd5f304ba78220ca66e6f4885e&Type=JSON&pIndex=1&pSize=100&SIGUN_CD=41170", true);
+  xmlhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>CMPNM_NM</th><th>INDUTYPE_NM</th><th>TELNO</th><th>REGION_MNY_NM</th><th>BRNHSTRM_MNY_USE_POSBL_YN</th><th>CARD_MNY_USE_POSBL_YN</th><th>REFINE_ROADNM_ADDR</th><th>SIGUN_CD</th></tr>";
+  var x = xmlDoc.getElementsByTagName("CD");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+</body>
+</html>

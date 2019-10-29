@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
+	<script type="text/javascript">
+	
+		$(function() {
+			let location = ['서울', '인천', '광주', '부산'];
+			
+		});
+		
+	</script>
+</head>
+<body>
+	<div class="ui-widget ui-helper-clearfix">
+ 
+	<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+	  <li class="ui-widget-content ui-corner-tr">
+	    <h5 class="ui-widget-header">서울</h5>
+	    <img src="./images/seoul.jpg" alt="seoul" width="180" height="254">
+	    <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+	  </li>
+	  <li class="ui-widget-content ui-corner-tr">
+	    <h5 class="ui-widget-header">인천</h5>
+	    <img src="./images/incheon.jpg" alt="incheon" width="180" height="254">
+	    <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+	  </li>
+	  <li class="ui-widget-content ui-corner-tr">
+	    <h5 class="ui-widget-header">광주</h5>
+	    <img src="./images/gwangju.jpg" alt="gwangju" width="180" height="254">
+	    <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+	  </li>
+	  <li class="ui-widget-content ui-corner-tr">
+	    <h5 class="ui-widget-header">부산</h5>
+	    <img src="./images/busan.jpg" alt="busan" width="180" height="254">
+	    <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+	  </li>
+	</ul>
+	 
+	<div id="place" class="ui-widget-content ui-state-default">
+	  <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Trash</span> Trash</h4>
+	</div>
+	 
+	</div>
+</body>
+</html>

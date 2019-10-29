@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	ID, PWD, CHK 값을 받아
+	
+	1. id, pwd가 같다면 로그인 성공: if(id.equals(pwd)) ...
+		chk값이 체크되어 있으면
+		> 쿠키를 생성해서 사용자 id값을 쿠키에 담으세요: 유효시간(24시간)
+		> 쿠키 쓰기 완료
+	
+	2. id, pwd가 같다면 로그인 성공
+		chk값이 체크되어 있지 않으면
+		> 기존에 생성한 쿠키를 삭제: setMaxAge(0)
+	
+	3. id, pwd가 같지 않다면
+		response.sendRedirect() > Ex20_LoginOk.jsp
+-->
+<%
+	request.setCharacterEncoding("UTF-8");
+
+	String id = request.getParameter("uid");
+	String pwd = request.getParameter("pwd");
+	String chk = null;
+	chk = request.getParameter("chk");
+	
+	out.print(id + " / " + pwd + " / " + chk);
+%>
+</body>
+</html>

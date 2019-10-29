@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	//한글처리
+	request.setCharacterEncoding("UTF-8");
+	
+	//데이터 받기
+	String uid = request.getParameter("uid");
+	String pwd = request.getParameter("pwd");
+	
+	//확인하기
+	out.print(uid + " / " + pwd);
+
+%>    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

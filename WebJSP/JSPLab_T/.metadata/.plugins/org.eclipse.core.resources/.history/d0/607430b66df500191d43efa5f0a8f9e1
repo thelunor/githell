@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html charset="UTF-8">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="text" id="test">
+	<script>
+	
+		var enCheck = RegExp(/[^a-zA-Z]$/);
+		$('#test').keyup(function(){
+			if(enCheck.test($('#test').val())){
+				console.log("영어 아님 "+$('#test').val());
+				$('#test').val($('#test').val().replace(/[^a-z]/gi,''));
+			}
+		});
+	</script>
+</body>

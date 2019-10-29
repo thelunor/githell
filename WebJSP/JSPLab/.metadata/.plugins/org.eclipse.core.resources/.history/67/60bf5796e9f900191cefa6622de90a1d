@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	정보(데이터)
+	클라이언트(로컬 PC 웹 브라우저) : 서버(웹 Tomcat, DB)
+	
+	정보(데이터: 자료) -> 어디에 저장하는 것이 좋을까?
+	
+	Client(Local PC: 웹 브라우저)
+	1. Cookie: (Memory Cookie, File Cookie(자동 암호화)) >> 소멸시기(Expire)
+	2. Local Storage(Memory): 저장소(키 : 값)
+	
+	Server(WebServer: Tomcat)
+	1. Server Memory: session 객체(접속한 사용자 식별, 개인정보, 접속 시간...) -> Memory -> 서버 종료 시 끝
+	2. Server Memory: application 객체(접속한 모든 사용자가 사용가능한 공유 객체) -> 서버 종료 시 끝
+	3. Server: File(txt): 영속
+	4. DB Server(RDBMS): 영속(단점: 객체 저장 불가)
+	5. 객체 DB(NoSQL)
+-->
+
+</body>
+</html>
