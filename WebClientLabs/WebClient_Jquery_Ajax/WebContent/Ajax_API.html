@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var api = "http://openapi.seoul.go.kr:8088/786b596c726a656c3631536f70456a/json/landActualPriceInfo/1/500?"
+			
+			$('#btn').click(function() {
+				$.ajax(
+					{
+						url: api,
+						type: "GET",
+						dataType: "json",
+						success: function(resdata) {
+							let land = resdata.landActualPriceInfo;
+							console.log(land.row);
+							$('#display').empty();
+							let table = "<table border=1 border-collapse=collapse>" +
+										"<th>자치구</th><th>법정동</th><th>거래일</th><th>거래금액</th><th>건물명</th><th>건물용도</th><th>건물면적</th>";
+							$.each(land.row, function(index, element) {
+								console.log(element.SGG_NM);
+								if($('#search').val() == element.SGG_NM || $('#search').val() == element.BJDONG_NM || $('#search').val() == element.BLDG_NM) {
+									table += "<tr>";
+									table += "<td>" + element.SGG_NM + "</td>";
+									table += "<td>" + element.BJDONG_NM + "</td>";
+									table += "<td>" + element.DEAL_YMD + "</td>";
+									table += "<td>" + element.OBJ_AMT + "</td>";
+									table += "<td>" + element.BLDG_NM + "</td>";
+									table += "<td>" + element.BLDG_MUSE_NM + "</td>";
+									table += "<td>" + element.BLDG_AREA + "</td>";
+								}
+							});
+							table += "</table>";
+							$('#display').html(table);
+						},
+						error: function(xhr) {
+							alert(xhr.status + xhr.statusText);
+						},
+						beforeSend: function() {
+							$('.loading').removeClass('display-none');
+						}, 
+						complete: function() {
+							$('.loading').addClass('display-none');
+						}
+					}		
+				);
+				
+			});
+		});
+	</script>
+	<style type="text/css">
+		.display-none { /*감추기*/
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h3>서울시 부동산 실거래가 정보</h3>
+	<hr>
+	<input type="text" id="search">
+	<input type="button" id="btn" value="검색">
+	<hr>
+	<div id="display"></div>
+	<div class="loading display-none"><img src="./images/ajax-loader.gif"></div>
+</body>
+</html>

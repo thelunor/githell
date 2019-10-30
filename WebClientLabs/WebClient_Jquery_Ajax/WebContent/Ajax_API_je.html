@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+
+table{width: 100%;}
+table,tr,th,td {border: 1px solid; border-collapse: collapse;}
+td{text-align: center;}
+
+body {
+text-align: center;
+}
+
+.Seoul {
+background-color: DodgerBlue;
+}
+ .wrap-loading div{ /*로딩 이미지*/
+        position: fixed;
+        top:50%;
+        left:50%;
+        margin-left: -21px;
+        margin-top: -21px;
+    }
+
+.display-none{ /*감추기*/
+        display:none;
+    }
+.wrap-loading{ /*화면 전체를 어둡게 합니다.*/
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: rgba(0,0,0,0.2); /*not in ie */
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000');    /* ie */
+}
+
+</style>
+
+<script type="text/javascript">
+$(function() {
+   $('#btn').click(function(){      
+      var houseAPI = "http://openapi.seoul.go.kr:8088/66556143796a67303131345244446a4f/json/landActualPriceInfo/1/500"; 
+      
+      $.ajax(//parameter json 객체
+            {
+               url: houseAPI,
+               type: "GET", 
+               dataType : "json", 
+               tags : $('#search').val(),
+               tagmode : "any",         
+               success : function(data){ 
+               console.log(data.landActualPriceInfo.row);
+               $('#house').empty();
+               let housetable = "<table>";   
+               housetable += "<tr><th>자치구명</th><th>법정동명</th><th>   계약일자</th><th>건물주용도</th><th>물건금액</th></tr>";
+               $.each(data.landActualPriceInfo.row, function(index, obj) {
+                  if($('#search').val()==obj.SGG_NM || $('#search').val()== obj.BJDONG_NM) {
+                  housetable+="<tr>";
+                  housetable+="<td>" + obj.SGG_NM + "</td>";
+                  housetable+="<td>" + obj.BJDONG_NM + "</td>";
+                  housetable+="<td>" + obj.DEAL_YMD + "</td>";
+                  housetable+="<td>" + obj.BLDG_MUSE_NM + "</td>";
+                  housetable+="<td>" +Math.round((Number(obj.OBJ_AMT))).toLocaleString()+"원" + "</td>";
+                  housetable+="</tr>";
+                  }
+               });
+               housetable += "</table>"
+                    $('#house').html(housetable); 
+               
+            },error:function(xhr){
+               alert("error : " + xhr.status + " / " + xhr.statusText);
+            
+            },beforeSend:function(){
+                 $('.wrap-loading').removeClass('display-none');
+            
+            },complete:function(){
+                 $('.wrap-loading').addClass('display-none');
+
+             }
+         }
+      );
+   });
+});
+
+</script>
+</head>
+<body>
+   <form class="Seoul">
+      <hr>
+      <h3>서울시 부동산 실거래가</h3>
+      <input type="text" id="search"> <input type="button"
+         value="검색하기" id="btn"> &nbsp;구, 동으로 검색
+      <hr>
+   </form>
+   <div id="house"></div>
+   <div class="wrap-loading display-none">
+    <div><img src="images/ajax-loader.gif" /></div>
+   </div>    
+</body>
+</html>

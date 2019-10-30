@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*  
+		jQuery.getJSON( url [, data ] [, success ] )
+		[] > 생략가능, success > callback 함수
+		default: dataType > json
+			dataType: 서버가 클라이언트에게 응답하는 데이터의 형식
+			(Text(json, script, html, text), xml)
+		
+		url
+		Type: String
+		A string containing the URL to which the request is sent.
+		
+		data
+		Type: PlainObject or String
+		A plain object or string that is sent to the server with the request.
+		
+		success
+		Type: Function( PlainObject data, String textStatus, jqXHR jqXHR )
+		A callback function that is executed if the request succeeds.
+		*/
+		$(function() {
+			$('#btn .btnload').click(function() {
+				$.getJSON("Ex05_json.json", function(jsonarray) {
+					console.log(jsonarray);
+					// [{}, {}, {}, {}]
+					// 문제: table을 만들고 서버에서 받은 데이터를 table td에 넣어
+					// display에 append 하세요
+					
+					// key Point
+					// 1. 객체.속성명
+					// 2. 객체["속성명"]
+					/*
+					table+="<tr>";
+					table+="<td>" + index + "</td>";
+					table+="<td>" + obj.num + "</td>";
+					if(obj.num) { // 있으면 true, 없으면 false
+					 table+="<td>" + obj["Name"] + "</td>";
+					} else {
+					 table+="<td>" + "EMPTY" + "</td>";
+					}
+					*/
+					let table = "<table border='1'>";
+					// let table = "<table border='1'><tr><th>num</th><th>Name</th></tr>";
+					$.each(jsonarray, function(index, element) {
+						console.log(element.num);
+						table +="<tr><td>"+element.num+"</td><td>"+element.name+"</td></tr>"
+					});
+					table += "</table>";
+					// $('#display').append(table); // 계속 생성
+					$('#display').html(table); // overwrite
+				});
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<div id="btn">
+		<div class="btnload">JSON Data Load</div>
+	</div>
+	<div id="display"></div>
+</body>
+</html>

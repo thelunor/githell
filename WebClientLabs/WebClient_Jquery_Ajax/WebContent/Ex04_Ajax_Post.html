@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#btn').click(function() {
+				// jsp?name=kim&pwd=1004 < data
+				// 권장하지 않는 방법
+				/*
+				let name = $('#name').val();
+				let pwd = $('#pwd').val();
+				let param = 'name=' + name + '&pwd=' + pwd;
+				$.post('Ex04_Server.jsp', param, function(responsedata) {
+					$('#message').html(responsedata);
+				});
+				*/
+				// 권장하는 방법: data를 표현하는 두 번째 parameter 설정 > json {} 객체
+				let data = {"name":$('#name').val(), "pwd":$('#pwd').val()};
+				$.post('Ex04_Server.jsp', data, function(responsedata) {
+					$('#message').html(responsedata);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	이름: <input type="text" id="name"><br>
+	비번: <input type="text" id="pwd"><br>
+	<input type="button" id="btn" value="비동기전송">
+	<hr>
+	<div id="message"></div>
+</body>
+</html>
