@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;kr.or.bit.utils&apos; to &apos;WebJSP_JDBC_Team4/src&apos;&#x0D;&#x0A;- Original project: &apos;WebJSP_JDBC&apos;&#x0D;&#x0A;- Destination element: &apos;WebJSP_JDBC_Team4/src&apos;&#x0D;&#x0A;- Original element: &apos;WebJSP_JDBC/src/kr.or.bit.utils&apos;" description="Copy package" destination="=WebJSP_JDBC_Team4/src" element1="/src&lt;kr.or.bit.utils" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1572516571948" version="1.0"/>
+</session>

@@ -1,0 +1,18 @@
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	/*
+		회원가입 처리 페이지(디자인 필요x)
+		
+		1. 한글 처리
+		2. 데이터 받기(request)
+		3. 데이터 확인하기
+		4. 로직 처리(비즈니스 로직)
+			회원가입 -> 데이터 받기 -> DB 연결 -> Insert -> Insert 성공 유무 -> Client에 결과 전달
+			
+			Insert 성공 > 회원가입 > 로그인 화면
+	*/
+%>
