@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+		jquery 비동기 함수 모음
+		https://www.w3schools.com/jquery/jquery_ref_ajax.asp
+		Jquery Ajax: xmlHttpRequest 를 사용하는 다양한 함수 제공
+					비동기를 지원하는 함수
+			종류:
+				Global Ajax Event Handlers
+				Helper Functions
+				Low-Level Interface (Ajax 40%)
+				Shorthand Methods (50%)
+			
+			$(selector).load(URL,data,callback);
+				url
+				Type: String
+				A string containing the URL to which the request is sent.
+				
+				data
+				Type: PlainObject or String
+				A plain object or string that is sent to the server with the request.
+				
+				complete
+				Type: Function( String responseText, String textStatus, jqXHR jqXHR )
+				A callback function that is executed when the request completes.
+		*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

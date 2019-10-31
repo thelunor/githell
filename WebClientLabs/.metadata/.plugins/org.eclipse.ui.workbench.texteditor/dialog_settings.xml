@@ -6,8 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="attr"/>
+		<item key="selection" value="disable"/>
 		<list key="findhistory">
+			<item value="disable"/>
+			<item value="해외투어"/>
+			<item value="trash"/>
+			<item value="tr"/>
+			<item value="theme"/>
+			<item value="thme"/>
 			<item value="attr"/>
 			<item value="team"/>
 			<item value="h4"/>
@@ -17,14 +23,9 @@
 			<item value="font-family: Nanum HarABeoJiEuiNaNum;"/>
 			<item value="나눔"/>
 			<item value="font-family: 나눔손글씨 붓;"/>
-			<item value="overlayfo"/>
-			<item value="overlay"/>
-			<item value="font-family: &apos;Fjalla One&apos;, sans-serif;"/>
-			<item value="font-family: &apos;Open Sans&apos;, sans-serif;"/>
-			<item value="font-family: 배달의민족 도현;"/>
-			<item value="배달"/>
 		</list>
 		<list key="replacehistory">
+			<item value="place"/>
 			<item value="font-family: &apos;Nanum Brush Script&apos;, cursive;"/>
 			<item value="&apos;Do Hyeon&apos;, sans-serif;"/>
 			<item value="font-family: &apos;Do Hyeon&apos;, sans-serif;"/>

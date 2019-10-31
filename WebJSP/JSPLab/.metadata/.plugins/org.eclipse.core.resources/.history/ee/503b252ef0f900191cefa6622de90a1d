@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	ID, PWD, CHK 값을 받아
+	
+	1. id, pwd가 같다면 로그인 성공: if(id.equals(pwd)) ...
+		chk값이 체크되어 있다면 쿠키를 생성해서 사용자 id값을 쿠키에 담으세요
+-->
+</body>
+</html>

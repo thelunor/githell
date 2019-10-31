@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	/*
+	Was: 여러 개의 웹 어플리케이션을 서비스 할 수 있다
+	Was 안에 WebJSP 웹 프로젝트(어플리케이션)을 가지고 있다
+	http://192.168.0.48:8090/WebJSP/Ex10_Application.jsp
+	http://192.168.0.48:8090/WebJSP/default.jsp
+	
+	WebJSP 어플리케이션 이름, 프로젝트 이름, 가상 디렉토리
+	-- C:\SmartWeb\WebJSP\JSPLab\WebJSP 실경로...
+	-- http://192.168.0.48:8090/WebJSP/ 웹 경로(가상 디렉토리)
+	WebJSP2 어플리케이션 이름, 프로젝트 이름
+	
+	어플리케이션이 가지는 default 서비스 경로: 실 서비스경로: WebContent (Context root)
+	http://192.168.0.48:8090/WebJSP/
+	
+	** 우리가 만든 소스파일은(html, htm, jsp, js, css)
+	WebContent 안에 있어야 한다
+	WebContent 안에 있는 모든 페이지(jsp)가 공유할 수 있는 자원은 없을까...? *** >> 사실은 없다
+	
+	어떤 자원을 a.jsp에도 사용하고 b.jsp에도 사용...(마치 static처럼)
+	
+	*** 웹 어플리케이션은 하나의 설정 파일을 가진다(웹 전체에 대한 설정 정보):
+		Web.xml(웹 어플리케이션의 설정 정보 관리) ** >> 가장 먼저 실행
+		*** WebContent/WEB-INF/web.xml ***
+		
+		** Web-INF(보안폴더): 클라이언트가 접속할 수 없는 경로(주소 접근 시 404)
+		** http://localhost:8090/Web_mall/WEB_INF/web.xml
+		** WEB-INF/views/member/login.jsp 생성(직접적인 접근은 할 수 없지만 우회할 수 있다) >> forward...
+	*/
+	int sum = 0; // 유효 scope(범위): page가 생성 되면 같이 만들어지고 page가 끝나면 같이 소멸
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String param = application.getInitParameter("email"); // web.xml을 기본으로 잡고  그 안에서 email을 가져온다
+		out.print("<h3>" + param + "</h3>");
+		
+		String param2 = application.getInitParameter("FilePath");
+		out.print("<h3>" + param2 + "</h3>");
+	%>
+</body>
+</html>

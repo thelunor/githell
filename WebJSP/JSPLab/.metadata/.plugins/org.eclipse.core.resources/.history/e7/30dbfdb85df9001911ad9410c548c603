@@ -1,0 +1,103 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="personal.css">
+<script>
+ 
+      $(function() {
+          let idpw_pattern = /^[a-z0-9_]{4,20}$/;
+          let email_pattern = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+          let phone_pattern = /^\d{3}-\d{3,4}-\d{4}$/;
+          let id_check=false;
+          let pw_check=false;
+          let pwck_check=false;
+          let name_check=false;
+          let email_check=false;
+          let phoneNumCheck=false;
+          $("#userid").keyup(function(){
+              if(idpw_pattern.test($(this).val())!=true){
+                  $("#alarm_id").text("아이디가 형식에 맞지 않습니다.");
+                  id_check=false;
+              }else{
+                  $("#alarm_id").text("아이디가 형식에 맞습니다.");
+                  id_check=true;
+              }
+          });
+          $("#userpwd").keyup(function(){
+              if(idpw_pattern.test($(this).val())!=true){
+                  $("#alarm_pwd").text("비밀번호가 형식에 맞지 않습니다.");
+                  pw_check=false;
+              }else{
+                  $("#alarm_pwd").text("비밀번호가 형식에 맞습니다.");
+                  pw_check=true;
+              }
+          });
+          $("#userpwdCheck").keyup(function(){
+              if(idpw_pattern.test($(this).val())!=$("#userpwd").val()){
+                  $("#alarm_pwdCk").text("입력한 비밀번호와 일치합니다.");
+                  pwck_check=false;
+              }else{
+                  $("#alarm_pwdCk").text("입력한 비밀번호와 일치합니다.");
+                  pwck_check=true;
+              }
+          });
+          $("#email").keyup(function(){
+              if(email_pattern.test($(this).val())!=true){
+                  $("#alarm_email").text("이메일주소가 형식에 맞지 않습니다.");
+                  email_check=false;
+              }else{
+                  $("#alarm_email").text("이메일주소가 형식에 맞습니다.");
+                  email_check=true;
+              }
+          });
+          $("#phoneNum").keyup(function(){
+              if(phone_pattern.test($(this).val())!=true){
+                  $("#alarm_phoneNum").text("휴대폰번호가 형식에 맞습니다.");
+                  phoneNumCheck=false;
+              }else{
+                  $("#alarm_phoneNum").text("휴대폰번호가 형식에 맞습니다.");
+                  phoneNumCheck=true;
+              }
+          });
+
+          function addUser(event){
+              let check = id_check && pw_check && pwck_check && name_check && email_check && phoneNumCheck;
+              if(!check){ //false인 경우
+                  alert("입력되지 않았습니다.");
+              }else{
+                  check=true;
+                  alert("회원가입 되었습니다.");
+                  $("#signInForm").submit();
+              }
+          }
+      });
+ 
+</script>
+</head>
+<body>
+<!-- navbar -->
+<jsp:include page="Top.jsp"></jsp:include>
+
+<!-- Main 캐러셀 -->
+<jsp:include page="Home.jsp"></jsp:include>
+
+<!-- about -->
+<jsp:include page="About.jsp"></jsp:include>
+
+<!-- login -->
+<jsp:include page="Login.jsp"></jsp:include>
+<!-- sing Up -->
+<jsp:include page="SignUp.jsp"></jsp:include>
+
+<!-- Footer -->
+<jsp:include page="Footer.jsp"></jsp:include>
+</body>
+</html>

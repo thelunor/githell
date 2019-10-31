@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	/*
+	요청에 대한 흐름제어
+	
+	include
+	forward
+	
+	공통점: request 객체를 공유한다
+	차이점: include 제어권을 가지고 있다(제어권을 다시 가져온다) >> 디자인(layout)
+		  forward 제어권을 넘겨준다(Point: 요청 주소는 동일한데 다른 page의 내용을 서비스 한다) >> 로직제어
+		  Why? 처음 요청했던 주소의 buffer를 그대로 사용
+		  localhost:8090/WebJSP/login.jsp... forward(A.jsp)
+		    담는 그릇은 login.jsp, 그릇에 담기는 내용은 A.jsp, B.jsp, C.jsp 
+	*/
+	String code = request.getParameter("code");
+	String viewURI = null;
+		if(code.equals("A")) {
+			viewURI = "/forward/A.jsp";
+		} else if(code.equals("B")) {
+			viewURI = "/forward/B.jsp";
+		} else if(code.equals("C")) {
+			viewURI = "/forward/C.jsp";
+		}
+%>
+<jsp:forward page="<%= viewURI %>"></jsp:forward>
+<!-- 아래 코드의 실행 여부는? -->
+<!-- buffer에 있던 아래 코드는 버리고 요청 내용만 출력(forward에 가지고 있는 page의 내용은 의미가 없다) -->
+<!-- include는 디자인의 의미가 있지만 forward는 의미가 없다 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+나는 forward page입니다
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\USER\Downloads\Team4_BootTemplate_Include (1)\Team4_BootTemplate_Include"/>
+			<item value="C:\Users\USER\Downloads\Group_3"/>
+			<item value="C:\Users\USER\Downloads\Team4_BootTemplate_Include"/>
+			<item value="C:\Users\USER\Downloads\Team2_BootTemplate"/>
+			<item value="C:\Users\USER\Downloads\Team1_Boot_Template_Main"/>
+			<item value="H:\2018\bitcamp104\WebJSP\JSPLab\WebBoardProject"/>
+			<item value="C:\Temp\JSPLab\WebJSP_JDBC_BASIC"/>
+			<item value="C:\Temp\JSPLab\WebJSP_JDBC"/>
+			<item value="C:\Temp\WebJSP_Board_UI"/>
+			<item value="C:\Users\USER\Downloads\JDBC_Boot_CRUD_4Team"/>
+			<item value="C:\Temp\cafedesign"/>
+			<item value="C:\Users\USER\Downloads\WebJSP_JDBC_BASIC"/>
+			<item value="C:\Users\USER\Downloads\JDBC_Boot_CRUD_1Team"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

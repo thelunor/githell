@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	Tomcat(WAS)에서 기본적으로 제공하는 객체
+	request(요청: 클라이언트 정보를 담는 객체)
+-->
+</body>
+</html>

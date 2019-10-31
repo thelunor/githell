@@ -1,0 +1,14 @@
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	/*
+		회원가입 처리 페이지(디자인 필요x)
+		
+		1. 한글 처리
+		2. 데이터 받기(request)
+		3. 데이터 확인하기
+	*/
+%>

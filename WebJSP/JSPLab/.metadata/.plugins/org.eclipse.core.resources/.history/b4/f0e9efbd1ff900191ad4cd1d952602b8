@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Response</title>
+</head>
+<body>
+<!--  
+	Client -> Server
+		요청(request)
+	
+	Server -> Client
+		응답(response)
+		
+	Tomcat (JavaX...)
+	
+	response
+	1. 출력(표현식): <5=
+	2. 페이지 이동처리(sendRedirect)
+	
+		javascript: 페이지 이동: location.href="Ex01_Basic.jsp"
+		: *** 페이지를 서버에 재요청 ***(주소창에 엔터, F5)
+-->
+</body>
+</html>

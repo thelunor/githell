@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery UI Accordion - Customize icons</title>
+<link rel="stylesheet"
+   href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script> -->
+
+<style>
+<!--
+section1 
+      -->#gallery {
+   /*
+      그림
+      왼쪽
+      정렬
+      및
+      그
+      공간의
+      폭
+      설정
+      */
+   float: left;
+   width: 70%;
+   min-height: 12em;
+}
+
+.gallery
+      li {
+   /*
+      그림
+      뒤의
+      공간
+      css
+      설정
+      */
+   float: left;
+   width: 200px;
+   height: 250px;
+   padding: 0.4em;
+   margin: 0 0.4em 0.4em 0;
+   text-align: center;
+}
+
+.gallery
+      li
+      h5 {
+   margin: 0 0 0.4em;
+   cursor: move;
+}
+
+.gallery
+      li
+      img {
+   width: 100%;
+   cursor: move;
+}
+
+#place {
+   float: right;
+   width: 20%;
+   height: 40%;
+   min-height: 18em;
+   padding: 1%;
+}
+
+#place
+      h4 {
+   float: left;
+   line-height: 16px;
+   margin: 0 0 0.4em;
+}
+
+#place
+      h4
+      .ui-icon {
+   float: left;
+}
+
+#place
+      .gallery
+      h5 {
+   display: none;
+}
+
+<!--
+좌석 선택 --!> #feedback {
+   font-size: 1.4em;
+}
+
+#selectable .ui-selecting {
+   background: #FECA40;
+}
+
+#selectable .ui-selected {
+   background: #F39814;
+   color: white;
+}
+
+#selectable {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 600px;
+}
+
+#selectable li {
+   margin: 3px;
+   padding: 1px;
+   float: left;
+   width: 50px;
+   height: 40px;
+   font-size: 1.8em;
+   text-align: center;
+}
+
+#feedback {
+   font-size: 1.4em;
+}
+
+#ab img {
+   -webkit-filter: grayscale(100%);
+   filter: gray;
+}
+
+#ab:hover img {
+   -webkit-filter: grayscale(0%);
+   filter: none;
+}
+</style>
+<script>
+   var inputplaceVal; //장소정보
+   var selectedDate; //시간 정보
+   var personNum; //인원수 정보
+   var seatNum; //좌석 정보
+
+   /*아코디언*/
+   $(function() {
+      $("#accordion > h3").addClass("ui-state-disabled");
+      $("#accordion > h3:first-child").removeClass("ui-state-disabled");
+      var icons = {
+         header : "ui-icon-circle-arrow-e",
+         activeHeader : "ui-icon-circle-arrow-s"
+      };
+      $("#accordion").accordion({
+         icons : icons,
+         heightStyle : "content"
+      });
+      $("#toggle").button().on("click", function() {
+         if ($("#accordion").accordion("option", "icons")) {
+            $("#accordion").accordion("option", "icons", null);
+         } else {
+            $("#accordion").accordion("option", "icons", icons);
+         }
+      });
+
+      var $gallery = $("#gallery")
+      var $place = $("#place");
+
+      //갤러리에 있는 사진을 draggable 할 수 있도록
+      $("li", $gallery).draggable({
+         cancel : "a.ui-icon", // clicking an icon won't initiate dragging
+         revert : "invalid", //drag하다가 놓치면 다시 제자리로
+         containment : "document",
+         helper : "clone",
+         cursor : "move"
+      });
+
+      //갤러리에 있는 사진 장소 선택창에 보내기
+      $place.droppable({
+         accept : "#gallery > li",
+         classes : {
+            "ui-droppable-active" : "ui-state-highlight"
+         },
+         drop : function(event, ui) {
+            chooseImage(ui.draggable);
+            $("#inputplace").val(ui.draggable.text().trim());
+            $("#places > *").addClass("ui-state-disabled");
+            //revert: "valid"
+
+         }
+      });
+
+      //장소 선택창에 있는 사진 되돌리기(드래그)
+      $gallery.droppable({
+         accept : "#place li",
+         classes : {
+            "ui-droppable-active" : "custom-state-active"
+         },
+         drop : function(event, ui) {
+            recycleImage(ui.draggable);
+         }
+      });
+
+      //장소 선택창에 있으면 되돌리기 아이콘이 생기고 애니메이션 줌
+      var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+      function chooseImage($item) {
+         $item.fadeOut(function() {
+            var $list = $("ul", $place).length ? $("ul", $place) : $(
+                  "<ul class='gallery ui-helper-reset'/>").appendTo(
+                  $place);
+            $item.append(recycle_icon).appendTo($list).fadeIn(function() {
+               $item.animate({
+                  width : "200px"
+               }).find("img").animate({
+                  height : "220px"
+               });
+            });
+         });
+      }
+
+      //장소 선택창에서 사진 지울 때
+      function recycleImage($item) {
+         $item.fadeOut(function() {
+            $item.find("a.ui-icon-refresh").remove().end().find("img")
+                  .end().appendTo($gallery).fadeIn();
+            $("#places > *").removeClass("ui-state-disabled");
+         });
+      }
+
+      //되돌리기 아이콘 누르면 사진 되돌려지기
+      $("ul.gallery > li").on("click", function(event) {
+         var $item = $(this), $target = $(event.target);
+
+         if ($target.is("a.ui-icon-refresh")) {
+            recycleImage($item);
+         }
+         return false;
+      });
+
+      //개봉예정 사진은 움직여지지 않도록
+      $("#gallery li:last-child").draggable({
+         cancel : "li.ui-widget-content"
+      });
+
+      /*장소 선택 클릭시 이벤트 */
+      $('#select_place_result').click(function() {
+         if ($("#inputplace").val() != "") {
+            let value = $("#inputplace").val();
+
+            if (value == "광주 - 유니버시아드 체조경기장") {
+               $("#datepicker").datepicker({
+                  dateFormat : "yy-mm-dd",
+                  minDate : "+8D",
+                  maxDate : "+9D"
+               });
+            } else if (value == "인천 - 남동체육관") {
+               $("#datepicker").datepicker({
+                  dateFormat : "yy-mm-dd",
+                  minDate : "+15D",
+                  maxDate : "+15D"
+               });
+
+            } else if (value == "부산 - 사직 실내체육관") {
+               $("#datepicker").datepicker({
+                  dateFormat : "yy-mm-dd",
+                  minDate : "+22D",
+                  maxDate : "+22D"
+               });
+            } else if (value == "서울 - 올림픽 체조경기장") {
+               $("#datepicker").datepicker({
+                  dateFormat : "yy-mm-dd",
+                  minDate : "+29D",
+                  maxDate : "+30D"
+               });
+            }
+            $('.container').slideUp();
+            $('#Date').slideDown();
+            $("#section2").removeClass("ui-state-disabled");
+         } else {
+            alert("장소를 선택해주세요.")
+         }
+
+      })
+
+      // 달력에서 날짜 선택하기
+      let monthNames = []; // 달력에서 1~12월을 받기 위한 배열
+      for (let i = 1; i <= 12; i++) {
+         monthNames.push(i + "월")
+      }
+
+      //날짜 선택
+
+      /*날짜 선택 완료 클릭시 이벤트 */
+      $('#select_date_result').click(function() {
+         if ($("#datepicker").val() != "") {
+            $('#Date').slideUp();
+            $('#select_personNum').slideDown();
+            $("#section3").removeClass("ui-state-disabled");
+         } else {
+            alert("날짜를 선택해주세요.")
+         }
+
+      })
+
+      /*인원 선택*/
+      $("#spinner").spinner({
+         max : 2,
+         min : 0,
+         numberFormat : "n"
+      });
+
+      let seats = []; //선택한 좌석 넣기
+      let seatsCount = 0;
+      /*인원 선택 완료 클릭 후의 이벤트*/
+      $("#select_person_result").click(function() {
+         var num = $("#spinner").val();
+         if (num == 0) {
+            alert('인원을 선택해주세요.');
+         } else {
+            $('#select_personNum').slideUp();
+            $('#selectSeats').slideDown();
+            $("#section4").removeClass("ui-state-disabled");
+         }
+      })
+      /*좌석선택 */
+      $("#selectable").selectable({
+         stop : function() {
+            let str = ' ';
+            seats = [];
+            //var result = $("#select-result").empty();
+            $(".ui-selected", this).each(function() {
+               let seat = ($("#selectable li").index(this) + 1); //선택한 좌석 넣기
+               seats.push(seat);
+            });
+            seatsCount = seats.length; //좌석 배열의 길이
+            if ($('#spinner').val() < seatsCount) {
+               alert('선택한 인원과 좌석수가 맞지 않습니다.다시 선택해 주세요');
+               $('#select-result').val(null);
+               $('#selectable > *').removeClass("ui-selected");
+               $('#select-result').html('');
+               //$("#places > *").addClass("ui-state-disabled");
+            } else {
+               for ( var index in seats) {
+                  str += seats[index] + " ";
+               }
+               $('#select-result').text(str);
+            }
+         }
+      });
+      //좌석 선택 완료
+      $('#seat_check').click(function() {
+         str = " ";
+         if ($('#spinner').val() != seatsCount) {
+            alert('선택한 인원과 좌석수가 맞지 않습니다.다시 선택해 주세요');
+            $('#select-result').val(null);
+         } else {
+            console.log($('inputplace').val())
+            $('#dialog-message').dialog("open");
+         }
+      });
+      /*좌석 선택 초기화 이벤트*/
+      $('#seat_reset').click(function() {
+         seats = [];
+         seatsCount = 0;
+         $('#select-result').html('');
+         $('#selectable > *').removeClass("ui-selected");
+      });
+
+      /*dialog*/
+
+      $("#dialog-message").dialog(
+            {
+               autoOpen : false,
+               show : {
+                  effect : "blind",
+                  duration : 1000
+               },
+               hide : {
+                  effect : "blind",
+                  duration : 1000
+               },
+               modal : true,
+               buttons : {
+                  "예약 정보 확인" : function(event) {
+                     var buttonEvent = event.target;
+                     inputplaceVal = $("#inputplace").val();
+                     selectedDate = $("#datepicker").val();
+                     personNum = $("#spinner").val();
+                     seatNum = $("#select-result").text();
+                     $('<span></span>').html(
+                           "장소 : " + inputplaceVal + "<br>").appendTo(
+                           $("#content"));
+                     $('<span></span>').html(
+                           "시간 : " + selectedDate + "<br>").appendTo(
+                           $("#content"));
+                     $('<span></span>').html(
+                           "인원 : " + personNum + "명" + "<br>")
+                           .appendTo($("#content"));
+                     $('<span></span>').html("좌석 : " + seatNum + "<br>")
+                           .appendTo($("#content"));
+                     $(buttonEvent).attr('disabled', true); //다시 버튼 클릭시 내용 생성 안되게 막음
+                  },
+                  "close" : function() {
+                     inputplaceVal = "";
+                     selectedDate = "";
+                     personNum = "";
+                     seatNum = "";
+                     $('#dialog-message').dialog('close');
+                  }
+               }
+            });
+   });
+</script>
+
+</head>
+<body>
+   <div class="header" style="margin-bottom: 0">
+      <img src="./images/ban.png" width="100%" height="350px">
+   </div>
+
+   <div id="accordion">
+      <h3>장소 선택</h3>
+      <div class="container">
+         <div id="place" class="ui-widget-content ui-state-default">
+            <h4 class="ui-widget-header">
+               <span class="ui-icon ui-icon-heart"></span><span
+                  style="font-size: 12px">장소 </span>
+            </h4>
+
+         </div>
+         <div class="ui-widget ui-helper-clearfix" id="places">
+            <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+               <li class="ui-widget-content ui-corner-tr">
+                  <h5 class="ui-widget-header">광주 - 유니버시아드 체조경기장</h5> <img
+                  src="./images/g.jpg" width="150" height="200">
+               </li>
+               <li class="ui-widget-content ui-corner-tr">
+                  <h5 class="ui-widget-header">인천 - 남동체육관</h5> <img
+                  src="./images/in.jpg" width="150" height="200">
+               </li>
+               <li class="ui-widget-content ui-corner-tr">
+                  <h5 class="ui-widget-header">부산 - 사직 실내체육관</h5> <img
+                  src="./images/busan.jpg" width="150" height="200">
+               </li>
+               <li class="ui-widget-content ui-corner-tr">
+                  <h5 class="ui-widget-header">서울 - 올림픽 체조경기장</h5> <img
+                  src="./images/s.jpg" width="150" height="200">
+               </li>
+               <li class="ui-widget-content ui-corner-tr" id="ab">
+                  <h5 class="ui-widget-header">해외투어 - 오픈예정</h5> <img
+                  src="./images/yet.jpg" width="150" height="200">
+               </li>
+            </ul>
+         </div>
+         <input type="text" title="지역" id="inputplace" readonly class="inputP"
+            placeholder="최종 지역" size="25"> <input type="button"
+            id="select_place_result" value="다음">
+      </div>
+
+
+      <h3 id=section2>날짜지정</h3>
+      <div id="Date">
+         <p>
+            Date : <input type="text" id="datepicker">
+         </p>
+         <input type="button" id="select_date_result" value="다음">
+      </div>
+
+
+      <h3 id=section3>인원 선택</h3>
+      <div id="select_personNum">
+         <p>
+            <label for="spinner">인원:</label> <input id="spinner" name="value"
+               readonly="readonly">
+         </p>
+         <br>
+         <p>
+            <input type="button" id="select_person_result" value="다음">
+         </p>
+      </div>
+      <h3 id=section4>좌석 선택</h3>
+      <div id="selectSeats">
+         <p>좌석을 선택해주세요.</p>
+         <p id="feedback">
+            <span>선택하신 좌석 : </span> <span id="select-result"></span>
+         </p>
+         <ol id="selectable">
+            <li class="ui-state-default">1</li>
+            <li class="ui-state-default">2</li>
+            <li class="ui-state-default">3</li>
+            <li class="ui-state-default">4</li>
+            <li class="ui-state-default">5</li>
+            <li class="ui-state-default">6</li>
+            <li class="ui-state-default">7</li>
+            <li class="ui-state-default">8</li>
+            <li class="ui-state-default">9</li>
+            <li class="ui-state-default">10</li>
+            <li class="ui-state-default">11</li>
+            <li class="ui-state-default">12</li>
+            <li class="ui-state-default">13</li>
+            <li class="ui-state-default">14</li>
+            <li class="ui-state-default">15</li>
+            <li class="ui-state-default">16</li>
+            <li class="ui-state-default">17</li>
+            <li class="ui-state-default">18</li>
+            <li class="ui-state-default">19</li>
+            <li class="ui-state-default">20</li>
+            <li class="ui-state-default">21</li>
+            <li class="ui-state-default">22</li>
+            <li class="ui-state-default">23</li>
+            <li class="ui-state-default">24</li>
+            <li class="ui-state-default">25</li>
+            <li class="ui-state-default">26</li>
+            <li class="ui-state-default">27</li>
+            <li class="ui-state-default">28</li>
+            <li class="ui-state-default">29</li>
+            <li class="ui-state-default">30</li>
+            <li class="ui-state-default">31</li>
+            <li class="ui-state-default">32</li>
+            <li class="ui-state-default">33</li>
+            <li class="ui-state-default">34</li>
+            <li class="ui-state-default">35</li>
+            <li class="ui-state-default">36</li>
+            <li class="ui-state-default">37</li>
+            <li class="ui-state-default">38</li>
+            <li class="ui-state-default">39</li>
+            <li class="ui-state-default">40</li>
+            <li class="ui-state-default">41</li>
+            <li class="ui-state-default">42</li>
+            <li class="ui-state-default">43</li>
+            <li class="ui-state-default">44</li>
+            <li class="ui-state-default">45</li>
+            <li class="ui-state-default">46</li>
+            <li class="ui-state-default">47</li>
+            <li class="ui-state-default">48</li>
+            <li class="ui-state-default">49</li>
+            <li class="ui-state-default">50</li>
+            <li class="ui-state-default">51</li>
+            <li class="ui-state-default">52</li>
+            <li class="ui-state-default">53</li>
+            <li class="ui-state-default">54</li>
+            <li class="ui-state-default">55</li>
+            <li class="ui-state-default">56</li>
+            <li class="ui-state-default">57</li>
+            <li class="ui-state-default">58</li>
+            <li class="ui-state-default">59</li>
+            <li class="ui-state-default">60</li>
+         </ol>
+         <button id="seat_check" class="btn btn-primary"
+            style="margin-left: 30%">좌석 선택완료</button>
+         <button id="seat_reset" class="btn btn-primary"
+            style="margin-left: 2%">좌석 초기화</button>
+      </div>
+      <!-- dialog modal message -->
+      <div id="dialog-message" title="예약 정보 확인하기">
+         <p>
+         <p class="ui-icon-heart" style="float: left; margin: 0 7px 50px 0;">
+            예약해주셔서 감사합니다. <br> '예약 정보 확인하기'를 누르시면 예약하신 정보를 확인하실 수 있습니다.
+         </p>
+         <p id="content"></p>
+      </div>
+
+   </div>
+
+</body>
+
+</html>

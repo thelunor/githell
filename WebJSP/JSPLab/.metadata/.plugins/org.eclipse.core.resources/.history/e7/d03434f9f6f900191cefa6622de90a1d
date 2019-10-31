@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	session: 브라우저(접속한 사용자)마다 서버에서 부여하는 고유한 객체
+	
+	session 값: 웹 서버가 접속한 클라이언트(웹 브라우저)에게 부여하는 고유한 ID 값(식별값)
+-->
+</body>
+</html>

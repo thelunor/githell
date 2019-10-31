@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	Tomcat(WAS)에서 기본적으로 제공하는 객체
+	1. request(요청: 클라이언트 정보를 담는 객체)
+	2. response(응답: 특정 페이지로 이동, 정보 출력, 쿠키 쓰기)
+	3. application(전역 객체: web.xml 파일 자원 처리, 전역 변수)
+	4. session(접속 사용자마다(session ID 마다) 부여되는 고유한 객체)
+-->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$.ajax( // parameter json 객체
+				{
+					url: "Ex07_Ajax_board.json",
+					type: "POST", // httpReq.open("post")
+					dataType: "json", // 서버가 응답하는 데이터 형식(Text(json, script, html, txt), xml)
+					success: function(data) { // 서버 응답 성공 200번대
+						// console.log(data);
+					
+						$.each(data, function(index, obj) {
+							$('#treedata').append(obj.id + " / " + obj.name + " / " + obj.title + " / " + obj.content + "<br>");
+						});
+					},
+					error: function(xhr) { // 서버 응답 404, 500
+						alert(xhr.status); // 에러 번호 404, 500
+					}
+					/*
+				    ,beforeSend:function(){
+
+			        (이미지 보여주기 처리)
+
+			        $('.wrap-loading').removeClass('display-none');
+
+			   		}
+
+			   		,complete:function(){
+
+			        (이미지 감추기 처리)
+
+			        $('.wrap-loading').addClass('display-none');
+					*/
+				}		
+			);			
+		});
+	</script>
+</head>
+<body>
+	<table id="treedata" border="1">
+	</table>
+</body>
+</html>

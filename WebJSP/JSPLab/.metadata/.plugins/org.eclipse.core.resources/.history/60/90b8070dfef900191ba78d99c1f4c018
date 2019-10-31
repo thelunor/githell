@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	Today Point
+	서버자원(WAS... memory) 활용
+	
+	application : session
+	변수(전역)		: 변수(개인: 접속한 브라우저마다, session ID마다)(접속한 사용자에게 부여되는 고유한 변수)
+	
+	사이트 접속: 전체 접속자 수(10000명)
+	application.setAttribute("count", 0); count 라는 전역 변수 생성
+		> 사이트에 접속하는 모든 session(사용자)이 접속 가능
+	
+	[session]
+	session.setAttribute("userid", "kim");
+	접속한 사용자마다 고유하게 부여되는 변수
+	
+	A 라는 사용자가 웹 서버 접속
+	서버 session 객체 생성 > 식별값(A001) 생성 > 식별값을 클라이언트 브라우저에 response
+	A001 >> session.setAttribute("userid", "");
+	
+	B 라는 사용자가 웹 서버 접속
+	서버 session 객체 생성 > 식별값(B001) 생성 > 식별값을 클라이언트 브라우저에 response
+	B001 >> session.setAttribute("userid", "");
+-->
+<h3>세션정보</h3>
+웹 서버가 부여하는 고유한 값: <%= session.getId() %>
+<hr>
+
+</body>
+</html>

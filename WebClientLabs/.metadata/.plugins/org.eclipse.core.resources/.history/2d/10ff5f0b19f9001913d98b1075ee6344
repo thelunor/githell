@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function getInstance() {
+			var xhr;
+			if(window.XMLHttpRequest) {
+				xhr = new XMLHttpRequest();
+			} else if(window.ActiveObject) {
+				xhr = new ActiveObject("Msxml2.XMLHTTP");
+			} else {
+				throw new Error("AJAX를 지원하지 않습니다.");
+			}
+			return xhr;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
