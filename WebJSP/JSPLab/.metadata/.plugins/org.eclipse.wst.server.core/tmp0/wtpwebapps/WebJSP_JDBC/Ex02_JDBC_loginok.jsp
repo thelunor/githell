@@ -62,7 +62,7 @@
 		conn = Singleton_Helper.getConnection("oracle");
 		String sql="select id, pwd from koreamember where id=?";
 		pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1,id);
+		pstmt.setString(1, id);
 		rs = pstmt.executeQuery(); 
 		
 		// 업무

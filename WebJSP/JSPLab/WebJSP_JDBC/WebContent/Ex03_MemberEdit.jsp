@@ -79,7 +79,7 @@ td {
 			<td style="width: 700px">
 				<form action="Ex03_MemberEditok.jsp" method="post">
 
-					<h3 style="text-align: center;">회원가입</h3>
+					<h3 style="text-align: center;">회원정보수정</h3>
 					<div>
 						<table
 							style="width: 400px; height: 200px; margin-left: auto; margin-right: auto;">

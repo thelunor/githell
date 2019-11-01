@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// EL 출력(서버자원): <%= 대체
+	// EL 사용한다고 해서 java의 객체를 지원하는 것은 아니다
+%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
