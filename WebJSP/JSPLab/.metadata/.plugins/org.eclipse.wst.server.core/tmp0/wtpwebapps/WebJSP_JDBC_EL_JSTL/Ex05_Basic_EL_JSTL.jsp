@@ -30,5 +30,13 @@
 	<h3>JSTL 변수값 출력하기</h3>
 	id: ${userid}<br>
 	pwd: ${userpwd}<br>
+	
+	<hr>
+	<c:if test="${!empty userpwd}">
+		<h3>not empty userpwd</h3>
+		<c:if test="${userpwd == '1004'}">
+			<h3>welcome Admin page</h3>
+		</c:if>
+	</c:if>
 </body>
 </html>
