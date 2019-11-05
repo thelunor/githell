@@ -12,4 +12,13 @@
   	<servlet-name>simplecontroller</servlet-name>
   	<url-pattern>/simple</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>frontcontroller</servlet-name>
+  	<servlet-class>com.board.FrontBoardController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>frontcontroller</servlet-name>
+  	<url-pattern>/board</url-pattern>
+  </servlet-mapping>
 </web-app>
