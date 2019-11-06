@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="Singleton"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="Singleton"/>
+			<item value="singleton"/>
 			<item value="include"/>
 			<item value="DataTable()"/>
 			<item value="search:"/>
@@ -21,8 +23,6 @@
 			<item value="DataTables Example"/>
 			<item value="dataTable_filter"/>
 			<item value="search"/>
-			<item value="label"/>
-			<item value="arrow"/>
 		</list>
 		<list key="replacehistory">
 		</list>

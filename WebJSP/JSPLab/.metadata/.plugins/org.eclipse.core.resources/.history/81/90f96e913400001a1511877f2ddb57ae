@@ -1,0 +1,22 @@
+<%@page import="javax.sql.DataSource"%>
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="javax.naming.Context"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tomcat Connection Pool</title>
+</head>
+<body>
+	<%
+		Connection conn = null;
+		
+		Context context = new InitialContext(); // 현재 웹 프로젝트에서 이름 기반으로 무엇인가를 검색
+		DataSource ds = (DataSource)context.lookup("java:comp/env/jdbc/oracle"); // java:comp/env/ + name
+		
+	%>
+</body>
+</html>

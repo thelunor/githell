@@ -1,0 +1,5 @@
+	Servlet
+	: HttpServlet을 상속하는 Java 파일을 Servlet이라 한다.
+	
+	1. Java 파일로 웹 서비스를 할 목적으로 만든 파일
+	2. Java 파일 단독으로 웹 서비스를 할 수 없기 때문에 HttpServlet 상속을 통해 웹 환경에서 요청과 응답을 처리한다.

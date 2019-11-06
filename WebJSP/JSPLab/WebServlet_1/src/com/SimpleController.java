@@ -12,9 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 /* 
 	Servlet
 	java 파일로 웹 서비스를 할 목적으로 만든 파일
+	(java는 웹을 할 수 없기 때문에)
 	서블릿 파일 조건: (웹: request, response) 객체 사용 가능 
 	
 	1. extends HttpServlet(반드시 상속!): 웹 환경에서 요청과 응답을 처리 가능
+		HttpServlet을 상속하는 java 파일을 Servlet이라 한다
 	
 	2. SimpleController 서블릿
 	

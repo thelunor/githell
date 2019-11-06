@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#message').click(function() {
+				// 유효성 검증(입력)
+				
+				$.ajax(
+					{
+						// http://192.168.0.48:8090/WebServlet_4_memo_mvc/MemoId
+						url: "MemoId",
+						type: "GET",
+						dataType: "html",
+						data: {id:$('#id').val()}, // ?id=kglim
+						success: function(resdata) {
+							console.log(">" + resdata + "<");
+							if (resdata == "false") { // 공백이 있으면 .trim()
+								$('#checkid').html("<span style='color: red'>이미 사용중인 아이디입니다.</sapn>");
+								$('#id').focus();
+							} else {
+								$('#checkid').html("<span style='color: blue'>사용가능한 아이디입니다.</span>");
+								$('#email').focus();
+							}
+						}
+					}
+				)
+			})
+		})
+	</script>
+</head>
+<body>
+<div style="margin-top:70px;"></div> 
+<!--  html 파일  action="MemoServlet"  -->
+<!-- html action 경로 잡을 때는 경로를 따로 잡아주지 않아도 된다 -->
+<form name="f" action="SimpleController?cmd=join" method="get"> 
+ <div align="center"> 
+    <table width="600" border="0" cellpadding="7" > 
+        <tr align="center" bgcolor="gold" height="50"> 
+            <td colspan="2"> 
+                <font size="4" color="#0033CC" face="굴림체"> 
+                <b> 
+                   Servlet Memo
+                </b> 
+                </font> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td width="25%" align="center" > 
+                <b>ID</b> 
+            </td> 
+            <td> 
+                <input type="text" size="40" name="id" id="id" maxlength="10" >
+                <input type="button" value="ID 확인" id="message">
+                <div id="checkid"></div>
+            </td> 
+        </tr>     
+        <tr> 
+            <td width="25%" align="center"> 
+                <b>EMAIL</b> 
+            </td> 
+            <td> 
+                <input type="text" size="40" name="email" id="email" maxlength="60" > 
+            </td> 
+        </tr> 
+        <tr> 
+            <td width="25%" align="center"> 
+                <b>MEMO</b> 
+            </td> 
+            <td> 
+                <textarea name="memo" cols="50" class="box2"></textarea> 
+            </td> 
+        </tr> 
+        <tr bgcolor="gold"> 
+            <td colspan="2" align="center" class="c2"> 
+                <input type="submit" value="전송" >
+                <input type="reset" value="취소"> 
+            </td> 
+        </tr> 
+     
+    </table> 
+  
+  
+ </div>
+</form>
+<hr>
+<a href="SimpleController?cmd=memolist">목록보기</a> 
+ 
+</body>
+</html>

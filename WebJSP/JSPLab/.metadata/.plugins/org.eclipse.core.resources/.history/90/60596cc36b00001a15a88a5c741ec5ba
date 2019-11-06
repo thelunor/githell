@@ -1,0 +1,105 @@
+package kr.or.bit.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.bit.dao.memodao;
+import kr.or.bit.dto.memo;
+
+/**
+ * Servlet implementation class SimpleController
+ */
+@WebServlet("/SimpleController")
+public class SimpleController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
+    public SimpleController() {
+        super();
+    }
+    
+    private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	//1. 한글처리 
+    	 request.setCharacterEncoding("UTF-8");
+		 response.setContentType("text/html;charset=UTF-8");
+		 PrintWriter out = response.getWriter();
+
+    	//2. 사용자 요청 파악(요청값 받기)
+    	
+		String type = request.getParameter("cmd");
+		
+		System.out.println(type);
+		
+		//3. 요청에 따른 업무 수행(service 실행)
+		if(type.equals("check")) { //id중복 체크
+			String id = request.getParameter("id");
+			System.out.println("id : " + id);
+			memodao dao = new memodao();
+			String ischeck = dao.isCheckById(id);
+			//key point
+			out.print(ischeck);
+			
+		}else if(type.equals("submit")) {
+			
+			 String id = request.getParameter("id");
+	    	 String email = request.getParameter("email");
+	    	 String memo = request.getParameter("memo");
+
+	    	 try{
+	    		  	memodao dao = new memodao(); //POINT
+	    		  	int n = dao.insertMemo(id, email, memo);
+
+	    		  	if(n>0){
+	        		    out.print("<script>");
+	        	     	out.print("alert('등록성공..');");
+	        	     	out.print("location.href='SimpleController?cmd=list';"); 
+	        	     	//주소창에 입력 enter (F5) 요청
+	        	     	//localhost:8090/WebServlet_3/MemoList
+	        	    out.print("</script>");
+	        	   }else{ //insert 에서 현실적으로 경우 ...
+	        		    out.print("<script>");
+	        		    out.print("alert('등록실패..');");
+	        		    out.print("location.href='memo.html';");
+	        		    out.print("</script>");
+	        	   }
+
+	    	  }catch(Exception e){
+	    	   out.print("<b> 오류 :" +  e.getMessage()  + "</b>");
+	    	  }
+			
+		}else if(type.equals("list")) {
+			try {
+				//요청 판단은 필요없다 
+				//전체 데이터 조회 처리
+				memodao dao = new memodao();
+				ArrayList<memo> memolist = dao.getMemoList();
+				
+				//요청 결과 저장
+				request.setAttribute("memolist", memolist);
+				request.getParameter("id");
+				//view 페이지 설정
+				RequestDispatcher dis = request.getRequestDispatcher("/memolist.jsp");
+				dis.forward(request, response);
+				
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		}
+	}	
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+	}
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+	}
+
+}

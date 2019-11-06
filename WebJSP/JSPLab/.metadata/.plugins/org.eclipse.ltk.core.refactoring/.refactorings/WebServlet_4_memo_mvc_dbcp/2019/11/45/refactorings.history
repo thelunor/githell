@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;WebServlet_4_memo_mvc_dbcp&apos;&#x0D;&#x0A;- Original project: &apos;WebServlet_4_memo_mvc_dbcp&apos;&#x0D;&#x0A;- Original element: &apos;kr.or.bit.utils.Singleton_Helper.java&apos;" description="Delete element" element1="/src&lt;kr.or.bit.utils{Singleton_Helper.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1573005714001" subPackages="false" version="1.0"/>
+</session>

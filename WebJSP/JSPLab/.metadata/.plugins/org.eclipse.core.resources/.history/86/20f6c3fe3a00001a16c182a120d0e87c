@@ -1,0 +1,10 @@
+package kr.or.bit.utils;
+
+import java.sql.Connection;
+
+public class ConnectionHelper {
+	public static Connection getConnection(String dbname) {
+		
+		return null;
+	}
+}

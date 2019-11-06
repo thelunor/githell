@@ -1,0 +1,97 @@
+package kr.or.bit.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.bit.dao.memodao;
+import kr.or.bit.dto.memo;
+
+@WebServlet("/SimpleController")
+public class SimpleController extends HttpServlet {
+   private static final long serialVersionUID = 1L;
+
+    public SimpleController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+    private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       
+       request.setCharacterEncoding("UTF-8");          
+      response.setContentType("text/html;charset=UTF-8"); //클라언트에게 전달한 페이지의 정보 구성
+
+       String str = request.getParameter("cmd");
+       if(str.equals("join")){
+          
+         String id = request.getParameter("id");
+            String email = request.getParameter("email");
+            String memo = request.getParameter("memo");
+            PrintWriter out = response.getWriter();
+            
+            try{
+                  memodao dao = new memodao(); //POINT
+                  int n = dao.insertMemo(id, email, memo);
+             
+             if(n>0){
+                 out.print("<script>");
+                  out.print("alert('회원 등록 성공');");
+                  out.print("location.href='SimpleController?cmd=list';"); 
+              out.print("</script>");
+              
+             }else{
+                 out.print("<script>");
+                 out.print("alert('회원 등록 실패');");
+                 out.print("location.href='memo.html';");
+                 out.print("</script>");
+             }
+
+            }catch(Exception e){
+             out.print("<b> 오류 :" +  e.getMessage()  + "</b>");
+            }
+            
+       }else if(str.equals("check")){
+  
+              String id = request.getParameter("id");
+              PrintWriter out = response.getWriter();
+              
+              memodao dao = new memodao();
+              String ischeck = dao.isCheckById(id);
+
+              out.print(ischeck); //true, false만 던짐
+              
+       }else if(str.equals("list")){
+          try {
+            memodao dao = new memodao();
+            ArrayList<memo> memolist = dao.getMemoList();
+
+            request.setAttribute("memolist", memolist);
+
+            RequestDispatcher dis = request.getRequestDispatcher("/memolist.jsp");
+            dis.forward(request, response);
+            
+      }catch (Exception e) {
+         System.out.println(e.getMessage());
+      }
+       
+       }
+     
+   }
+
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      doProcess(request, response);      
+   }
+
+
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      doProcess(request, response);
+   }
+
+}
